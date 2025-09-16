@@ -5,6 +5,7 @@ It combines a frontend app, a backend server, and machine learning scripts to ex
 
 ---
 
+
 ## 📂 Project Structure
 
 ```
@@ -12,6 +13,14 @@ food_app/        # Frontend app (Next.js/React, exported and deployed to S3)
 food_server/     # Backend server (Flask-based REST API)
 food_model/      # Machine learning model scripts and data processing
 ```
+
+## 📥 Clone the Repository
+
+First, clone the repository from GitHub and move into the project folder:
+
+```bash
+git clone https://github.com/kml-coder/food_chart_public.git
+cd food_chart_public
 
 ---
 
