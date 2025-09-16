@@ -21,6 +21,7 @@ First, clone the repository from GitHub and move into the project folder:
 ```bash
 git clone https://github.com/kml-coder/food_chart_public.git
 cd food_chart_public
+```
 
 ---
 
@@ -32,12 +33,12 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-### 2. Install Dependencies
+### 1. Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Run Server
+### 2. Run Server
 ```bash
 cd food_chart/food_server
 python3 server.py
@@ -48,7 +49,7 @@ python3 server.py
 
 ---
 
-## 📦 Running the Frontend (food_app)
+## Running the Frontend (food_app)
 
 ### 1. Start with Expo (Local Development)
 ```bash
@@ -63,7 +64,7 @@ npx expo start
 
 ---
 
-## Data scraping from recipe sites
+## 📦 Data scraping from recipe sites
 ```bash
 cd food_chart/food_model/gptgram_model/scrape
 python3 scrape_xml.py
