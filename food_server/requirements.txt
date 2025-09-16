@@ -1,0 +1,5 @@
+flask
+flask-cors
+recipe-scrapers
+ingredient-parser-nlp
+inflect

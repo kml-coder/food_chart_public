@@ -1,0 +1,9 @@
+transformers
+datasets
+sentencepiece
+pandas
+torch
+evaluate
+scikit-learn
+sagemaker
+transformers[torch]
