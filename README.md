@@ -33,12 +33,12 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-### 1. Install Dependencies
+### 2. Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Run Server
+### 3. Run Server
 ```bash
 cd food_chart/food_server
 python3 server.py
