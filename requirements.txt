@@ -1,0 +1,16 @@
+flask
+flask-cors
+recipe-scrapers
+ingredient-parser-nlp
+inflect
+
+transformers
+datasets
+sentencepiece
+pandas
+torch
+evaluate
+scikit-learn
+sagemaker
+transformers[torch]
+

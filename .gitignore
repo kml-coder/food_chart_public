@@ -1,0 +1,23 @@
+#ignore everything
+*
+**/.env
+
+# food_app 
+!food_app/
+
+# food_server 
+!food_server/server.py
+!food_server/Dockerfile
+
+# food_model
+!food_model/gptgram_model/scrape/clean.py
+!food_model/gptgram_model/scrape/scrape_xml.py
+!food_model/gptgram_model/scrape/scrape.py
+!food_model/gptgram_model/scrape/recipe_links.txt
+
+!food_model/src/model.py
+
+#main
+!requirements.txt
+!README.md
+!.gitignore
