@@ -19,7 +19,6 @@ food_model/      # Machine learning model scripts and data processing
 
 ### 1. Setup Virtual Environment
 ```bash
-cd food_chart/food_server
 python3 -m venv venv
 source venv/bin/activate
 ```
@@ -31,40 +30,42 @@ pip install -r requirements.txt
 
 ### 3. Run Server
 ```bash
+cd food_chart/food_server
 python3 server.py
 ```
 
-- Default port: **5000**
+- Default port: **5050**
 - To change the port: edit `server.py` → update `app.run(port=XXXX)`
 
 ---
 
 ## 📦 Running the Frontend (food_app)
 
-### 1. Build Export
+### 1. Start with Expo (Local Development)
 ```bash
 cd food_chart/food_app
-npx export
-```
 
-### 2. Upload to S3
-```bash
-aws s3 sync dist/ s3://food-chart-app
+# Install dependencies
+npm install   # or yarn install
+
+# Start Expo development server
+npx expo start
 ```
 
 ---
 
-## 🤖 Running the Model (food_model)
-
-### Example: Data scraping
+## Data scraping from recipe sites
 ```bash
 cd food_chart/food_model/gptgram_model/scrape
+python3 scrape_xml.py
 python3 scrape.py
 python3 clean.py
-python3 scrape_xml.py
+
 ```
 
-### Example: Model execution
+## 🤖 Running the Model (food_model)
+
+### Example: Model execution (need your own dataset)
 ```bash
 cd food_chart/food_model/src
 python3 model.py
@@ -76,8 +77,8 @@ python3 model.py
 
 ### 1. Connect to EC2
 ```bash
-chmod 400 kmlcoder.pem
-ssh -i kmlcoder.pem ubuntu@<EC2_PUBLIC_IP>
+chmod 400 (your own pem)
+ssh -i (your own pem) (your own instance ip)
 ```
 
 ### 2. Install Dependencies
@@ -90,11 +91,12 @@ sudo apt install -y python3-pip python3-venv
 ### 3. Clone Repo & Setup
 ```bash
 git clone https://github.com/kml-coder/food_chart_public.git
-cd food_chart/food_server
-
+cd food_chart
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
+cd food_chart/food_server
+
 python3 server.py
 ```
 
@@ -103,6 +105,8 @@ python3 server.py
 ## 🔧 Requirements
 - Python 3.8+
 - Node.js & npm
+- Expo
+- React
 - AWS CLI
 - AWS account with S3 + EC2
 - Git
@@ -114,7 +118,7 @@ python3 server.py
   ```bash
   aws configure
   ```
-- On EC2, ensure the **security group inbound rules** allow your server port (e.g., 5000).  
+- On EC2, ensure the **security group inbound rules** allow your server port (e.g., 5050).  
 - Replace `<EC2_PUBLIC_IP>` with the actual instance’s public IPv4 address.  
 - Keep sensitive files (`.env`, keys, etc.) excluded from public repositories using `.gitignore`.
 
