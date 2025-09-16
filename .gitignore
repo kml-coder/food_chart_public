@@ -3,7 +3,7 @@
 **/.env
 
 # food_app 
-!food_app/
+!food_app/**
 
 # food_server 
 !food_server/server.py
