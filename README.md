@@ -23,6 +23,9 @@ git clone https://github.com/kml-coder/food_chart_public.git
 cd food_chart_public
 ```
 
+Second, download the t5 model from (here)
+and unzip it and move "model" folder to food_server folder
+
 ---
 
 ## 🚀 Running the Backend (food_server)
