@@ -364,7 +364,7 @@ export default function App() {
                             <Text style={{ fontWeight: 'bold', fontSize: 16 }}>Predicted Grams</Text>
                             {predictions.map((item, idx) => (
                             <Text key={idx} style={{ fontSize: 15, marginVertical: 2 }}>
-                                {item.raw} → {item.total_prediction} g  ({item.quantity} × {item.base_prediction} g)
+                                {item.raw} → {item.total_prediction} g
                             </Text>
                             ))}
                         </View>
