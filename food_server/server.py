@@ -4,11 +4,15 @@ from recipe_scrapers import scrape_me, WebsiteNotImplementedError
 from ingredient_parser import parse_ingredient
 from fractions import Fraction
 from bs4 import BeautifulSoup
+from transformers import T5Tokenizer, AutoModelForSeq2SeqLM
+import torch
 
 import requests, json, csv, re, time
 
 app= Flask(__name__)
 CORS(app)
+
+
 
 # TODO 
     # (Done) 1. change all the data and get ratio in the server, make Chartdata(ratio) and 
@@ -80,6 +84,12 @@ unitmap = {
         'l': 1000 / 15, # 이거는 조심하기 l가 알파벳 하나라 좀 오류 작동할 수 있을듯
     }
 
+MODEL_PATH = "./model"  # path that you downloaded model folder
+tokenizer = T5Tokenizer.from_pretrained(MODEL_PATH)
+model = AutoModelForSeq2SeqLM.from_pretrained(MODEL_PATH)
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+model = model.to(device)
+
 def parse_ingredient_line(line, i):
     parsed = parse_ingredient(line)
     amounts = parsed.amount
@@ -145,6 +155,7 @@ def save_results_to_csv(data, filename="estimated_grams.csv"):
         writer = csv.DictWriter(f, fieldnames=["query", "estimated_grams"])
         writer.writeheader()
         writer.writerows(data)
+        
     
 @app.route('/get-ingredients', methods =['GET'])
 def get_ingredients():
@@ -202,6 +213,43 @@ def parse_text():
             'groupsData': groups_data,
             'raw_ingredients': lines
         })
+@app.route('/predict-grams', methods=['POST'])
+def predict_grams():
+    try:
+        data = request.json
+        except_data = data.get("exceptData", [])
+
+        results = []
+        for item in except_data:
+            text = item.get("raw", "")
+            quantity = item.get("quantity", 1)  # default 1
+
+            if not text:
+                continue
+
+            
+            inputs = tokenizer(text, return_tensors="pt").to(device)
+            outputs = model.generate(**inputs, max_length=50)
+            pred_str = tokenizer.decode(outputs[0], skip_special_tokens=True)
+
+            try:
+                base_grams = float(pred_str)   
+            except:
+                base_grams = 0
+
+            total_grams = base_grams * (quantity if quantity else 1)
+
+            results.append({
+                "raw": text,
+                "quantity": quantity,
+                "base_prediction": base_grams,
+                "total_prediction": total_grams
+            })
+
+        return jsonify({"predicted": results})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5050)

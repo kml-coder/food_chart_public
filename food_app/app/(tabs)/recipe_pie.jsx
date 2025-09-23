@@ -89,6 +89,8 @@ export default function App() {
     const [newAmount, setNewAmount] = useState('');
     const [adjustedMap, setAdjustedMap] = useState({});
 
+    const [predictions, setPredictions] = useState([]);
+
     const fetchIngredients = async () => {
         if(useTextInput && !textInput.trim()) return; // 텍스트 활성화되어도 텍스트가 없으면 return(실행 안됌)
         if (!useTextInput && !url.trim()) return; // url 활성화되어도 url가 없으면 return(실행 안됌)
@@ -109,7 +111,7 @@ export default function App() {
             
 
             if (json.error) { // if error happens in server, catch that first
-                alert(json.error);  // ✅ 서버에서 지원되지 않는 URL일 때 알림
+                alert(json.error);  //  서버에서 지원되지 않는 URL일 때 알림
                 setGroupData([]);
                 setRawIngredients([]);
                 return;
@@ -130,7 +132,7 @@ export default function App() {
                 };
 
             }));
-            setRawIngredients(json.raw_ingredients); // ✅ 이 줄 추가
+            setRawIngredients(json.raw_ingredients); //  이 줄 추가
             setAdjustedMap({});
         } catch (e) { // if error happens while trying that(not server) we catch that
             alert(e.message);
@@ -158,6 +160,31 @@ export default function App() {
         });
         setAdjustedMap(newMap)
     };
+
+    const fetchPredictions = async () => {
+    try {
+        const exceptDataAll = groupData.flatMap(g => g.exceptData);
+        if (exceptDataAll.length === 0) {
+            alert("No except data to predict");
+            return;
+        }
+        const res = await fetch(`${BASE_URL}/predict-grams`, {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({ exceptData: exceptDataAll })
+        });
+        const json = await res.json();
+        if (json.error) {
+            alert(json.error);
+            return;
+        }
+        setPredictions(json.predicted);
+    } catch (e) {
+        alert(e.message);
+        console.log(e);
+    }
+    };
+
     const makescroll = () => {
         return groupData.map((group, index) => {
             if (loading) return null;
@@ -325,6 +352,23 @@ export default function App() {
 
                         />
                     </View>
+                    <Button 
+                        title="Predict Grams for Except Data"
+                        onPress={fetchPredictions}
+                        color="#444"
+                        style={{ marginTop: 12 }}
+                    />
+
+                    {predictions.length > 0 && (
+                        <View style={{ marginTop: 20, width: 300 }}>
+                            <Text style={{ fontWeight: 'bold', fontSize: 16 }}>Predicted Grams</Text>
+                            {predictions.map((item, idx) => (
+                            <Text key={idx} style={{ fontSize: 15, marginVertical: 2 }}>
+                                {item.raw} → {item.total_prediction} g  ({item.quantity} × {item.base_prediction} g)
+                            </Text>
+                            ))}
+                        </View>
+                    )}
                     {rawIngredients.length > 0 && (
                         <View style={{ flexDirection: 'column', alignItems: 'flex-start', marginTop: 20 }}>
                             <Text style={{ fontWeight: 'bold', fontSize: 15, marginTop: 12 }}>Raw Ingredients</Text>

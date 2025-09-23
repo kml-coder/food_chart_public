@@ -13,4 +13,4 @@ evaluate
 scikit-learn
 sagemaker
 transformers[torch]
-
+sentencepiece
