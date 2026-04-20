@@ -27,3 +27,12 @@
 !requirements.txt
 !README.md
 !.gitignore
+!.dockerignore
+!DOCKER.md
+!docker-compose.yml
+!docker-compose.deploy.yml
+!docker/
+!docker/**
+!.github/
+!.github/workflows/
+!.github/workflows/**

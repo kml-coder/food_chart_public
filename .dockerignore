@@ -1,0 +1,10 @@
+.git
+.gitignore
+.DS_Store
+node_modules
+food_app/node_modules
+food_app/.expo
+food_app/dist
+food_app/web-build
+food_server/__pycache__
+food_server/*.pyc
