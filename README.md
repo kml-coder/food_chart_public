@@ -28,6 +28,56 @@ and unzip it and move "model" folder to food_server folder
 
 ---
 
+## 🐳 Running with Docker
+
+### 1. Place model files
+
+Backend expects model files at:
+
+```bash
+food_server/model
+```
+
+### 2. Run locally with Docker Compose (build from source)
+
+```bash
+docker compose up --build
+```
+
+- Frontend: `http://localhost:8080`
+- Backend: `http://localhost:5050`
+
+Stop:
+
+```bash
+docker compose down
+```
+
+### 3. Deploy with GHCR images (pull prebuilt images)
+
+This repository includes GitHub Actions workflow to publish images to GHCR on push to `main`.
+
+- `ghcr.io/<OWNER>/<REPO>-backend:latest`
+- `ghcr.io/<OWNER>/<REPO>-frontend:latest`
+
+On deployment server:
+
+```bash
+export GHCR_OWNER=<your-github-owner>
+export IMAGE_PREFIX=<your-repository-name>
+
+docker compose -f docker-compose.deploy.yml pull
+docker compose -f docker-compose.deploy.yml up -d
+```
+
+Stop:
+
+```bash
+docker compose -f docker-compose.deploy.yml down
+```
+
+---
+
 ## 🚀 Running the Backend (food_server)
 
 ### 1. Setup Virtual Environment
