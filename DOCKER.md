@@ -1,6 +1,12 @@
 # Docker Run Guide
 
 This project supports both local Docker build and GHCR-based deployment.
+Docker scope is intentionally limited to:
+
+- `food_app` (frontend)
+- `food_server` (backend API)
+
+`food_model` training/data scripts are not part of Docker runtime.
 
 ## 1) Required model directory
 
@@ -29,6 +35,14 @@ Stop:
 ```bash
 docker compose down
 ```
+
+Ollama model can be changed with backend environment variable:
+
+```bash
+OLLAMA_MODEL=phi3
+```
+
+For example, use `llama3:8b` if needed.
 
 ## 3) GHCR image publish (GitHub Actions)
 

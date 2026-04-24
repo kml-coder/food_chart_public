@@ -30,6 +30,13 @@ and unzip it and move "model" folder to food_server folder
 
 ## 🐳 Running with Docker
 
+Docker setup in this repository is only for:
+
+- `food_app` (frontend)
+- `food_server` (backend API)
+
+`food_model` scripts are intentionally excluded from Docker runtime.
+
 ### 1. Place model files
 
 Backend expects model files at:

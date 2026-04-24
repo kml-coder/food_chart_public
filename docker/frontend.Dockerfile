@@ -6,7 +6,7 @@ COPY food_app/package*.json /app/
 RUN npm ci
 
 COPY food_app /app
-RUN npm run build \
+RUN npx expo export --platform web \
     && if [ -d dist ]; then mv dist /tmp/web; elif [ -d web-build ]; then mv web-build /tmp/web; else echo "No web build output found" && exit 1; fi
 
 FROM nginx:1.27-alpine

@@ -1,0 +1,9 @@
+flask
+flask-cors
+recipe-scrapers
+ingredient-parser-nlp
+beautifulsoup4
+requests
+transformers
+torch
+sentencepiece

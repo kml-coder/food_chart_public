@@ -2,10 +2,9 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
-COPY requirements.txt /tmp/requirements.txt
+COPY docker/backend.requirements.txt /tmp/requirements.txt
 
-RUN pip install --no-cache-dir -r /tmp/requirements.txt \
-    && pip install --no-cache-dir beautifulsoup4 requests
+RUN pip install --no-cache-dir -r /tmp/requirements.txt
 
 COPY food_server/server.py /app/server.py
 

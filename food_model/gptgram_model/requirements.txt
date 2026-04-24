@@ -1,3 +1,7 @@
 recipe-scrapers
 ingredient-parser-nlp
 inflect
+numpy
+scikit-learn
+lightgbm
+joblib

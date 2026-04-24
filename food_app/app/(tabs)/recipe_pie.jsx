@@ -70,12 +70,26 @@ const styles = StyleSheet.create({
     },
     loading: { marginTop: 15, fontSize: 16, color: '#888' }
 });
+
+const formatGroupForChart = (group) => {
+    const sortedChartData = [...group.chartData].sort((a, b) => b.value - a.value);
+    const total = sortedChartData.reduce((sum, item) => sum + (Number(item.value) || 0), 0) || 1;
+    const chartWithPercent = sortedChartData.map(item => ({
+        ...item,
+        percent: (((Number(item.value) || 0) / total) * 100).toFixed(2)
+    }));
+    return {
+        ...group,
+        chartData: chartWithPercent
+    };
+};
+
 export default function App() {
 
     const [useTextInput, setUseTextInput] = useState(false);
     const [textInput, setTextInput] = useState('');
 
-    const [useEC2, setUseEC2] = useState(true);
+    const [useEC2, setUseEC2] = useState(false);
     const BASE_URL = useEC2 ? 'http://3.149.161.11:5050' : 'http://localhost:5050';
 
     const [url, setUrl] = useState('');
@@ -90,6 +104,8 @@ export default function App() {
     const [adjustedMap, setAdjustedMap] = useState({});
 
     const [predictions, setPredictions] = useState([]);
+    const [selectedOllamaModel, setSelectedOllamaModel] = useState('phi3');
+    const MODEL_OPTIONS = ['phi3', 'llama3:8b', 't5'];
 
     const fetchIngredients = async () => {
         if(useTextInput && !textInput.trim()) return; // 텍스트 활성화되어도 텍스트가 없으면 return(실행 안됌)
@@ -117,21 +133,15 @@ export default function App() {
                 return;
             }
             setTitle(json.title); // okay
-            setGroupData(json.groupsData.map(group => {
-                const total = group.chartData.reduce((sum, item) => sum + item.value, 0) || 1;
-                const sortedChartData = [...group.chartData].sort((a, b) => b.value - a.value);
-                const chartWithPercent = sortedChartData.map(item => ({
-                    ...item,
-                    percent: ((item.value) / total * 100).toFixed(2)
-                }));
-                return {
-                    purpose: group.purpose,
-                    chartData: chartWithPercent,
-                    exceptData: group.exceptData,
-
-                };
-
-            }));
+            setGroupData(
+                json.groupsData.map(group =>
+                    formatGroupForChart({
+                        purpose: group.purpose,
+                        chartData: group.chartData,
+                        exceptData: group.exceptData,
+                    })
+                )
+            );
             setRawIngredients(json.raw_ingredients); //  이 줄 추가
             setAdjustedMap({});
         } catch (e) { // if error happens while trying that(not server) we catch that
@@ -146,11 +156,14 @@ export default function App() {
     } // 문제가 저기 있는 value는 tablespoon 기준이고, cup일때는 4 cup / original quantity * 16 이라 무조건 4분의 1이됌
     const adjustIngredients = () => {
         if (!selectedIngredient || !newAmount) return;
-        const ratio = (parseFloat(newAmount)* (unitmap[selectedIngredient.unit] || 0))/ selectedIngredient.value;
+        const parsedNewAmount = parseFloat(newAmount);
+        if (Number.isNaN(parsedNewAmount) || !selectedIngredient.quantity) return;
+        const ratio = parsedNewAmount / selectedIngredient.quantity;
         const newMap = {};
         groupData.forEach(group => {
             group.chartData.forEach(item => {
-                const quantity = (item.quantity * ratio) ;
+                const baseQuantity = Number(item.quantity) || 0;
+                const quantity = (baseQuantity * ratio) ;
                 newMap[item.raw] = {
                     quantity: quantity.toFixed(2),
                     unit: item.unit,
@@ -171,7 +184,10 @@ export default function App() {
         const res = await fetch(`${BASE_URL}/predict-grams`, {
             method: "POST",
             headers: {"Content-Type": "application/json"},
-            body: JSON.stringify({ exceptData: exceptDataAll })
+            body: JSON.stringify({
+                exceptData: exceptDataAll,
+                ollamaModel: selectedOllamaModel
+            })
         });
         const json = await res.json();
         if (json.error) {
@@ -179,6 +195,35 @@ export default function App() {
             return;
         }
         setPredictions(json.predicted);
+        const predictedMap = new Map(
+            json.predicted.map((pred) => [pred.raw, Number(pred.total_prediction) || 0])
+        );
+
+        setGroupData((prevGroups) =>
+            prevGroups.map((group) => {
+                const promotedItems = group.exceptData
+                    .map((item) => {
+                        const predictedValue = predictedMap.get(item.raw);
+                        if (!predictedValue || predictedValue <= 0) return null;
+                        return {
+                            ...item,
+                            value: predictedValue,
+                        };
+                    })
+                    .filter(Boolean);
+
+                const unresolvedExceptData = group.exceptData.filter((item) => {
+                    const predictedValue = predictedMap.get(item.raw);
+                    return !predictedValue || predictedValue <= 0;
+                });
+
+                return formatGroupForChart({
+                    ...group,
+                    chartData: [...group.chartData, ...promotedItems],
+                    exceptData: unresolvedExceptData,
+                });
+            })
+        );
     } catch (e) {
         alert(e.message);
         console.log(e);
@@ -293,6 +338,18 @@ export default function App() {
                 color="#666"
                 style={{ marginTop: 8 }}>
             </Button>
+            <Button
+                title={`Prediction Model: ${selectedOllamaModel} (tap to switch)`}
+                onPress={() =>
+                    setSelectedOllamaModel(prev => {
+                        const idx = MODEL_OPTIONS.indexOf(prev);
+                        const nextIdx = idx === -1 ? 0 : (idx + 1) % MODEL_OPTIONS.length;
+                        return MODEL_OPTIONS[nextIdx];
+                    })
+                }
+                color="#555"
+                style={{ marginTop: 8 }}
+            />
             {/* Piechart + ChartData (legend) */}
             {!loading && groupData.length > 0 && (
                 <>
@@ -363,9 +420,16 @@ export default function App() {
                         <View style={{ marginTop: 20, width: 300 }}>
                             <Text style={{ fontWeight: 'bold', fontSize: 16 }}>Predicted Grams</Text>
                             {predictions.map((item, idx) => (
-                            <Text key={idx} style={{ fontSize: 15, marginVertical: 2 }}>
-                                {item.raw} → {item.total_prediction} g
-                            </Text>
+                                <View key={idx} style={{ marginVertical: 6 }}>
+                                    <Text style={{ fontSize: 15, marginVertical: 2 }}>
+                                        {item.raw} → {item.total_prediction} g ({item.model_used || 'unknown'})
+                                    </Text>
+                                    {item.t5_trace && (
+                                        <Text style={{ fontSize: 12, color: '#555' }}>
+                                            {`[T5 trace] prompt="${item.t5_trace.input_prompt}" | generated="${item.t5_trace.generated_text}" | parsed=${item.t5_trace.parsed_number}`}
+                                        </Text>
+                                    )}
+                                </View>
                             ))}
                         </View>
                     )}

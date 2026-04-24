@@ -6,6 +6,10 @@ services:
     container_name: food-chart-backend
     ports:
       - "5050:5050"
+    environment:
+      - OLLAMA_URL=http://host.docker.internal:11434/api/chat
+      - OLLAMA_MODEL=phi3
+      - USE_OLLAMA_GRAMS=true
     volumes:
       - ./food_server/model:/app/model:ro
     restart: unless-stopped

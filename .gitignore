@@ -19,6 +19,10 @@
 !food_model/gptgram_model/scrape/scrape_xml.py
 !food_model/gptgram_model/scrape/scrape.py
 !food_model/gptgram_model/scrape/recipe_links.txt
+!food_model/gptgram_model/scrape/output_filled.json
+!food_model/gptgram_model/scrape/output_filled_name_unit_removed.json
+!food_model/gptgram_model/scrape/unit_size_cleanup.ipynb
+!food_model/gptgram_model/t5_small_regression.ipynb
 
 !food_model/src
 !food_model/src/model.py
@@ -36,3 +40,22 @@
 !.github/
 !.github/workflows/
 !.github/workflows/**
+
+# local editor / OS noise
+food_app/.vscode/
+.DS_Store
+**/.ipynb_checkpoints/
+
+# local envs
+.venv/
+venv/
+
+# build / train artifacts
+artifacts/
+**/*.pt
+**/*.bin
+**/*.safetensors
+
+# app local caches
+food_app/node_modules/
+food_app/.expo/
