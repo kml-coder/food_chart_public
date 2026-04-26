@@ -1,0 +1,152 @@
+cup
+
+tablespoon
+teaspoon
+fluid_ounce
+slice
+pinch
+bunch
+dash
+head
+drop
+piece
+sprig
+packet
+leaf
+thin slice
+package
+thick slice
+link
+sheet
+loaf
+scoop
+stalk
+recipe
+cube
+splash
+strip
+stick
+ear
+envelope
+pod
+clove
+rack
+inch
+bulb
+spear
+ball
+wedge
+bunch sprig
+cup slice
+part
+square
+twist
+dash dash
+pkg
+rib
+bag
+box
+inch piece
+thin
+can
+clove clove
+cup sprig
+grind
+inch slice
+slice slice
+thin strip
+tiny pinch
+block
+cup scant
+foot
+gram * tablespoon
+inch square
+inch thick slice
+individual packet
+ounce slice
+petainch * picoinch
+pint jar
+pound slice
+shot
+teaspoon scant
+tub
+unpeeled clove
+bag * pound
+batch
+big pinch
+bite-size chunk
+bottle
+bulb bulb
+bulb clove
+bunch spear
+bunch stalk
+canister
+center-cut slice
+chunk
+container
+cup * gram
+cup * pound
+cup bulb
+cup chunk
+cup handful
+cup stalk
+cup stick
+diagonally sliced piece
+ear ear
+fluid_ounce bottle
+generou dash
+generou pinch
+glass bottle
+good handful
+gram * teaspoon
+handful
+head clove
+head head
+heaping bar
+inch stick
+inch strip
+inch thick piece
+individual package
+inner stalk
+jar
+leaf head
+loaf loaf
+long strip
+metric_ton
+ounce block
+ounce bottle
+ounce can
+ounce chunk
+ounce cube
+ounce spear
+ounce thin slice
+picoinch ** 2
+pinch dash
+pound bulb
+pound head
+pound stalk
+pound stick
+quarts-size
+ring
+round loaf
+scant teaspoon
+slab
+slice nickel-sized slice
+solo bulb
+sprig sprig
+stalk stalk
+stem
+tablespoon clove
+tablespoon heaped tablespoon
+tablespoon stick
+tablespoon thin strip
+tea bag
+teaspoon sprig
+thin spear
+thin wedge
+triangular slice
+very pinch
+wheel
+whole head
+wide-mouth quart
+yard

@@ -1,0 +1,3418 @@
+[
+  {
+    "WWEIA Category description": "Apple juice",
+    "Main food description": "Apple cider"
+  },
+  {
+    "WWEIA Category description": "Apple juice",
+    "Main food description": "Apple cider"
+  },
+  {
+    "WWEIA Category description": "Apple juice",
+    "Main food description": "Apple juice, 100%"
+  },
+  {
+    "WWEIA Category description": "Apple juice",
+    "Main food description": "Apple juice, 100%, with calcium added"
+  },
+  {
+    "WWEIA Category description": "Apple juice",
+    "Main food description": "Apple juice, 100%, with calcium added"
+  },
+  {
+    "WWEIA Category description": "Apples",
+    "Main food description": "Applesauce, regular"
+  },
+  {
+    "WWEIA Category description": "Apples",
+    "Main food description": "Applesauce, unsweetened"
+  },
+  {
+    "WWEIA Category description": "Apples",
+    "Main food description": "Applesauce, regular"
+  },
+  {
+    "WWEIA Category description": "Apples",
+    "Main food description": "Apple pie filling"
+  },
+  {
+    "WWEIA Category description": "Apples",
+    "Main food description": "Apple, raw"
+  },
+  {
+    "WWEIA Category description": "Baby food: cereals",
+    "Main food description": "Baby Toddler cereal, oatmeal, ready-to-eat"
+  },
+  {
+    "WWEIA Category description": "Baby food: cereals",
+    "Main food description": "Baby Toddler cereal, oatmeal with fruit, dry"
+  },
+  {
+    "WWEIA Category description": "Baby food: cereals",
+    "Main food description": "Baby Toddler cereal, multigrain with fruit, dry"
+  },
+  {
+    "WWEIA Category description": "Baby food: cereals",
+    "Main food description": "Baby Toddler cereal, multigrain, ready-to-eat"
+  },
+  {
+    "WWEIA Category description": "Baby food: cereals",
+    "Main food description": "Baby Toddler cereal, rice, dry"
+  },
+  {
+    "WWEIA Category description": "Baby food: fruit",
+    "Main food description": "Baby Toddler pears, Stage 2"
+  },
+  {
+    "WWEIA Category description": "Baby food: fruit",
+    "Main food description": "Baby Toddler mangoes"
+  },
+  {
+    "WWEIA Category description": "Baby food: fruit",
+    "Main food description": "Baby Toddler fruit, NFS"
+  },
+  {
+    "WWEIA Category description": "Baby food: fruit",
+    "Main food description": "Baby Toddler pears, Stage 1"
+  },
+  {
+    "WWEIA Category description": "Baby food: fruit",
+    "Main food description": "Baby Toddler multiple fruit, Stage 2"
+  },
+  {
+    "WWEIA Category description": "Baby food: meat and dinners",
+    "Main food description": "Toddler meal, pasta and vegetables"
+  },
+  {
+    "WWEIA Category description": "Baby food: meat and dinners",
+    "Main food description": "Baby Toddler turkey"
+  },
+  {
+    "WWEIA Category description": "Baby food: meat and dinners",
+    "Main food description": "Toddler meal, rice and vegetables"
+  },
+  {
+    "WWEIA Category description": "Baby food: meat and dinners",
+    "Main food description": "Baby Toddler turkey"
+  },
+  {
+    "WWEIA Category description": "Baby food: meat and dinners",
+    "Main food description": "Baby Toddler ham"
+  },
+  {
+    "WWEIA Category description": "Baby food: mixtures",
+    "Main food description": "Baby Toddler food, NFS"
+  },
+  {
+    "WWEIA Category description": "Baby food: mixtures",
+    "Main food description": "Baby Toddler fruit, with grain"
+  },
+  {
+    "WWEIA Category description": "Baby food: mixtures",
+    "Main food description": "Baby Toddler fruit and vegetables, with yogurt"
+  },
+  {
+    "WWEIA Category description": "Baby food: mixtures",
+    "Main food description": "Baby Toddler fruit, with yogurt"
+  },
+  {
+    "WWEIA Category description": "Baby food: mixtures",
+    "Main food description": "Baby Toddler fruit and meat"
+  },
+  {
+    "WWEIA Category description": "Baby food: snacks and sweets",
+    "Main food description": "Baby Toddler yogurt melts"
+  },
+  {
+    "WWEIA Category description": "Baby food: snacks and sweets",
+    "Main food description": "Baby Toddler puffs, fruit"
+  },
+  {
+    "WWEIA Category description": "Baby food: snacks and sweets",
+    "Main food description": "Baby Toddler pudding"
+  },
+  {
+    "WWEIA Category description": "Baby food: snacks and sweets",
+    "Main food description": "Baby Toddler puffs, vegetable"
+  },
+  {
+    "WWEIA Category description": "Baby food: snacks and sweets",
+    "Main food description": "Baby Toddler biscuit"
+  },
+  {
+    "WWEIA Category description": "Baby food: vegetables",
+    "Main food description": "Baby Toddler squash, Stage 2"
+  },
+  {
+    "WWEIA Category description": "Baby food: vegetables",
+    "Main food description": "Baby Toddler vegetable, NFS"
+  },
+  {
+    "WWEIA Category description": "Baby food: vegetables",
+    "Main food description": "Baby Toddler beets"
+  },
+  {
+    "WWEIA Category description": "Baby food: vegetables",
+    "Main food description": "Baby Toddler vegetable, NFS"
+  },
+  {
+    "WWEIA Category description": "Baby food: vegetables",
+    "Main food description": "Baby Toddler multiple vegetables, Stage 2"
+  },
+  {
+    "WWEIA Category description": "Baby food: yogurt",
+    "Main food description": "Baby Toddler yogurt, plain"
+  },
+  {
+    "WWEIA Category description": "Baby food: yogurt",
+    "Main food description": "Baby Toddler yogurt, with fruit"
+  },
+  {
+    "WWEIA Category description": "Baby food: yogurt",
+    "Main food description": "Baby Toddler yogurt, plain"
+  },
+  {
+    "WWEIA Category description": "Baby food: yogurt",
+    "Main food description": "Baby Toddler yogurt, with fruit"
+  },
+  {
+    "WWEIA Category description": "Baby food: yogurt",
+    "Main food description": "Baby Toddler yogurt, plain"
+  },
+  {
+    "WWEIA Category description": "Baby juice",
+    "Main food description": "Baby Toddler juice, NFS"
+  },
+  {
+    "WWEIA Category description": "Baby juice",
+    "Main food description": "Baby Toddler juice, NFS"
+  },
+  {
+    "WWEIA Category description": "Baby juice",
+    "Main food description": "Baby Toddler juice, grape"
+  },
+  {
+    "WWEIA Category description": "Baby juice",
+    "Main food description": "Baby Toddler juice, apple"
+  },
+  {
+    "WWEIA Category description": "Baby juice",
+    "Main food description": "Baby Toddler juice, apple"
+  },
+  {
+    "WWEIA Category description": "Baby water",
+    "Main food description": "Water, baby"
+  },
+  {
+    "WWEIA Category description": "Baby water",
+    "Main food description": "Water, baby"
+  },
+  {
+    "WWEIA Category description": "Baby water",
+    "Main food description": "Water, baby"
+  },
+  {
+    "WWEIA Category description": "Bacon",
+    "Main food description": "Pork bacon, NS as to fresh, smoked or cured, reduced sodium, cooked"
+  },
+  {
+    "WWEIA Category description": "Bacon",
+    "Main food description": "Bacon, NS as to type of meat, cooked"
+  },
+  {
+    "WWEIA Category description": "Bacon",
+    "Main food description": "Pork bacon, smoked or cured, cooked"
+  },
+  {
+    "WWEIA Category description": "Bacon",
+    "Main food description": "Turkey bacon, cooked"
+  },
+  {
+    "WWEIA Category description": "Bacon",
+    "Main food description": "Beef, bacon, cooked"
+  },
+  {
+    "WWEIA Category description": "Bagels and English muffins",
+    "Main food description": "Bagel, whole wheat, with raisins"
+  },
+  {
+    "WWEIA Category description": "Bagels and English muffins",
+    "Main food description": "Bagel, pumpernickel"
+  },
+  {
+    "WWEIA Category description": "Bagels and English muffins",
+    "Main food description": "Bagel"
+  },
+  {
+    "WWEIA Category description": "Bagels and English muffins",
+    "Main food description": "Bagel, whole wheat"
+  },
+  {
+    "WWEIA Category description": "Bagels and English muffins",
+    "Main food description": "Muffin, English, with fruit other than raisins"
+  },
+  {
+    "WWEIA Category description": "Bananas",
+    "Main food description": "Banana, baked"
+  },
+  {
+    "WWEIA Category description": "Bananas",
+    "Main food description": "Banana, raw"
+  },
+  {
+    "WWEIA Category description": "Bananas",
+    "Main food description": "Banana, raw"
+  },
+  {
+    "WWEIA Category description": "Bananas",
+    "Main food description": "Banana, raw"
+  },
+  {
+    "WWEIA Category description": "Bananas",
+    "Main food description": "Banana, baked"
+  },
+  {
+    "WWEIA Category description": "Bean, pea, legume dishes",
+    "Main food description": "Pot pie, no meat"
+  },
+  {
+    "WWEIA Category description": "Bean, pea, legume dishes",
+    "Main food description": "Kidney beans and brown rice"
+  },
+  {
+    "WWEIA Category description": "Bean, pea, legume dishes",
+    "Main food description": "Kidney beans and brown rice"
+  },
+  {
+    "WWEIA Category description": "Bean, pea, legume dishes",
+    "Main food description": "Swiss steak, with gravy, meatless"
+  },
+  {
+    "WWEIA Category description": "Bean, pea, legume dishes",
+    "Main food description": "Pinto beans and white rice"
+  },
+  {
+    "WWEIA Category description": "Beans, peas, legumes",
+    "Main food description": "White beans, from dried, no added fat"
+  },
+  {
+    "WWEIA Category description": "Beans, peas, legumes",
+    "Main food description": "Black beans, from fast food / restaurant"
+  },
+  {
+    "WWEIA Category description": "Beans, peas, legumes",
+    "Main food description": "Split peas, from dried, no added fat"
+  },
+  {
+    "WWEIA Category description": "Beans, peas, legumes",
+    "Main food description": "Beans and tomatoes, fat added"
+  },
+  {
+    "WWEIA Category description": "Beans, peas, legumes",
+    "Main food description": "Chickpeas, from canned, no added fat"
+  },
+  {
+    "WWEIA Category description": "Beef, excludes ground",
+    "Main food description": "Beef, NFS"
+  },
+  {
+    "WWEIA Category description": "Beef, excludes ground",
+    "Main food description": "Beef, steak, sirloin, NS as to fat eaten"
+  },
+  {
+    "WWEIA Category description": "Beef, excludes ground",
+    "Main food description": "Beef, steak, strip, lean and fat eaten"
+  },
+  {
+    "WWEIA Category description": "Beef, excludes ground",
+    "Main food description": "Beef, steak, T-bone,  lean and fat eaten"
+  },
+  {
+    "WWEIA Category description": "Beef, excludes ground",
+    "Main food description": "Barbecue beef, no sauce"
+  },
+  {
+    "WWEIA Category description": "Beer",
+    "Main food description": "Michelada"
+  },
+  {
+    "WWEIA Category description": "Beer",
+    "Main food description": "Alcoholic malt beverage, sweetened"
+  },
+  {
+    "WWEIA Category description": "Beer",
+    "Main food description": "Hard cider"
+  },
+  {
+    "WWEIA Category description": "Beer",
+    "Main food description": "Alcoholic malt beverage"
+  },
+  {
+    "WWEIA Category description": "Beer",
+    "Main food description": "Beer, light"
+  },
+  {
+    "WWEIA Category description": "Biscuits, muffins, quick breads",
+    "Main food description": "Cornbread, made from home recipe"
+  },
+  {
+    "WWEIA Category description": "Biscuits, muffins, quick breads",
+    "Main food description": "Muffin, carrot"
+  },
+  {
+    "WWEIA Category description": "Biscuits, muffins, quick breads",
+    "Main food description": "Muffin, oatmeal"
+  },
+  {
+    "WWEIA Category description": "Biscuits, muffins, quick breads",
+    "Main food description": "Arepa Dominicana"
+  },
+  {
+    "WWEIA Category description": "Biscuits, muffins, quick breads",
+    "Main food description": "Corn pone, baked"
+  },
+  {
+    "WWEIA Category description": "Blueberries and other berries",
+    "Main food description": "Raspberries, frozen"
+  },
+  {
+    "WWEIA Category description": "Blueberries and other berries",
+    "Main food description": "Blueberries, frozen"
+  },
+  {
+    "WWEIA Category description": "Blueberries and other berries",
+    "Main food description": "Cranberry sauce"
+  },
+  {
+    "WWEIA Category description": "Blueberries and other berries",
+    "Main food description": "Blueberries, frozen"
+  },
+  {
+    "WWEIA Category description": "Blueberries and other berries",
+    "Main food description": "Blackberries, frozen"
+  },
+  {
+    "WWEIA Category description": "Bottled water",
+    "Main food description": "Water, bottled, plain"
+  },
+  {
+    "WWEIA Category description": "Bottled water",
+    "Main food description": "Water, bottled, plain"
+  },
+  {
+    "WWEIA Category description": "Bottled water",
+    "Main food description": "Water, bottled, plain"
+  },
+  {
+    "WWEIA Category description": "Bottled water",
+    "Main food description": "Water, bottled, plain"
+  },
+  {
+    "WWEIA Category description": "Bottled water",
+    "Main food description": "Water, bottled, plain"
+  },
+  {
+    "WWEIA Category description": "Broccoli",
+    "Main food description": "Broccoli, frozen, cooked with oil"
+  },
+  {
+    "WWEIA Category description": "Broccoli",
+    "Main food description": "Broccoli, frozen, cooked with butter or margarine"
+  },
+  {
+    "WWEIA Category description": "Broccoli",
+    "Main food description": "Broccoli raab, raw"
+  },
+  {
+    "WWEIA Category description": "Broccoli",
+    "Main food description": "Broccoli, frozen, cooked with butter or margarine"
+  },
+  {
+    "WWEIA Category description": "Broccoli",
+    "Main food description": "Broccoli, raw"
+  },
+  {
+    "WWEIA Category description": "Burgers",
+    "Main food description": "Hamburger (Burger King)"
+  },
+  {
+    "WWEIA Category description": "Burgers",
+    "Main food description": "Cheeseburger, on wheat bun, 1 small patty"
+  },
+  {
+    "WWEIA Category description": "Burgers",
+    "Main food description": "Double hamburger, from fast food, 2 large patties"
+  },
+  {
+    "WWEIA Category description": "Burgers",
+    "Main food description": "Hamburger slider, from fast food"
+  },
+  {
+    "WWEIA Category description": "Burgers",
+    "Main food description": "Hamburger, on wheat bun, 1 medium patty"
+  },
+  {
+    "WWEIA Category description": "Burritos and tacos",
+    "Main food description": "Taco or tostada salad with meat and sour cream"
+  },
+  {
+    "WWEIA Category description": "Burritos and tacos",
+    "Main food description": "Taco or tostada salad with meat"
+  },
+  {
+    "WWEIA Category description": "Burritos and tacos",
+    "Main food description": "Burrito, beef, with rice, cheese"
+  },
+  {
+    "WWEIA Category description": "Burritos and tacos",
+    "Main food description": "Burrito, with beans, cheese"
+  },
+  {
+    "WWEIA Category description": "Burritos and tacos",
+    "Main food description": "Burrito, chicken, with beans, cheese"
+  },
+  {
+    "WWEIA Category description": "Butter and animal fats",
+    "Main food description": "Fat back, cooked"
+  },
+  {
+    "WWEIA Category description": "Butter and animal fats",
+    "Main food description": "Fat back, cooked"
+  },
+  {
+    "WWEIA Category description": "Butter and animal fats",
+    "Main food description": "Butter, tub"
+  },
+  {
+    "WWEIA Category description": "Butter and animal fats",
+    "Main food description": "Butter, NFS"
+  },
+  {
+    "WWEIA Category description": "Butter and animal fats",
+    "Main food description": "Butter, stick"
+  },
+  {
+    "WWEIA Category description": "Cabbage",
+    "Main food description": "Cabbage, savoy, cooked"
+  },
+  {
+    "WWEIA Category description": "Cabbage",
+    "Main food description": "Cabbage, green, cooked, no added fat"
+  },
+  {
+    "WWEIA Category description": "Cabbage",
+    "Main food description": "Cabbage, Chinese, cooked, no added fat"
+  },
+  {
+    "WWEIA Category description": "Cabbage",
+    "Main food description": "Cabbage, green, cooked with butter or margarine"
+  },
+  {
+    "WWEIA Category description": "Cabbage",
+    "Main food description": "Cabbage, red, raw"
+  },
+  {
+    "WWEIA Category description": "Cakes and pies",
+    "Main food description": "Pie, peach"
+  },
+  {
+    "WWEIA Category description": "Cakes and pies",
+    "Main food description": "Cake or cupcake, chocolate, no icing"
+  },
+  {
+    "WWEIA Category description": "Cakes and pies",
+    "Main food description": "Cake or cupcake, gingerbread"
+  },
+  {
+    "WWEIA Category description": "Cakes and pies",
+    "Main food description": "Pie, blueberry"
+  },
+  {
+    "WWEIA Category description": "Cakes and pies",
+    "Main food description": "Pie, peanut butter cream"
+  },
+  {
+    "WWEIA Category description": "Candy containing chocolate",
+    "Main food description": "Dark chocolate candy with nuts, other, NFS"
+  },
+  {
+    "WWEIA Category description": "Candy containing chocolate",
+    "Main food description": "Chocolate candy"
+  },
+  {
+    "WWEIA Category description": "Candy containing chocolate",
+    "Main food description": "Dark chocolate candy"
+  },
+  {
+    "WWEIA Category description": "Candy containing chocolate",
+    "Main food description": "Chocolate candy, cream filled"
+  },
+  {
+    "WWEIA Category description": "Candy containing chocolate",
+    "Main food description": "Dark chocolate candy with nuts, other, NFS"
+  },
+  {
+    "WWEIA Category description": "Candy not containing chocolate",
+    "Main food description": "White chocolate candy"
+  },
+  {
+    "WWEIA Category description": "Candy not containing chocolate",
+    "Main food description": "Candy, marshmallow"
+  },
+  {
+    "WWEIA Category description": "Candy not containing chocolate",
+    "Main food description": "Candy, licorice"
+  },
+  {
+    "WWEIA Category description": "Candy not containing chocolate",
+    "Main food description": "Candy, hard"
+  },
+  {
+    "WWEIA Category description": "Candy not containing chocolate",
+    "Main food description": "Candy, nougat with nuts"
+  },
+  {
+    "WWEIA Category description": "Carrots",
+    "Main food description": "Carrots, NS as to form, cooked"
+  },
+  {
+    "WWEIA Category description": "Carrots",
+    "Main food description": "Carrots, canned, cooked, no added fat"
+  },
+  {
+    "WWEIA Category description": "Carrots",
+    "Main food description": "Carrots, canned, cooked, fat added, NS as to fat type"
+  },
+  {
+    "WWEIA Category description": "Carrots",
+    "Main food description": "Carrots, canned, cooked with butter or margarine"
+  },
+  {
+    "WWEIA Category description": "Carrots",
+    "Main food description": "Carrots, raw"
+  },
+  {
+    "WWEIA Category description": "Cereal bars",
+    "Main food description": "Cereal or granola bar, high fiber, coated with non-chocolate yogurt coating"
+  },
+  {
+    "WWEIA Category description": "Cereal bars",
+    "Main food description": "Cereal or granola bar (General Mills Fiber One Chewy Bar)"
+  },
+  {
+    "WWEIA Category description": "Cereal bars",
+    "Main food description": "Cereal or granola bar, coated with non-chocolate coating"
+  },
+  {
+    "WWEIA Category description": "Cereal bars",
+    "Main food description": "Cereal or granola bar (General Mills Nature Valley Crunchy Granola Bar)"
+  },
+  {
+    "WWEIA Category description": "Cereal bars",
+    "Main food description": "Cereal or granola bar (Kellogg's Special K bar)"
+  },
+  {
+    "WWEIA Category description": "Cheese",
+    "Main food description": "Cheese, processed, with vegetables"
+  },
+  {
+    "WWEIA Category description": "Cheese",
+    "Main food description": "Cheese, Cheddar"
+  },
+  {
+    "WWEIA Category description": "Cheese",
+    "Main food description": "Cheese, Brick"
+  },
+  {
+    "WWEIA Category description": "Cheese",
+    "Main food description": "Cheese spread, American or Cheddar cheese base, reduced fat"
+  },
+  {
+    "WWEIA Category description": "Cheese",
+    "Main food description": "Cheese, Cheddar, nonfat or fat free"
+  },
+  {
+    "WWEIA Category description": "Cheese sandwiches",
+    "Main food description": "Cheese sandwich, cheddar cheese, on wheat bread"
+  },
+  {
+    "WWEIA Category description": "Cheese sandwiches",
+    "Main food description": "Grilled cheese sandwich, reduced fat cheese, on white bread"
+  },
+  {
+    "WWEIA Category description": "Cheese sandwiches",
+    "Main food description": "Cheese sandwich, cheddar cheese, on wheat bread"
+  },
+  {
+    "WWEIA Category description": "Cheese sandwiches",
+    "Main food description": "Grilled cheese sandwich, cheddar cheese, on white bread"
+  },
+  {
+    "WWEIA Category description": "Cheese sandwiches",
+    "Main food description": "Cheese sandwich, NFS"
+  },
+  {
+    "WWEIA Category description": "Chicken fillet sandwiches",
+    "Main food description": "Chicken fillet sandwich, grilled, on white bun"
+  },
+  {
+    "WWEIA Category description": "Chicken fillet sandwiches",
+    "Main food description": "Chicken fillet sandwich, fried, from fast food"
+  },
+  {
+    "WWEIA Category description": "Chicken fillet sandwiches",
+    "Main food description": "Chicken fillet sandwich, grilled, on white bun"
+  },
+  {
+    "WWEIA Category description": "Chicken fillet sandwiches",
+    "Main food description": "Chicken fillet sandwich, grilled, on white bun, with cheese"
+  },
+  {
+    "WWEIA Category description": "Chicken fillet sandwiches",
+    "Main food description": "Chicken salad sandwich on white"
+  },
+  {
+    "WWEIA Category description": "Chicken patties, nuggets and tenders",
+    "Main food description": "Chicken patty, breaded"
+  },
+  {
+    "WWEIA Category description": "Chicken patties, nuggets and tenders",
+    "Main food description": "Chicken fillet, breaded"
+  },
+  {
+    "WWEIA Category description": "Chicken patties, nuggets and tenders",
+    "Main food description": "Chicken tenders or strips, breaded, from fast food"
+  },
+  {
+    "WWEIA Category description": "Chicken patties, nuggets and tenders",
+    "Main food description": "Chicken nuggets, from fast food"
+  },
+  {
+    "WWEIA Category description": "Chicken patties, nuggets and tenders",
+    "Main food description": "Chicken tenders or strips, breaded, from school lunch"
+  },
+  {
+    "WWEIA Category description": "Chicken, whole pieces",
+    "Main food description": "Chicken breast, fried, coated, skin / coating not eaten, from raw"
+  },
+  {
+    "WWEIA Category description": "Chicken, whole pieces",
+    "Main food description": "Chicken drumstick, grilled without sauce, skin eaten"
+  },
+  {
+    "WWEIA Category description": "Chicken, whole pieces",
+    "Main food description": "Chicken thigh, baked, coated, skin / coating not eaten"
+  },
+  {
+    "WWEIA Category description": "Chicken, whole pieces",
+    "Main food description": "Chicken breast, fried, coated, skin / coating eaten, from fast food / restaurant"
+  },
+  {
+    "WWEIA Category description": "Chicken, whole pieces",
+    "Main food description": "Chicken, NS as to part, baked, broiled, or roasted, skin not eaten"
+  },
+  {
+    "WWEIA Category description": "Citrus fruits",
+    "Main food description": "Orange, canned, in syrup"
+  },
+  {
+    "WWEIA Category description": "Citrus fruits",
+    "Main food description": "Orange, raw"
+  },
+  {
+    "WWEIA Category description": "Citrus fruits",
+    "Main food description": "Orange, raw"
+  },
+  {
+    "WWEIA Category description": "Citrus fruits",
+    "Main food description": "Orange, canned, in syrup"
+  },
+  {
+    "WWEIA Category description": "Citrus fruits",
+    "Main food description": "Orange, canned, juice pack"
+  },
+  {
+    "WWEIA Category description": "Citrus juice",
+    "Main food description": "Orange juice, 100%, frozen, reconstituted"
+  },
+  {
+    "WWEIA Category description": "Citrus juice",
+    "Main food description": "Orange juice, 100%, with calcium added, frozen, reconstituted"
+  },
+  {
+    "WWEIA Category description": "Citrus juice",
+    "Main food description": "Grapefruit juice, 100%, freshly squeezed"
+  },
+  {
+    "WWEIA Category description": "Citrus juice",
+    "Main food description": "Orange juice, 100%, with calcium added, frozen, reconstituted"
+  },
+  {
+    "WWEIA Category description": "Citrus juice",
+    "Main food description": "Grapefruit juice, 100%, NS as to form"
+  },
+  {
+    "WWEIA Category description": "Coffee",
+    "Main food description": "Frozen coffee drink, with non-dairy milk"
+  },
+  {
+    "WWEIA Category description": "Coffee",
+    "Main food description": "Coffee, Latte, decaffeinated, flavored"
+  },
+  {
+    "WWEIA Category description": "Coffee",
+    "Main food description": "Frozen mocha coffee drink"
+  },
+  {
+    "WWEIA Category description": "Coffee",
+    "Main food description": "Coffee, Iced Cafe Mocha"
+  },
+  {
+    "WWEIA Category description": "Coffee",
+    "Main food description": "Frozen mocha coffee drink, with non-dairy milk and whipped cream"
+  },
+  {
+    "WWEIA Category description": "Cold cuts and cured meats",
+    "Main food description": "Pepperoni, reduced fat"
+  },
+  {
+    "WWEIA Category description": "Cold cuts and cured meats",
+    "Main food description": "Beef jerky"
+  },
+  {
+    "WWEIA Category description": "Cold cuts and cured meats",
+    "Main food description": "Ham"
+  },
+  {
+    "WWEIA Category description": "Cold cuts and cured meats",
+    "Main food description": "Liverwurst"
+  },
+  {
+    "WWEIA Category description": "Cold cuts and cured meats",
+    "Main food description": "Beef, prepackaged or deli, luncheon meat"
+  },
+  {
+    "WWEIA Category description": "Coleslaw, non-lettuce salads",
+    "Main food description": "Bean salad, yellow and/or green string beans"
+  },
+  {
+    "WWEIA Category description": "Coleslaw, non-lettuce salads",
+    "Main food description": "Pea salad with cheese"
+  },
+  {
+    "WWEIA Category description": "Coleslaw, non-lettuce salads",
+    "Main food description": "Carrots, raw, salad with apples"
+  },
+  {
+    "WWEIA Category description": "Coleslaw, non-lettuce salads",
+    "Main food description": "Coleslaw, fast food / restaurant"
+  },
+  {
+    "WWEIA Category description": "Coleslaw, non-lettuce salads",
+    "Main food description": "Cucumber salad made with cucumber and vinegar"
+  },
+  {
+    "WWEIA Category description": "Cookies and brownies",
+    "Main food description": "Cookie, chocolate chip, reduced fat"
+  },
+  {
+    "WWEIA Category description": "Cookies and brownies",
+    "Main food description": "Cookie, chocolate chip, reduced sugar"
+  },
+  {
+    "WWEIA Category description": "Cookies and brownies",
+    "Main food description": "Cookie, butter or sugar, with icing or filling other than chocolate"
+  },
+  {
+    "WWEIA Category description": "Cookies and brownies",
+    "Main food description": "Cookie, with peanut butter filling, chocolate-coated"
+  },
+  {
+    "WWEIA Category description": "Cookies and brownies",
+    "Main food description": "Cookie, vanilla wafer"
+  },
+  {
+    "WWEIA Category description": "Corn",
+    "Main food description": "Corn, fresh, cooked, fat added, NS as to fat type"
+  },
+  {
+    "WWEIA Category description": "Corn",
+    "Main food description": "Corn, raw"
+  },
+  {
+    "WWEIA Category description": "Corn",
+    "Main food description": "Corn, NS as to form, cooked"
+  },
+  {
+    "WWEIA Category description": "Corn",
+    "Main food description": "Corn, frozen, cooked, fat added, NS as to fat type"
+  },
+  {
+    "WWEIA Category description": "Corn",
+    "Main food description": "Corn, canned, cooked, no added fat"
+  },
+  {
+    "WWEIA Category description": "Cottage/ricotta cheese",
+    "Main food description": "Cheese, cottage cheese, with gelatin dessert"
+  },
+  {
+    "WWEIA Category description": "Cottage/ricotta cheese",
+    "Main food description": "Cheese, cottage cheese, with gelatin dessert and vegetables"
+  },
+  {
+    "WWEIA Category description": "Cottage/ricotta cheese",
+    "Main food description": "Cottage cheese, farmer's"
+  },
+  {
+    "WWEIA Category description": "Cottage/ricotta cheese",
+    "Main food description": "Cheese, cottage, dry curd"
+  },
+  {
+    "WWEIA Category description": "Cottage/ricotta cheese",
+    "Main food description": "Cheese, cottage, lowfat, lactose reduced"
+  },
+  {
+    "WWEIA Category description": "Crackers, excludes saltines",
+    "Main food description": "Popcorn cake"
+  },
+  {
+    "WWEIA Category description": "Crackers, excludes saltines",
+    "Main food description": "Crackers, cheese, whole grain"
+  },
+  {
+    "WWEIA Category description": "Crackers, excludes saltines",
+    "Main food description": "Crackers, cheese"
+  },
+  {
+    "WWEIA Category description": "Crackers, excludes saltines",
+    "Main food description": "Crackers, woven wheat, flavored (Triscuit)"
+  },
+  {
+    "WWEIA Category description": "Crackers, excludes saltines",
+    "Main food description": "Crackers, butter, reduced sodium"
+  },
+  {
+    "WWEIA Category description": "Cream and cream substitutes",
+    "Main food description": "Coffee creamer, NFS"
+  },
+  {
+    "WWEIA Category description": "Cream and cream substitutes",
+    "Main food description": "Cream, NS as to light, heavy, or half and half"
+  },
+  {
+    "WWEIA Category description": "Cream and cream substitutes",
+    "Main food description": "Cream, half and half, fat free"
+  },
+  {
+    "WWEIA Category description": "Cream and cream substitutes",
+    "Main food description": "Coffee creamer, NFS"
+  },
+  {
+    "WWEIA Category description": "Cream and cream substitutes",
+    "Main food description": "Cream, half and half, flavored"
+  },
+  {
+    "WWEIA Category description": "Cream cheese, sour cream, whipped cream",
+    "Main food description": "Cream cheese, fat free"
+  },
+  {
+    "WWEIA Category description": "Cream cheese, sour cream, whipped cream",
+    "Main food description": "Cheese spread, cream cheese"
+  },
+  {
+    "WWEIA Category description": "Cream cheese, sour cream, whipped cream",
+    "Main food description": "Whipped topping, fat free"
+  },
+  {
+    "WWEIA Category description": "Cream cheese, sour cream, whipped cream",
+    "Main food description": "Sour cream, light"
+  },
+  {
+    "WWEIA Category description": "Cream cheese, sour cream, whipped cream",
+    "Main food description": "Cream cheese, light"
+  },
+  {
+    "WWEIA Category description": "Deli and cured meat sandwiches",
+    "Main food description": "Italian sandwich on white"
+  },
+  {
+    "WWEIA Category description": "Deli and cured meat sandwiches",
+    "Main food description": "Sandwich wrap, NFS"
+  },
+  {
+    "WWEIA Category description": "Deli and cured meat sandwiches",
+    "Main food description": "Ham sandwich or sub, with cheese, restaurant"
+  },
+  {
+    "WWEIA Category description": "Deli and cured meat sandwiches",
+    "Main food description": "Multiple meat sandwich on white"
+  },
+  {
+    "WWEIA Category description": "Deli and cured meat sandwiches",
+    "Main food description": "Turkey sandwich or sub, with cheese, restaurant"
+  },
+  {
+    "WWEIA Category description": "Diet soft drinks",
+    "Main food description": "Soft drink, fruit flavored, diet, caffeine free"
+  },
+  {
+    "WWEIA Category description": "Diet soft drinks",
+    "Main food description": "Soft drink, cola, diet"
+  },
+  {
+    "WWEIA Category description": "Diet soft drinks",
+    "Main food description": "Soft drink, chocolate flavored, diet"
+  },
+  {
+    "WWEIA Category description": "Diet soft drinks",
+    "Main food description": "Soft drink, fruit flavored, diet, caffeine free"
+  },
+  {
+    "WWEIA Category description": "Diet soft drinks",
+    "Main food description": "Soft drink, fruit flavored, diet, caffeine free"
+  },
+  {
+    "WWEIA Category description": "Diet sport and energy drinks",
+    "Main food description": "Sports drink, low calorie (Powerade Zero)"
+  },
+  {
+    "WWEIA Category description": "Diet sport and energy drinks",
+    "Main food description": "Sports drink, low calorie"
+  },
+  {
+    "WWEIA Category description": "Diet sport and energy drinks",
+    "Main food description": "Energy drink, low calorie (Monster)"
+  },
+  {
+    "WWEIA Category description": "Diet sport and energy drinks",
+    "Main food description": "Sports drink, low calorie (Gatorade G2)"
+  },
+  {
+    "WWEIA Category description": "Diet sport and energy drinks",
+    "Main food description": "Energy drink, sugar free (Monster)"
+  },
+  {
+    "WWEIA Category description": "Dips, gravies, other sauces",
+    "Main food description": "Alfredo sauce with poultry"
+  },
+  {
+    "WWEIA Category description": "Dips, gravies, other sauces",
+    "Main food description": "Alfredo sauce with poultry and added vegetables"
+  },
+  {
+    "WWEIA Category description": "Dips, gravies, other sauces",
+    "Main food description": "Gravy, poultry, fat free"
+  },
+  {
+    "WWEIA Category description": "Dips, gravies, other sauces",
+    "Main food description": "Hummus, flavored"
+  },
+  {
+    "WWEIA Category description": "Dips, gravies, other sauces",
+    "Main food description": "Onion dip, regular"
+  },
+  {
+    "WWEIA Category description": "Doughnuts, sweet rolls, pastries",
+    "Main food description": "Pan Dulce, with fruit, no frosting"
+  },
+  {
+    "WWEIA Category description": "Doughnuts, sweet rolls, pastries",
+    "Main food description": "Sopaipilla with syrup or honey"
+  },
+  {
+    "WWEIA Category description": "Doughnuts, sweet rolls, pastries",
+    "Main food description": "Croissant, cheese"
+  },
+  {
+    "WWEIA Category description": "Doughnuts, sweet rolls, pastries",
+    "Main food description": "Pastry, made with bean paste and salted egg yolk filling, baked"
+  },
+  {
+    "WWEIA Category description": "Doughnuts, sweet rolls, pastries",
+    "Main food description": "Doughnut, cake type, powdered sugar"
+  },
+  {
+    "WWEIA Category description": "Dried fruits",
+    "Main food description": "Mango, dried"
+  },
+  {
+    "WWEIA Category description": "Dried fruits",
+    "Main food description": "Apricot, dried"
+  },
+  {
+    "WWEIA Category description": "Dried fruits",
+    "Main food description": "Papaya, dried"
+  },
+  {
+    "WWEIA Category description": "Dried fruits",
+    "Main food description": "Cherries, dried"
+  },
+  {
+    "WWEIA Category description": "Dried fruits",
+    "Main food description": "Currants, dried"
+  },
+  {
+    "WWEIA Category description": "Egg rolls, dumplings, sushi",
+    "Main food description": "Egg roll, with shrimp"
+  },
+  {
+    "WWEIA Category description": "Egg rolls, dumplings, sushi",
+    "Main food description": "Sushi, NFS"
+  },
+  {
+    "WWEIA Category description": "Egg rolls, dumplings, sushi",
+    "Main food description": "Egg roll, with beef and/or pork"
+  },
+  {
+    "WWEIA Category description": "Egg rolls, dumplings, sushi",
+    "Main food description": "Egg roll, meatless"
+  },
+  {
+    "WWEIA Category description": "Egg rolls, dumplings, sushi",
+    "Main food description": "Sushi roll, eel"
+  },
+  {
+    "WWEIA Category description": "Egg/breakfast sandwiches",
+    "Main food description": "Egg sandwich on white bread, with cheese"
+  },
+  {
+    "WWEIA Category description": "Egg/breakfast sandwiches",
+    "Main food description": "Egg sandwich on wheat bread, with meat"
+  },
+  {
+    "WWEIA Category description": "Egg/breakfast sandwiches",
+    "Main food description": "Quesadilla, egg"
+  },
+  {
+    "WWEIA Category description": "Egg/breakfast sandwiches",
+    "Main food description": "Egg white sandwich"
+  },
+  {
+    "WWEIA Category description": "Egg/breakfast sandwiches",
+    "Main food description": "Egg burrito, with bacon"
+  },
+  {
+    "WWEIA Category description": "Eggs and omelets",
+    "Main food description": "Egg omelet or scrambled egg, with cheese and meat, made with oil"
+  },
+  {
+    "WWEIA Category description": "Eggs and omelets",
+    "Main food description": "Egg, whole, fried with cooking spray"
+  },
+  {
+    "WWEIA Category description": "Eggs and omelets",
+    "Main food description": "Egg, whole, baked, NS as to fat"
+  },
+  {
+    "WWEIA Category description": "Eggs and omelets",
+    "Main food description": "Egg omelet or scrambled egg, with cheese and meat, made with margarine"
+  },
+  {
+    "WWEIA Category description": "Eggs and omelets",
+    "Main food description": "Egg salad, made with Italian dressing"
+  },
+  {
+    "WWEIA Category description": "Enhanced water",
+    "Main food description": "Water, enhanced, regular"
+  },
+  {
+    "WWEIA Category description": "Enhanced water",
+    "Main food description": "Water, enhanced, diet"
+  },
+  {
+    "WWEIA Category description": "Enhanced water",
+    "Main food description": "Water, enhanced, regular"
+  },
+  {
+    "WWEIA Category description": "Enhanced water",
+    "Main food description": "Water, enhanced, diet"
+  },
+  {
+    "WWEIA Category description": "Enhanced water",
+    "Main food description": "Water, enhanced, regular"
+  },
+  {
+    "WWEIA Category description": "Fish",
+    "Main food description": "Fish, flounder, NFS"
+  },
+  {
+    "WWEIA Category description": "Fish",
+    "Main food description": "Fish, swordfish"
+  },
+  {
+    "WWEIA Category description": "Fish",
+    "Main food description": "Fish, snapper"
+  },
+  {
+    "WWEIA Category description": "Fish",
+    "Main food description": "Fish, flounder, NFS"
+  },
+  {
+    "WWEIA Category description": "Fish",
+    "Main food description": "Fish, perch, grilled"
+  },
+  {
+    "WWEIA Category description": "Flavored milk, lowfat",
+    "Main food description": "Chocolate milk, reduced sugar, NFS"
+  },
+  {
+    "WWEIA Category description": "Flavored milk, lowfat",
+    "Main food description": "Chocolate milk, reduced sugar, low fat (1%)"
+  },
+  {
+    "WWEIA Category description": "Flavored milk, lowfat",
+    "Main food description": "Chocolate milk, NFS"
+  },
+  {
+    "WWEIA Category description": "Flavored milk, lowfat",
+    "Main food description": "Strawberry milk, reduced sugar"
+  },
+  {
+    "WWEIA Category description": "Flavored milk, lowfat",
+    "Main food description": "Chocolate milk, reduced sugar, NFS"
+  },
+  {
+    "WWEIA Category description": "Flavored milk, nonfat",
+    "Main food description": "Hot chocolate / cocoa, dry mix, made with lowfat (1%) or fat free (skim) milk"
+  },
+  {
+    "WWEIA Category description": "Flavored milk, nonfat",
+    "Main food description": "Hot chocolate / cocoa, dry mix, reduced sugar, made with water"
+  },
+  {
+    "WWEIA Category description": "Flavored milk, nonfat",
+    "Main food description": "Hot chocolate / cocoa, reduced sugar, made with lowfat (1%) or fat free (skim) milk"
+  },
+  {
+    "WWEIA Category description": "Flavored milk, nonfat",
+    "Main food description": "Hot chocolate / cocoa, reduced sugar, made with lowfat (1%) or fat free (skim) milk"
+  },
+  {
+    "WWEIA Category description": "Flavored milk, nonfat",
+    "Main food description": "Chocolate milk, reduced sugar, fat free (skim)"
+  },
+  {
+    "WWEIA Category description": "Flavored milk, reduced fat",
+    "Main food description": "Strawberry milk, reduced fat (2%)"
+  },
+  {
+    "WWEIA Category description": "Flavored milk, reduced fat",
+    "Main food description": "Hot chocolate / cocoa, dry mix, reduced sugar, made with whole or reduced fat (2%) milk"
+  },
+  {
+    "WWEIA Category description": "Flavored milk, reduced fat",
+    "Main food description": "Hot chocolate / cocoa, dry mix, reduced sugar, made with whole or reduced fat (2%) milk"
+  },
+  {
+    "WWEIA Category description": "Flavored milk, reduced fat",
+    "Main food description": "Strawberry milk, reduced fat (2%)"
+  },
+  {
+    "WWEIA Category description": "Flavored milk, reduced fat",
+    "Main food description": "Strawberry milk, NFS"
+  },
+  {
+    "WWEIA Category description": "Flavored milk, whole",
+    "Main food description": "Chocolate milk, reduced sugar, whole"
+  },
+  {
+    "WWEIA Category description": "Flavored milk, whole",
+    "Main food description": "Strawberry milk, whole"
+  },
+  {
+    "WWEIA Category description": "Flavored milk, whole",
+    "Main food description": "Milk, condensed, sweetened"
+  },
+  {
+    "WWEIA Category description": "Flavored milk, whole",
+    "Main food description": "Strawberry milk, whole"
+  },
+  {
+    "WWEIA Category description": "Flavored milk, whole",
+    "Main food description": "Chocolate milk, whole"
+  },
+  {
+    "WWEIA Category description": "Flavored or carbonated water",
+    "Main food description": "Water, non-carbonated, flavored"
+  },
+  {
+    "WWEIA Category description": "Flavored or carbonated water",
+    "Main food description": "Water, carbonated, flavored"
+  },
+  {
+    "WWEIA Category description": "Flavored or carbonated water",
+    "Main food description": "Water, tonic"
+  },
+  {
+    "WWEIA Category description": "Flavored or carbonated water",
+    "Main food description": "Water, carbonated, flavored"
+  },
+  {
+    "WWEIA Category description": "Flavored or carbonated water",
+    "Main food description": "Water, non-carbonated, flavored"
+  },
+  {
+    "WWEIA Category description": "Formula, prepared from powder",
+    "Main food description": "Infant formula, Gerber Good Start Soy, Stage 1, powder, made with tap water"
+  },
+  {
+    "WWEIA Category description": "Formula, prepared from powder",
+    "Main food description": "Infant formula, Similac Isomil Soy, powder, made with tap water"
+  },
+  {
+    "WWEIA Category description": "Formula, prepared from powder",
+    "Main food description": "Infant formula, store brand, soy"
+  },
+  {
+    "WWEIA Category description": "Formula, prepared from powder",
+    "Main food description": "Infant formula, Enfamil Infant, powder, made with tap water"
+  },
+  {
+    "WWEIA Category description": "Formula, prepared from powder",
+    "Main food description": "Infant formula, Gerber, NFS"
+  },
+  {
+    "WWEIA Category description": "Formula, ready-to-feed",
+    "Main food description": "Infant formula, Similac Alimentum, ready-to-feed"
+  },
+  {
+    "WWEIA Category description": "Formula, ready-to-feed",
+    "Main food description": "Infant formula, Similac Advance, ready-to-feed"
+  },
+  {
+    "WWEIA Category description": "Formula, ready-to-feed",
+    "Main food description": "Toddler formula, PediaSure"
+  },
+  {
+    "WWEIA Category description": "Formula, ready-to-feed",
+    "Main food description": "Infant formula, Enfamil AR, ready-to-feed"
+  },
+  {
+    "WWEIA Category description": "Formula, ready-to-feed",
+    "Main food description": "Infant formula, Similac for Spit-Up, ready-to-feed"
+  },
+  {
+    "WWEIA Category description": "Frankfurter sandwiches",
+    "Main food description": "Chili hot dog sandwich, on wheat bread"
+  },
+  {
+    "WWEIA Category description": "Frankfurter sandwiches",
+    "Main food description": "Chili hot dog sandwich, on wheat bun"
+  },
+  {
+    "WWEIA Category description": "Frankfurter sandwiches",
+    "Main food description": "Corn dog"
+  },
+  {
+    "WWEIA Category description": "Frankfurter sandwiches",
+    "Main food description": "Hot dog sandwich, reduced fat, on wheat bun"
+  },
+  {
+    "WWEIA Category description": "Frankfurter sandwiches",
+    "Main food description": "Pig in a blanket"
+  },
+  {
+    "WWEIA Category description": "Frankfurters",
+    "Main food description": "Hot dog, turkey"
+  },
+  {
+    "WWEIA Category description": "Frankfurters",
+    "Main food description": "Hot dog, meat and poultry"
+  },
+  {
+    "WWEIA Category description": "Frankfurters",
+    "Main food description": "Hot dog, reduced fat"
+  },
+  {
+    "WWEIA Category description": "Frankfurters",
+    "Main food description": "Hot dog, meat and poultry"
+  },
+  {
+    "WWEIA Category description": "Frankfurters",
+    "Main food description": "Hot dog, beef"
+  },
+  {
+    "WWEIA Category description": "French fries and other fried white potatoes",
+    "Main food description": "Potato, french fries, NS as to fresh or frozen"
+  },
+  {
+    "WWEIA Category description": "French fries and other fried white potatoes",
+    "Main food description": "Potato tots, fast food / restaurant"
+  },
+  {
+    "WWEIA Category description": "French fries and other fried white potatoes",
+    "Main food description": "Potato, french fries, fast food"
+  },
+  {
+    "WWEIA Category description": "French fries and other fried white potatoes",
+    "Main food description": "Potato patty"
+  },
+  {
+    "WWEIA Category description": "French fries and other fried white potatoes",
+    "Main food description": "Potato, french fries, with chili and cheese, fast food / restaurant"
+  },
+  {
+    "WWEIA Category description": "Fried rice and lo/chow mein",
+    "Main food description": "Rice, white, with vegetables, soy-based sauce, no added fat"
+  },
+  {
+    "WWEIA Category description": "Fried rice and lo/chow mein",
+    "Main food description": "Beef chow mein or chop suey with noodles"
+  },
+  {
+    "WWEIA Category description": "Fried rice and lo/chow mein",
+    "Main food description": "Lo mein, NFS"
+  },
+  {
+    "WWEIA Category description": "Fried rice and lo/chow mein",
+    "Main food description": "Chow fun noodles with meat and vegetables"
+  },
+  {
+    "WWEIA Category description": "Fried rice and lo/chow mein",
+    "Main food description": "Beef chow mein or chop suey, no noodles"
+  },
+  {
+    "WWEIA Category description": "Fried vegetables",
+    "Main food description": "Fried summer squash, yellow or green"
+  },
+  {
+    "WWEIA Category description": "Fried vegetables",
+    "Main food description": "Pakora"
+  },
+  {
+    "WWEIA Category description": "Fried vegetables",
+    "Main food description": "Yuca fries"
+  },
+  {
+    "WWEIA Category description": "Fried vegetables",
+    "Main food description": "Fried okra"
+  },
+  {
+    "WWEIA Category description": "Fried vegetables",
+    "Main food description": "Sweet potato fries, NFS"
+  },
+  {
+    "WWEIA Category description": "Fruit drinks",
+    "Main food description": "Fruit juice drink"
+  },
+  {
+    "WWEIA Category description": "Fruit drinks",
+    "Main food description": "Vegetable and fruit juice drink, with high vitamin C, light"
+  },
+  {
+    "WWEIA Category description": "Fruit drinks",
+    "Main food description": "Cranberry juice drink, with high vitamin C, light"
+  },
+  {
+    "WWEIA Category description": "Fruit drinks",
+    "Main food description": "Coconut water, sweetened"
+  },
+  {
+    "WWEIA Category description": "Fruit drinks",
+    "Main food description": "Cranberry juice drink, with high vitamin C"
+  },
+  {
+    "WWEIA Category description": "Gelatins, ices, sorbets",
+    "Main food description": "Frozen fruit juice bar"
+  },
+  {
+    "WWEIA Category description": "Gelatins, ices, sorbets",
+    "Main food description": "Frozen fruit juice bar, no sugar added"
+  },
+  {
+    "WWEIA Category description": "Gelatins, ices, sorbets",
+    "Main food description": "Italian Ice, no sugar added"
+  },
+  {
+    "WWEIA Category description": "Gelatins, ices, sorbets",
+    "Main food description": "Popsicle"
+  },
+  {
+    "WWEIA Category description": "Gelatins, ices, sorbets",
+    "Main food description": "Gelatin dessert"
+  },
+  {
+    "WWEIA Category description": "Grapes",
+    "Main food description": "Grapes, raw"
+  },
+  {
+    "WWEIA Category description": "Grapes",
+    "Main food description": "Grapes, raw"
+  },
+  {
+    "WWEIA Category description": "Grapes",
+    "Main food description": "Grapes, raw"
+  },
+  {
+    "WWEIA Category description": "Grits and other cooked cereals",
+    "Main food description": "Cream of rice"
+  },
+  {
+    "WWEIA Category description": "Grits and other cooked cereals",
+    "Main food description": "Grits, instant, made with water, NS as to fat"
+  },
+  {
+    "WWEIA Category description": "Grits and other cooked cereals",
+    "Main food description": "Upma"
+  },
+  {
+    "WWEIA Category description": "Grits and other cooked cereals",
+    "Main food description": "Grits, with cheese, NS as to fat"
+  },
+  {
+    "WWEIA Category description": "Grits and other cooked cereals",
+    "Main food description": "Hominy, cooked"
+  },
+  {
+    "WWEIA Category description": "Ground beef",
+    "Main food description": "Beef, ground"
+  },
+  {
+    "WWEIA Category description": "Ground beef",
+    "Main food description": "Beef, ground, patty"
+  },
+  {
+    "WWEIA Category description": "Ground beef",
+    "Main food description": "Meat, ground, NFS"
+  },
+  {
+    "WWEIA Category description": "Ground beef",
+    "Main food description": "Veal, ground"
+  },
+  {
+    "WWEIA Category description": "Ground beef",
+    "Main food description": "Beef, ground, patty"
+  },
+  {
+    "WWEIA Category description": "Human milk",
+    "Main food description": "Milk, human"
+  },
+  {
+    "WWEIA Category description": "Human milk",
+    "Main food description": "Milk, human"
+  },
+  {
+    "WWEIA Category description": "Human milk",
+    "Main food description": "Milk, human"
+  },
+  {
+    "WWEIA Category description": "Ice cream and frozen dairy desserts",
+    "Main food description": "Frozen yogurt, chocolate"
+  },
+  {
+    "WWEIA Category description": "Ice cream and frozen dairy desserts",
+    "Main food description": "Frozen yogurt, vanilla"
+  },
+  {
+    "WWEIA Category description": "Ice cream and frozen dairy desserts",
+    "Main food description": "Ice cream candy bar"
+  },
+  {
+    "WWEIA Category description": "Ice cream and frozen dairy desserts",
+    "Main food description": "Ice cream cone, chocolate, prepackaged"
+  },
+  {
+    "WWEIA Category description": "Ice cream and frozen dairy desserts",
+    "Main food description": "Ice cream, chocolate, with additional ingredients"
+  },
+  {
+    "WWEIA Category description": "Jams, syrups, toppings",
+    "Main food description": "Chocolate hazelnut spread"
+  },
+  {
+    "WWEIA Category description": "Jams, syrups, toppings",
+    "Main food description": "Jam"
+  },
+  {
+    "WWEIA Category description": "Jams, syrups, toppings",
+    "Main food description": "Blueberry pie filling"
+  },
+  {
+    "WWEIA Category description": "Jams, syrups, toppings",
+    "Main food description": "Topping, fruit"
+  },
+  {
+    "WWEIA Category description": "Jams, syrups, toppings",
+    "Main food description": "Chocolate syrup, light"
+  },
+  {
+    "WWEIA Category description": "Lamb, goat, game",
+    "Main food description": "Lamb, ground"
+  },
+  {
+    "WWEIA Category description": "Lamb, goat, game",
+    "Main food description": "Armadillo"
+  },
+  {
+    "WWEIA Category description": "Lamb, goat, game",
+    "Main food description": "Wild pig"
+  },
+  {
+    "WWEIA Category description": "Lamb, goat, game",
+    "Main food description": "Raccoon"
+  },
+  {
+    "WWEIA Category description": "Lamb, goat, game",
+    "Main food description": "Goat"
+  },
+  {
+    "WWEIA Category description": "Lettuce and lettuce salads",
+    "Main food description": "Mixed salad greens, raw"
+  },
+  {
+    "WWEIA Category description": "Lettuce and lettuce salads",
+    "Main food description": "Lettuce, salad with egg, tomato, and/or carrots, with or without other vegetables, no dressing"
+  },
+  {
+    "WWEIA Category description": "Lettuce and lettuce salads",
+    "Main food description": "Mixed salad greens, raw"
+  },
+  {
+    "WWEIA Category description": "Lettuce and lettuce salads",
+    "Main food description": "Lettuce, salad with egg, cheese, tomato, and/or carrots, with or without other vegetables, no dressing"
+  },
+  {
+    "WWEIA Category description": "Lettuce and lettuce salads",
+    "Main food description": "Lettuce, arugula, raw"
+  },
+  {
+    "WWEIA Category description": "Liquor and cocktails",
+    "Main food description": "Liqueur, cream"
+  },
+  {
+    "WWEIA Category description": "Liquor and cocktails",
+    "Main food description": "Gin fizz"
+  },
+  {
+    "WWEIA Category description": "Liquor and cocktails",
+    "Main food description": "Brandy and cola"
+  },
+  {
+    "WWEIA Category description": "Liquor and cocktails",
+    "Main food description": "Gin"
+  },
+  {
+    "WWEIA Category description": "Liquor and cocktails",
+    "Main food description": "Black Russian"
+  },
+  {
+    "WWEIA Category description": "Liver and organ meats",
+    "Main food description": "Hog maws"
+  },
+  {
+    "WWEIA Category description": "Liver and organ meats",
+    "Main food description": "Brains"
+  },
+  {
+    "WWEIA Category description": "Liver and organ meats",
+    "Main food description": "Tongue"
+  },
+  {
+    "WWEIA Category description": "Liver and organ meats",
+    "Main food description": "Hog maws"
+  },
+  {
+    "WWEIA Category description": "Liver and organ meats",
+    "Main food description": "Chitterlings"
+  },
+  {
+    "WWEIA Category description": "Macaroni and cheese",
+    "Main food description": "Macaroni or noodles with cheese and tuna"
+  },
+  {
+    "WWEIA Category description": "Macaroni and cheese",
+    "Main food description": "Macaroni or noodles with cheese, Easy Mac type"
+  },
+  {
+    "WWEIA Category description": "Macaroni and cheese",
+    "Main food description": "Macaroni or noodles with cheese, made from packaged mix"
+  },
+  {
+    "WWEIA Category description": "Macaroni and cheese",
+    "Main food description": "Macaroni or noodles with cheese and chicken or turkey"
+  },
+  {
+    "WWEIA Category description": "Macaroni and cheese",
+    "Main food description": "Macaroni or noodles, creamed, with cheese and tuna"
+  },
+  {
+    "WWEIA Category description": "Mango and papaya",
+    "Main food description": "Mango, raw"
+  },
+  {
+    "WWEIA Category description": "Mango and papaya",
+    "Main food description": "Mango, canned"
+  },
+  {
+    "WWEIA Category description": "Mango and papaya",
+    "Main food description": "Papaya, raw"
+  },
+  {
+    "WWEIA Category description": "Mango and papaya",
+    "Main food description": "Mango, raw"
+  },
+  {
+    "WWEIA Category description": "Mango and papaya",
+    "Main food description": "Mango, frozen"
+  },
+  {
+    "WWEIA Category description": "Margarine",
+    "Main food description": "Butter replacement, powder"
+  },
+  {
+    "WWEIA Category description": "Margarine",
+    "Main food description": "Butter replacement, liquid"
+  },
+  {
+    "WWEIA Category description": "Margarine",
+    "Main food description": "Butter replacement, liquid"
+  },
+  {
+    "WWEIA Category description": "Margarine",
+    "Main food description": "Shortening, NS as to vegetable or animal"
+  },
+  {
+    "WWEIA Category description": "Margarine",
+    "Main food description": "Margarine, light"
+  },
+  {
+    "WWEIA Category description": "Mashed potatoes and white potato mixtures",
+    "Main food description": "Potato salad, from restaurant"
+  },
+  {
+    "WWEIA Category description": "Mashed potatoes and white potato mixtures",
+    "Main food description": "Potato, mashed, from dry mix, made with milk, with cheese"
+  },
+  {
+    "WWEIA Category description": "Mashed potatoes and white potato mixtures",
+    "Main food description": "Potato salad, made with mayonnaise-type salad dressing"
+  },
+  {
+    "WWEIA Category description": "Mashed potatoes and white potato mixtures",
+    "Main food description": "Potato from Puerto Rican chicken fricassee, with sauce"
+  },
+  {
+    "WWEIA Category description": "Mashed potatoes and white potato mixtures",
+    "Main food description": "Potato, mashed, from fast food, with gravy"
+  },
+  {
+    "WWEIA Category description": "Mayonnaise",
+    "Main food description": "Mayonnaise-type salad dressing, light"
+  },
+  {
+    "WWEIA Category description": "Mayonnaise",
+    "Main food description": "Mayonnaise, fat free"
+  },
+  {
+    "WWEIA Category description": "Mayonnaise",
+    "Main food description": "Sandwich spread"
+  },
+  {
+    "WWEIA Category description": "Mayonnaise",
+    "Main food description": "Mayonnaise, light"
+  },
+  {
+    "WWEIA Category description": "Mayonnaise",
+    "Main food description": "Tartar sauce"
+  },
+  {
+    "WWEIA Category description": "Meat and BBQ sandwiches",
+    "Main food description": "Barbecue sandwich, NFS"
+  },
+  {
+    "WWEIA Category description": "Meat and BBQ sandwiches",
+    "Main food description": "Steak sandwich or sub on wheat"
+  },
+  {
+    "WWEIA Category description": "Meat and BBQ sandwiches",
+    "Main food description": "Barbecue beef sandwich, on white bun"
+  },
+  {
+    "WWEIA Category description": "Meat and BBQ sandwiches",
+    "Main food description": "Barbecue sandwich, NFS"
+  },
+  {
+    "WWEIA Category description": "Meat and BBQ sandwiches",
+    "Main food description": "Cheese steak sandwich or sub on wheat"
+  },
+  {
+    "WWEIA Category description": "Meat mixed dishes",
+    "Main food description": "Puerto Rican pasteles"
+  },
+  {
+    "WWEIA Category description": "Meat mixed dishes",
+    "Main food description": "Ham or pork and potatoes with gravy"
+  },
+  {
+    "WWEIA Category description": "Meat mixed dishes",
+    "Main food description": "Sausage and noodles with cream or white sauce"
+  },
+  {
+    "WWEIA Category description": "Meat mixed dishes",
+    "Main food description": "Stew, lamb"
+  },
+  {
+    "WWEIA Category description": "Meat mixed dishes",
+    "Main food description": "Ham or pork with gravy"
+  },
+  {
+    "WWEIA Category description": "Melons",
+    "Main food description": "Watermelon, raw"
+  },
+  {
+    "WWEIA Category description": "Melons",
+    "Main food description": "Honeydew melon, raw"
+  },
+  {
+    "WWEIA Category description": "Melons",
+    "Main food description": "Watermelon, raw"
+  },
+  {
+    "WWEIA Category description": "Melons",
+    "Main food description": "Honeydew melon, raw"
+  },
+  {
+    "WWEIA Category description": "Melons",
+    "Main food description": "Cantaloupe, raw"
+  },
+  {
+    "WWEIA Category description": "Milk shakes and other dairy drinks",
+    "Main food description": "Milk shake, home recipe, chocolate, light"
+  },
+  {
+    "WWEIA Category description": "Milk shakes and other dairy drinks",
+    "Main food description": "Ice cream soda, flavors other than chocolate"
+  },
+  {
+    "WWEIA Category description": "Milk shakes and other dairy drinks",
+    "Main food description": "Ice cream soda, chocolate"
+  },
+  {
+    "WWEIA Category description": "Milk shakes and other dairy drinks",
+    "Main food description": "Ice cream soda, flavors other than chocolate"
+  },
+  {
+    "WWEIA Category description": "Milk shakes and other dairy drinks",
+    "Main food description": "Milk shake with malt"
+  },
+  {
+    "WWEIA Category description": "Milk, lowfat",
+    "Main food description": "Milk, lactose free, low fat (1%)"
+  },
+  {
+    "WWEIA Category description": "Milk, lowfat",
+    "Main food description": "Kefir"
+  },
+  {
+    "WWEIA Category description": "Milk, lowfat",
+    "Main food description": "Milk, low fat (1%)"
+  },
+  {
+    "WWEIA Category description": "Milk, lowfat",
+    "Main food description": "Kefir"
+  },
+  {
+    "WWEIA Category description": "Milk, lowfat",
+    "Main food description": "Milk, low fat (1%)"
+  },
+  {
+    "WWEIA Category description": "Milk, nonfat",
+    "Main food description": "Milk, fat free (skim)"
+  },
+  {
+    "WWEIA Category description": "Milk, nonfat",
+    "Main food description": "Milk, evaporated, fat free (skim)"
+  },
+  {
+    "WWEIA Category description": "Milk, nonfat",
+    "Main food description": "Milk, dry, reconstituted, nonfat"
+  },
+  {
+    "WWEIA Category description": "Milk, nonfat",
+    "Main food description": "Milk, fat free (skim)"
+  },
+  {
+    "WWEIA Category description": "Milk, nonfat",
+    "Main food description": "Milk, lactose free, fat free (skim)"
+  },
+  {
+    "WWEIA Category description": "Milk, reduced fat",
+    "Main food description": "Milk, NFS"
+  },
+  {
+    "WWEIA Category description": "Milk, reduced fat",
+    "Main food description": "Milk, evaporated, reduced fat (2%)"
+  },
+  {
+    "WWEIA Category description": "Milk, reduced fat",
+    "Main food description": "Milk, lactose free, reduced fat (2%)"
+  },
+  {
+    "WWEIA Category description": "Milk, reduced fat",
+    "Main food description": "Milk, NFS"
+  },
+  {
+    "WWEIA Category description": "Milk, reduced fat",
+    "Main food description": "Milk, reduced fat (2%)"
+  },
+  {
+    "WWEIA Category description": "Milk, whole",
+    "Main food description": "Goat milk"
+  },
+  {
+    "WWEIA Category description": "Milk, whole",
+    "Main food description": "Milk, dry, reconstituted, whole"
+  },
+  {
+    "WWEIA Category description": "Milk, whole",
+    "Main food description": "Milk, evaporated, NS as to fat content"
+  },
+  {
+    "WWEIA Category description": "Milk, whole",
+    "Main food description": "Milk, evaporated, NS as to fat content"
+  },
+  {
+    "WWEIA Category description": "Milk, whole",
+    "Main food description": "Milk, lactose free, whole"
+  },
+  {
+    "WWEIA Category description": "Mustard and other condiments",
+    "Main food description": "Lime juice, 100%, canned or bottled"
+  },
+  {
+    "WWEIA Category description": "Mustard and other condiments",
+    "Main food description": "Peppers, hot, raw"
+  },
+  {
+    "WWEIA Category description": "Mustard and other condiments",
+    "Main food description": "Lemon juice, 100%, NS as to form"
+  },
+  {
+    "WWEIA Category description": "Mustard and other condiments",
+    "Main food description": "Vinegar"
+  },
+  {
+    "WWEIA Category description": "Mustard and other condiments",
+    "Main food description": "Lime juice, 100%, canned or bottled"
+  },
+  {
+    "WWEIA Category description": "Nachos",
+    "Main food description": "Nachos, chicken, with beans"
+  },
+  {
+    "WWEIA Category description": "Nachos",
+    "Main food description": "Nachos, beef or pork"
+  },
+  {
+    "WWEIA Category description": "Nachos",
+    "Main food description": "Nachos, chicken"
+  },
+  {
+    "WWEIA Category description": "Nachos",
+    "Main food description": "Nachos, chicken"
+  },
+  {
+    "WWEIA Category description": "Nachos",
+    "Main food description": "Nachos, beef or pork, with beans"
+  },
+  {
+    "WWEIA Category description": "Not included in a food category",
+    "Main food description": "Soy based sauce, for use with vegetables"
+  },
+  {
+    "WWEIA Category description": "Not included in a food category",
+    "Main food description": "Parsley, raw"
+  },
+  {
+    "WWEIA Category description": "Not included in a food category",
+    "Main food description": "Fruit flavored drink, powdered, not reconstituted, diet"
+  },
+  {
+    "WWEIA Category description": "Not included in a food category",
+    "Main food description": "Strawberry beverage powder, dry mix, not reconstituted"
+  },
+  {
+    "WWEIA Category description": "Not included in a food category",
+    "Main food description": "Tea, iced, instant, black, unsweetened, dry"
+  },
+  {
+    "WWEIA Category description": "Nutrition bars",
+    "Main food description": "Nutrition bar or meal replacement bar, NFS"
+  },
+  {
+    "WWEIA Category description": "Nutrition bars",
+    "Main food description": "Nutrition bar (Snickers Marathon Protein Bar)"
+  },
+  {
+    "WWEIA Category description": "Nutrition bars",
+    "Main food description": "Nutrition bar (PowerBar)"
+  },
+  {
+    "WWEIA Category description": "Nutrition bars",
+    "Main food description": "Nutrition bar (Tiger's Milk)"
+  },
+  {
+    "WWEIA Category description": "Nutrition bars",
+    "Main food description": "Nutrition bar (Clif Bar)"
+  },
+  {
+    "WWEIA Category description": "Nutritional beverages",
+    "Main food description": "Nutritional drink or shake, high protein, ready-to-drink (Slim Fast)"
+  },
+  {
+    "WWEIA Category description": "Nutritional beverages",
+    "Main food description": "Nutritional drink or shake, ready-to-drink (Ensure Plus)"
+  },
+  {
+    "WWEIA Category description": "Nutritional beverages",
+    "Main food description": "Nutritional drink or shake, ready-to-drink (Boost Plus)"
+  },
+  {
+    "WWEIA Category description": "Nutritional beverages",
+    "Main food description": "Nutritional drink or shake, ready-to-drink (Carnation Instant Breakfast)"
+  },
+  {
+    "WWEIA Category description": "Nutritional beverages",
+    "Main food description": "Nutritional drink or shake, ready-to-drink (Muscle Milk)"
+  },
+  {
+    "WWEIA Category description": "Nuts and seeds",
+    "Main food description": "Peanuts, dry roasted, salted"
+  },
+  {
+    "WWEIA Category description": "Nuts and seeds",
+    "Main food description": "Almonds, unsalted"
+  },
+  {
+    "WWEIA Category description": "Nuts and seeds",
+    "Main food description": "Cashews, unsalted"
+  },
+  {
+    "WWEIA Category description": "Nuts and seeds",
+    "Main food description": "Pumpkin seeds, unsalted"
+  },
+  {
+    "WWEIA Category description": "Nuts and seeds",
+    "Main food description": "Sunflower seeds, plain, unsalted"
+  },
+  {
+    "WWEIA Category description": "Oatmeal",
+    "Main food description": "Oatmeal, regular or quick, made with milk, no added fat"
+  },
+  {
+    "WWEIA Category description": "Oatmeal",
+    "Main food description": "Oatmeal, instant, plain, made with water, fat added"
+  },
+  {
+    "WWEIA Category description": "Oatmeal",
+    "Main food description": "Oatmeal, instant, plain, made with water, no added fat"
+  },
+  {
+    "WWEIA Category description": "Oatmeal",
+    "Main food description": "Oatmeal, instant, plain, made with non-dairy milk, fat added"
+  },
+  {
+    "WWEIA Category description": "Oatmeal",
+    "Main food description": "Oatmeal, instant, plain, made with milk, no added fat"
+  },
+  {
+    "WWEIA Category description": "Olives, pickles, pickled vegetables",
+    "Main food description": "Pickles, sweet"
+  },
+  {
+    "WWEIA Category description": "Olives, pickles, pickled vegetables",
+    "Main food description": "Kimchi"
+  },
+  {
+    "WWEIA Category description": "Olives, pickles, pickled vegetables",
+    "Main food description": "Olives, NFS"
+  },
+  {
+    "WWEIA Category description": "Olives, pickles, pickled vegetables",
+    "Main food description": "Peppers, hot, pickled"
+  },
+  {
+    "WWEIA Category description": "Olives, pickles, pickled vegetables",
+    "Main food description": "Tomato, green, pickled"
+  },
+  {
+    "WWEIA Category description": "Onions",
+    "Main food description": "Leeks"
+  },
+  {
+    "WWEIA Category description": "Onions",
+    "Main food description": "Onions, cooked, fat added"
+  },
+  {
+    "WWEIA Category description": "Onions",
+    "Main food description": "Onions, green, raw"
+  },
+  {
+    "WWEIA Category description": "Onions",
+    "Main food description": "Onions, green, cooked"
+  },
+  {
+    "WWEIA Category description": "Onions",
+    "Main food description": "Leeks"
+  },
+  {
+    "WWEIA Category description": "Other Mexican mixed dishes",
+    "Main food description": "Burrito bowl, beef or pork, with beans and rice"
+  },
+  {
+    "WWEIA Category description": "Other Mexican mixed dishes",
+    "Main food description": "Enchilada, pork"
+  },
+  {
+    "WWEIA Category description": "Other Mexican mixed dishes",
+    "Main food description": "Taquito, chicken"
+  },
+  {
+    "WWEIA Category description": "Other Mexican mixed dishes",
+    "Main food description": "Burrito bowl, chicken, with beans"
+  },
+  {
+    "WWEIA Category description": "Other Mexican mixed dishes",
+    "Main food description": "Tamale casserole with meat"
+  },
+  {
+    "WWEIA Category description": "Other dark green vegetables",
+    "Main food description": "Mustard greens, frozen, cooked, no added fat"
+  },
+  {
+    "WWEIA Category description": "Other dark green vegetables",
+    "Main food description": "Chard, cooked"
+  },
+  {
+    "WWEIA Category description": "Other dark green vegetables",
+    "Main food description": "Beet greens, raw"
+  },
+  {
+    "WWEIA Category description": "Other dark green vegetables",
+    "Main food description": "Mustard greens, frozen, cooked, fat added"
+  },
+  {
+    "WWEIA Category description": "Other dark green vegetables",
+    "Main food description": "Kale, fresh, cooked, no added fat"
+  },
+  {
+    "WWEIA Category description": "Other diet drinks",
+    "Main food description": "Fruit flavored drink, powdered, reconstituted, diet"
+  },
+  {
+    "WWEIA Category description": "Other diet drinks",
+    "Main food description": "Fruit flavored drink, with high vitamin C, diet"
+  },
+  {
+    "WWEIA Category description": "Other diet drinks",
+    "Main food description": "Vegetable and fruit juice drink, with high vitamin C, diet"
+  },
+  {
+    "WWEIA Category description": "Other diet drinks",
+    "Main food description": "Fruit flavored drink, with high vitamin C, powdered, reconstituted, diet"
+  },
+  {
+    "WWEIA Category description": "Other diet drinks",
+    "Main food description": "Vegetable and fruit juice drink, with high vitamin C, diet"
+  },
+  {
+    "WWEIA Category description": "Other fruit juice",
+    "Main food description": "Cranberry juice, 100%, not a blend"
+  },
+  {
+    "WWEIA Category description": "Other fruit juice",
+    "Main food description": "Cranberry juice blend, 100% juice"
+  },
+  {
+    "WWEIA Category description": "Other fruit juice",
+    "Main food description": "Papaya juice, 100%"
+  },
+  {
+    "WWEIA Category description": "Other fruit juice",
+    "Main food description": "Prune juice, 100%"
+  },
+  {
+    "WWEIA Category description": "Other fruit juice",
+    "Main food description": "Fruit juice blend, citrus, 100% juice"
+  },
+  {
+    "WWEIA Category description": "Other fruits and fruit salads",
+    "Main food description": "Fruit cocktail, canned, in syrup"
+  },
+  {
+    "WWEIA Category description": "Other fruits and fruit salads",
+    "Main food description": "Fruit, pickled"
+  },
+  {
+    "WWEIA Category description": "Other fruits and fruit salads",
+    "Main food description": "Guava, raw"
+  },
+  {
+    "WWEIA Category description": "Other fruits and fruit salads",
+    "Main food description": "Fruit salad, fresh or raw, excluding citrus fruits, no dressing"
+  },
+  {
+    "WWEIA Category description": "Other fruits and fruit salads",
+    "Main food description": "Apricot, canned"
+  },
+  {
+    "WWEIA Category description": "Other red and orange vegetables",
+    "Main food description": "Sweet potato, baked, fat added"
+  },
+  {
+    "WWEIA Category description": "Other red and orange vegetables",
+    "Main food description": "Pumpkin, canned, cooked"
+  },
+  {
+    "WWEIA Category description": "Other red and orange vegetables",
+    "Main food description": "Sweet potato, baked, NS as to fat"
+  },
+  {
+    "WWEIA Category description": "Other red and orange vegetables",
+    "Main food description": "Sweet potato, baked, fat added"
+  },
+  {
+    "WWEIA Category description": "Other red and orange vegetables",
+    "Main food description": "Sweet potato, baked, NS as to fat"
+  },
+  {
+    "WWEIA Category description": "Other starchy vegetables",
+    "Main food description": "Blackeyed peas, from frozen"
+  },
+  {
+    "WWEIA Category description": "Other starchy vegetables",
+    "Main food description": "Taro, cooked"
+  },
+  {
+    "WWEIA Category description": "Other starchy vegetables",
+    "Main food description": "Green peas, frozen, cooked, fat added, NS as to fat type"
+  },
+  {
+    "WWEIA Category description": "Other starchy vegetables",
+    "Main food description": "Green peas, canned, reduced sodium, cooked, no added fat"
+  },
+  {
+    "WWEIA Category description": "Other starchy vegetables",
+    "Main food description": "Plantain, cooked, no added fat"
+  },
+  {
+    "WWEIA Category description": "Other vegetables and combinations",
+    "Main food description": "Asparagus, frozen, cooked, no added fat"
+  },
+  {
+    "WWEIA Category description": "Other vegetables and combinations",
+    "Main food description": "Asparagus, raw"
+  },
+  {
+    "WWEIA Category description": "Other vegetables and combinations",
+    "Main food description": "Brussels sprouts, fresh, cooked, no added fat"
+  },
+  {
+    "WWEIA Category description": "Other vegetables and combinations",
+    "Main food description": "Vegetables, stew type, cooked, no added fat"
+  },
+  {
+    "WWEIA Category description": "Other vegetables and combinations",
+    "Main food description": "Asparagus, frozen, cooked with oil"
+  },
+  {
+    "WWEIA Category description": "Pancakes, waffles, French toast",
+    "Main food description": "Waffle, plain, fast food / restaurant"
+  },
+  {
+    "WWEIA Category description": "Pancakes, waffles, French toast",
+    "Main food description": "Waffle, fruit, frozen"
+  },
+  {
+    "WWEIA Category description": "Pancakes, waffles, French toast",
+    "Main food description": "Pancakes, whole grain"
+  },
+  {
+    "WWEIA Category description": "Pancakes, waffles, French toast",
+    "Main food description": "Waffle, cinnamon"
+  },
+  {
+    "WWEIA Category description": "Pancakes, waffles, French toast",
+    "Main food description": "Pancakes, whole grain, fast food / restaurant"
+  },
+  {
+    "WWEIA Category description": "Pasta mixed dishes, excludes macaroni and cheese",
+    "Main food description": "Pasta with tomato-based sauce, poultry, and added vegetables, ready-to-heat"
+  },
+  {
+    "WWEIA Category description": "Pasta mixed dishes, excludes macaroni and cheese",
+    "Main food description": "Ravioli, meat-filled, with tomato sauce or meat sauce"
+  },
+  {
+    "WWEIA Category description": "Pasta mixed dishes, excludes macaroni and cheese",
+    "Main food description": "Macaroni or pasta salad with shrimp"
+  },
+  {
+    "WWEIA Category description": "Pasta mixed dishes, excludes macaroni and cheese",
+    "Main food description": "Ravioli, cheese-filled, with tomato sauce"
+  },
+  {
+    "WWEIA Category description": "Pasta mixed dishes, excludes macaroni and cheese",
+    "Main food description": "Pasta, whole grain, with cream sauce, poultry, and added vegetables, ready-to-heat"
+  },
+  {
+    "WWEIA Category description": "Pasta sauces, tomato-based",
+    "Main food description": "Spaghetti sauce with poultry"
+  },
+  {
+    "WWEIA Category description": "Pasta sauces, tomato-based",
+    "Main food description": "Spaghetti sauce"
+  },
+  {
+    "WWEIA Category description": "Pasta sauces, tomato-based",
+    "Main food description": "Spaghetti sauce with meat"
+  },
+  {
+    "WWEIA Category description": "Pasta sauces, tomato-based",
+    "Main food description": "Spaghetti sauce with poultry"
+  },
+  {
+    "WWEIA Category description": "Pasta sauces, tomato-based",
+    "Main food description": "Spaghetti sauce with added vegetables"
+  },
+  {
+    "WWEIA Category description": "Pasta, noodles, cooked grains",
+    "Main food description": "Pasta, vegetable, cooked"
+  },
+  {
+    "WWEIA Category description": "Pasta, noodles, cooked grains",
+    "Main food description": "Noodles, cooked"
+  },
+  {
+    "WWEIA Category description": "Pasta, noodles, cooked grains",
+    "Main food description": "Millet"
+  },
+  {
+    "WWEIA Category description": "Pasta, noodles, cooked grains",
+    "Main food description": "Rice noodles, cooked"
+  },
+  {
+    "WWEIA Category description": "Pasta, noodles, cooked grains",
+    "Main food description": "Pasta, whole grain, cooked"
+  },
+  {
+    "WWEIA Category description": "Peaches and nectarines",
+    "Main food description": "Peach, canned, NFS"
+  },
+  {
+    "WWEIA Category description": "Peaches and nectarines",
+    "Main food description": "Peach, canned, in syrup"
+  },
+  {
+    "WWEIA Category description": "Peaches and nectarines",
+    "Main food description": "Peach, canned, NFS"
+  },
+  {
+    "WWEIA Category description": "Peaches and nectarines",
+    "Main food description": "Peach, canned, juice pack"
+  },
+  {
+    "WWEIA Category description": "Peaches and nectarines",
+    "Main food description": "Nectarine, raw"
+  },
+  {
+    "WWEIA Category description": "Peanut butter and jelly sandwiches",
+    "Main food description": "Nutella sandwich on wheat bread"
+  },
+  {
+    "WWEIA Category description": "Peanut butter and jelly sandwiches",
+    "Main food description": "Jelly sandwich, on white bread"
+  },
+  {
+    "WWEIA Category description": "Peanut butter and jelly sandwiches",
+    "Main food description": "Peanut butter sandwich, NFS"
+  },
+  {
+    "WWEIA Category description": "Peanut butter and jelly sandwiches",
+    "Main food description": "Almond butter and jelly sandwich, on white bread"
+  },
+  {
+    "WWEIA Category description": "Peanut butter and jelly sandwiches",
+    "Main food description": "Peanut butter sandwich, with regular peanut butter, on white bread"
+  },
+  {
+    "WWEIA Category description": "Pears",
+    "Main food description": "Pear, raw"
+  },
+  {
+    "WWEIA Category description": "Pears",
+    "Main food description": "Pear, canned, in syrup"
+  },
+  {
+    "WWEIA Category description": "Pears",
+    "Main food description": "Pear, canned, NFS"
+  },
+  {
+    "WWEIA Category description": "Pears",
+    "Main food description": "Pear, raw"
+  },
+  {
+    "WWEIA Category description": "Pears",
+    "Main food description": "Pear, canned, in syrup"
+  },
+  {
+    "WWEIA Category description": "Pineapple",
+    "Main food description": "Pineapple, canned, juice pack"
+  },
+  {
+    "WWEIA Category description": "Pineapple",
+    "Main food description": "Pineapple, canned, NFS"
+  },
+  {
+    "WWEIA Category description": "Pineapple",
+    "Main food description": "Pineapple, raw"
+  },
+  {
+    "WWEIA Category description": "Pineapple",
+    "Main food description": "Pineapple, canned, NFS"
+  },
+  {
+    "WWEIA Category description": "Pineapple",
+    "Main food description": "Pineapple, canned, juice pack"
+  },
+  {
+    "WWEIA Category description": "Pizza",
+    "Main food description": "Pizza with cheese and extra vegetables, thin crust"
+  },
+  {
+    "WWEIA Category description": "Pizza",
+    "Main food description": "White pizza, cheese, with meat and vegetables, thin crust"
+  },
+  {
+    "WWEIA Category description": "Pizza",
+    "Main food description": "Pizza, cheese, with vegetables, from restaurant or fast food, medium crust"
+  },
+  {
+    "WWEIA Category description": "Pizza",
+    "Main food description": "Pizza, with meat other than pepperoni, from school lunch, thick crust"
+  },
+  {
+    "WWEIA Category description": "Pizza",
+    "Main food description": "Pizza, cheese, from restaurant or fast food, medium crust"
+  },
+  {
+    "WWEIA Category description": "Plant-based milk",
+    "Main food description": "Non-dairy milk, NFS"
+  },
+  {
+    "WWEIA Category description": "Plant-based milk",
+    "Main food description": "Hot chocolate / cocoa, reduced sugar, made with non-dairy milk"
+  },
+  {
+    "WWEIA Category description": "Plant-based milk",
+    "Main food description": "Almond milk, sweetened"
+  },
+  {
+    "WWEIA Category description": "Plant-based milk",
+    "Main food description": "Non-dairy milk, NFS"
+  },
+  {
+    "WWEIA Category description": "Plant-based milk",
+    "Main food description": "Almond milk, unsweetened"
+  },
+  {
+    "WWEIA Category description": "Plant-based yogurt",
+    "Main food description": "Yogurt, coconut milk"
+  },
+  {
+    "WWEIA Category description": "Plant-based yogurt",
+    "Main food description": "Yogurt, almond milk"
+  },
+  {
+    "WWEIA Category description": "Plant-based yogurt",
+    "Main food description": "Yogurt, soy"
+  },
+  {
+    "WWEIA Category description": "Plant-based yogurt",
+    "Main food description": "Yogurt, almond milk"
+  },
+  {
+    "WWEIA Category description": "Plant-based yogurt",
+    "Main food description": "Yogurt, coconut milk"
+  },
+  {
+    "WWEIA Category description": "Popcorn",
+    "Main food description": "Popcorn, caramel coated, with nuts"
+  },
+  {
+    "WWEIA Category description": "Popcorn",
+    "Main food description": "Popcorn, popped in oil, no butter added"
+  },
+  {
+    "WWEIA Category description": "Popcorn",
+    "Main food description": "Popcorn, microwave, cheese flavored"
+  },
+  {
+    "WWEIA Category description": "Popcorn",
+    "Main food description": "Popcorn, microwave, plain"
+  },
+  {
+    "WWEIA Category description": "Popcorn",
+    "Main food description": "Popcorn, ready-to-eat, plain, light"
+  },
+  {
+    "WWEIA Category description": "Pork",
+    "Main food description": "Pork, chop, coated, lean and fat eaten"
+  },
+  {
+    "WWEIA Category description": "Pork",
+    "Main food description": "Pork, steak, lean and fat eaten"
+  },
+  {
+    "WWEIA Category description": "Pork",
+    "Main food description": "Pork, chop, lean only eaten"
+  },
+  {
+    "WWEIA Category description": "Pork",
+    "Main food description": "Pork, chop, coated, NS as to fat eaten"
+  },
+  {
+    "WWEIA Category description": "Pork",
+    "Main food description": "Pork, ham hocks"
+  },
+  {
+    "WWEIA Category description": "Potato chips",
+    "Main food description": "Potato chips, lightly salted"
+  },
+  {
+    "WWEIA Category description": "Potato chips",
+    "Main food description": "Potato chips, plain"
+  },
+  {
+    "WWEIA Category description": "Potato chips",
+    "Main food description": "Potato chips, popped, plain"
+  },
+  {
+    "WWEIA Category description": "Potato chips",
+    "Main food description": "Potato chips, restructured, flavored"
+  },
+  {
+    "WWEIA Category description": "Potato chips",
+    "Main food description": "Potato chips, ruffled, sour cream and onion flavored"
+  },
+  {
+    "WWEIA Category description": "Poultry mixed dishes",
+    "Main food description": "Chicken fricassee, Puerto Rican style"
+  },
+  {
+    "WWEIA Category description": "Poultry mixed dishes",
+    "Main food description": "Chicken or turkey with cream sauce"
+  },
+  {
+    "WWEIA Category description": "Poultry mixed dishes",
+    "Main food description": "Chicken or turkey, breaded, fried, garden salad with bacon and cheese, chicken and/or turkey, bacon, cheese, lettuce and/or greens, tomato and/or carrots, other vegetables, no dressing"
+  },
+  {
+    "WWEIA Category description": "Poultry mixed dishes",
+    "Main food description": "Chicken or turkey caesar garden salad, chicken and/or turkey, lettuce, tomato, cheese, no dressing"
+  },
+  {
+    "WWEIA Category description": "Poultry mixed dishes",
+    "Main food description": "Chicken curry"
+  },
+  {
+    "WWEIA Category description": "Pretzels/snack mix",
+    "Main food description": "Pretzels, soft, filled with cheese"
+  },
+  {
+    "WWEIA Category description": "Pretzels/snack mix",
+    "Main food description": "Pretzels, hard, plain, salted"
+  },
+  {
+    "WWEIA Category description": "Pretzels/snack mix",
+    "Main food description": "Pretzels, hard, NFS"
+  },
+  {
+    "WWEIA Category description": "Pretzels/snack mix",
+    "Main food description": "Pretzels, soft, from frozen, topped with meat"
+  },
+  {
+    "WWEIA Category description": "Pretzels/snack mix",
+    "Main food description": "Pretzels, hard, plain, unsalted"
+  },
+  {
+    "WWEIA Category description": "Protein and nutritional powders",
+    "Main food description": "Nutritional powder mix (Muscle Milk)"
+  },
+  {
+    "WWEIA Category description": "Protein and nutritional powders",
+    "Main food description": "Nutritional powder mix, protein, light, NFS"
+  },
+  {
+    "WWEIA Category description": "Protein and nutritional powders",
+    "Main food description": "Nutritional powder mix, protein, light, NFS"
+  },
+  {
+    "WWEIA Category description": "Protein and nutritional powders",
+    "Main food description": "Nutritional powder mix, high protein (Herbalife)"
+  },
+  {
+    "WWEIA Category description": "Protein and nutritional powders",
+    "Main food description": "Nutritional powder mix, protein, soy based, NFS"
+  },
+  {
+    "WWEIA Category description": "Pudding",
+    "Main food description": "Barfi or Burfi, Indian dessert"
+  },
+  {
+    "WWEIA Category description": "Pudding",
+    "Main food description": "Meringues"
+  },
+  {
+    "WWEIA Category description": "Pudding",
+    "Main food description": "Pudding, chocolate, NFS"
+  },
+  {
+    "WWEIA Category description": "Pudding",
+    "Main food description": "Pudding, tapioca, ready-to-eat"
+  },
+  {
+    "WWEIA Category description": "Pudding",
+    "Main food description": "Pudding, flavors other than chocolate, NFS"
+  },
+  {
+    "WWEIA Category description": "Ramen and Asian broth-based soups",
+    "Main food description": "Soup, wonton"
+  },
+  {
+    "WWEIA Category description": "Ramen and Asian broth-based soups",
+    "Main food description": "Ramen bowl, NFS"
+  },
+  {
+    "WWEIA Category description": "Ramen and Asian broth-based soups",
+    "Main food description": "Ramen bowl with meat and egg"
+  },
+  {
+    "WWEIA Category description": "Ramen and Asian broth-based soups",
+    "Main food description": "Ramen bowl with beef"
+  },
+  {
+    "WWEIA Category description": "Ramen and Asian broth-based soups",
+    "Main food description": "Soup, miso or tofu"
+  },
+  {
+    "WWEIA Category description": "Ready-to-eat cereal, higher sugar (>21.2g/100g)",
+    "Main food description": "Cereal, other, fruit flavored"
+  },
+  {
+    "WWEIA Category description": "Ready-to-eat cereal, higher sugar (>21.2g/100g)",
+    "Main food description": "Cereal, other, peanut butter"
+  },
+  {
+    "WWEIA Category description": "Ready-to-eat cereal, higher sugar (>21.2g/100g)",
+    "Main food description": "Cereal, ready-to-eat, NFS"
+  },
+  {
+    "WWEIA Category description": "Ready-to-eat cereal, higher sugar (>21.2g/100g)",
+    "Main food description": "Cereal, flavored puffs"
+  },
+  {
+    "WWEIA Category description": "Ready-to-eat cereal, higher sugar (>21.2g/100g)",
+    "Main food description": "Cereal, O's, flavored"
+  },
+  {
+    "WWEIA Category description": "Ready-to-eat cereal, lower sugar (=<21.2g/100g)",
+    "Main food description": "Cereal, shredded wheat, plain"
+  },
+  {
+    "WWEIA Category description": "Ready-to-eat cereal, lower sugar (=<21.2g/100g)",
+    "Main food description": "Cereal, other, plain"
+  },
+  {
+    "WWEIA Category description": "Ready-to-eat cereal, lower sugar (=<21.2g/100g)",
+    "Main food description": "Cereal, O's, plain"
+  },
+  {
+    "WWEIA Category description": "Ready-to-eat cereal, lower sugar (=<21.2g/100g)",
+    "Main food description": "Cereal, wheat squares"
+  },
+  {
+    "WWEIA Category description": "Ready-to-eat cereal, lower sugar (=<21.2g/100g)",
+    "Main food description": "Cereal, corn squares"
+  },
+  {
+    "WWEIA Category description": "Rice",
+    "Main food description": "Rice, white and wild, cooked, fat added"
+  },
+  {
+    "WWEIA Category description": "Rice",
+    "Main food description": "Rice, brown and wild, cooked, NS as to fat"
+  },
+  {
+    "WWEIA Category description": "Rice",
+    "Main food description": "Rice, cooked, NFS"
+  },
+  {
+    "WWEIA Category description": "Rice",
+    "Main food description": "Rice, brown and wild, cooked, NS as to fat"
+  },
+  {
+    "WWEIA Category description": "Rice",
+    "Main food description": "Rice, white, cooked, made with oil"
+  },
+  {
+    "WWEIA Category description": "Rice mixed dishes",
+    "Main food description": "Rice with Spanish sausage, Puerto Rican style"
+  },
+  {
+    "WWEIA Category description": "Rice mixed dishes",
+    "Main food description": "Rice, cooked with coconut milk"
+  },
+  {
+    "WWEIA Category description": "Rice mixed dishes",
+    "Main food description": "Rice, white, with dark green vegetables, fat added"
+  },
+  {
+    "WWEIA Category description": "Rice mixed dishes",
+    "Main food description": "Rice, brown, with peas, no added fat"
+  },
+  {
+    "WWEIA Category description": "Rice mixed dishes",
+    "Main food description": "Flavored rice mixture with cheese"
+  },
+  {
+    "WWEIA Category description": "Rolls and buns",
+    "Main food description": "Roll, whole wheat"
+  },
+  {
+    "WWEIA Category description": "Rolls and buns",
+    "Main food description": "Roll, whole wheat"
+  },
+  {
+    "WWEIA Category description": "Rolls and buns",
+    "Main food description": "Roll, multigrain"
+  },
+  {
+    "WWEIA Category description": "Rolls and buns",
+    "Main food description": "Roll, sour dough"
+  },
+  {
+    "WWEIA Category description": "Rolls and buns",
+    "Main food description": "Roll, wheat or cracked wheat"
+  },
+  {
+    "WWEIA Category description": "Salad dressings and vegetable oils",
+    "Main food description": "Flaxseed oil"
+  },
+  {
+    "WWEIA Category description": "Salad dressings and vegetable oils",
+    "Main food description": "Corn oil"
+  },
+  {
+    "WWEIA Category description": "Salad dressings and vegetable oils",
+    "Main food description": "Thousand Island dressing, fat free"
+  },
+  {
+    "WWEIA Category description": "Salad dressings and vegetable oils",
+    "Main food description": "Russian dressing"
+  },
+  {
+    "WWEIA Category description": "Salad dressings and vegetable oils",
+    "Main food description": "French or Catalina dressing"
+  },
+  {
+    "WWEIA Category description": "Saltine crackers",
+    "Main food description": "Crackers, oyster"
+  },
+  {
+    "WWEIA Category description": "Saltine crackers",
+    "Main food description": "Crackers, saltine, reduced fat"
+  },
+  {
+    "WWEIA Category description": "Saltine crackers",
+    "Main food description": "Crackers, saltine, reduced sodium"
+  },
+  {
+    "WWEIA Category description": "Saltine crackers",
+    "Main food description": "Crackers, saltine, reduced fat"
+  },
+  {
+    "WWEIA Category description": "Saltine crackers",
+    "Main food description": "Crackers, saltine"
+  },
+  {
+    "WWEIA Category description": "Sausages",
+    "Main food description": "Vienna sausage, canned"
+  },
+  {
+    "WWEIA Category description": "Sausages",
+    "Main food description": "Pork and beef sausage"
+  },
+  {
+    "WWEIA Category description": "Sausages",
+    "Main food description": "Turkey or chicken sausage"
+  },
+  {
+    "WWEIA Category description": "Sausages",
+    "Main food description": "Italian sausage"
+  },
+  {
+    "WWEIA Category description": "Sausages",
+    "Main food description": "Pork sausage, reduced sodium"
+  },
+  {
+    "WWEIA Category description": "Seafood mixed dishes",
+    "Main food description": "Fish curry with rice"
+  },
+  {
+    "WWEIA Category description": "Seafood mixed dishes",
+    "Main food description": "Shrimp with lobster sauce"
+  },
+  {
+    "WWEIA Category description": "Seafood mixed dishes",
+    "Main food description": "Tuna salad, made with light mayonnaise"
+  },
+  {
+    "WWEIA Category description": "Seafood mixed dishes",
+    "Main food description": "Fish and rice with tomato-based sauce"
+  },
+  {
+    "WWEIA Category description": "Seafood mixed dishes",
+    "Main food description": "Shrimp toast"
+  },
+  {
+    "WWEIA Category description": "Seafood sandwiches",
+    "Main food description": "Fish sandwich, fried, on white bun, with cheese"
+  },
+  {
+    "WWEIA Category description": "Seafood sandwiches",
+    "Main food description": "Fried seafood sandwich"
+  },
+  {
+    "WWEIA Category description": "Seafood sandwiches",
+    "Main food description": "Fish sandwich, grilled"
+  },
+  {
+    "WWEIA Category description": "Seafood sandwiches",
+    "Main food description": "Tuna salad sandwich on white, with cheese"
+  },
+  {
+    "WWEIA Category description": "Seafood sandwiches",
+    "Main food description": "Fish sandwich, fried, from fast food"
+  },
+  {
+    "WWEIA Category description": "Shellfish",
+    "Main food description": "Shrimp, baked or broiled, coated"
+  },
+  {
+    "WWEIA Category description": "Shellfish",
+    "Main food description": "Crayfish, fried"
+  },
+  {
+    "WWEIA Category description": "Shellfish",
+    "Main food description": "Escargot"
+  },
+  {
+    "WWEIA Category description": "Shellfish",
+    "Main food description": "Clams, raw"
+  },
+  {
+    "WWEIA Category description": "Shellfish",
+    "Main food description": "Shrimp, baked or broiled"
+  },
+  {
+    "WWEIA Category description": "Smoothies and grain drinks",
+    "Main food description": "Fruit smoothie, with whole fruit, non-dairy"
+  },
+  {
+    "WWEIA Category description": "Smoothies and grain drinks",
+    "Main food description": "Fruit smoothie juice drink, no dairy"
+  },
+  {
+    "WWEIA Category description": "Smoothies and grain drinks",
+    "Main food description": "Fruit smoothie, NFS"
+  },
+  {
+    "WWEIA Category description": "Smoothies and grain drinks",
+    "Main food description": "Fruit smoothie, light"
+  },
+  {
+    "WWEIA Category description": "Smoothies and grain drinks",
+    "Main food description": "Fruit smoothie juice drink, with dairy"
+  },
+  {
+    "WWEIA Category description": "Soft drinks",
+    "Main food description": "Soft drink, fruit flavored, caffeine free"
+  },
+  {
+    "WWEIA Category description": "Soft drinks",
+    "Main food description": "Soft drink, cola"
+  },
+  {
+    "WWEIA Category description": "Soft drinks",
+    "Main food description": "Soft drink, chocolate flavored"
+  },
+  {
+    "WWEIA Category description": "Soft drinks",
+    "Main food description": "Soft drink, fruit flavored, caffeine free"
+  },
+  {
+    "WWEIA Category description": "Soft drinks",
+    "Main food description": "Soft drink, fruit flavored, caffeine free"
+  },
+  {
+    "WWEIA Category description": "Soups, broth-based",
+    "Main food description": "Soup, tomato, canned / carton, reduced sodium"
+  },
+  {
+    "WWEIA Category description": "Soups, broth-based",
+    "Main food description": "Soup, broth"
+  },
+  {
+    "WWEIA Category description": "Soups, broth-based",
+    "Main food description": "Soup, noodle, NFS"
+  },
+  {
+    "WWEIA Category description": "Soups, broth-based",
+    "Main food description": "Soup, chicken, canned, reduced sodium"
+  },
+  {
+    "WWEIA Category description": "Soups, broth-based",
+    "Main food description": "Soup, split pea"
+  },
+  {
+    "WWEIA Category description": "Soups, cream-based",
+    "Main food description": "Soup, French onion"
+  },
+  {
+    "WWEIA Category description": "Soups, cream-based",
+    "Main food description": "Soup, broccoli cheese"
+  },
+  {
+    "WWEIA Category description": "Soups, cream-based",
+    "Main food description": "Soup, pumpkin"
+  },
+  {
+    "WWEIA Category description": "Soups, cream-based",
+    "Main food description": "Soup, cream of vegetable"
+  },
+  {
+    "WWEIA Category description": "Soups, cream-based",
+    "Main food description": "Soup, cream of mushroom"
+  },
+  {
+    "WWEIA Category description": "Soy and meat-alternative products",
+    "Main food description": "Soybean curd"
+  },
+  {
+    "WWEIA Category description": "Soy and meat-alternative products",
+    "Main food description": "Soybean curd cheese"
+  },
+  {
+    "WWEIA Category description": "Soy and meat-alternative products",
+    "Main food description": "Chicken, meatless, breaded, fried"
+  },
+  {
+    "WWEIA Category description": "Soy and meat-alternative products",
+    "Main food description": "Vermicelli, made from soybeans"
+  },
+  {
+    "WWEIA Category description": "Soy and meat-alternative products",
+    "Main food description": "Frozen dessert, non-dairy"
+  },
+  {
+    "WWEIA Category description": "Soy-based condiments",
+    "Main food description": "Natto"
+  },
+  {
+    "WWEIA Category description": "Soy-based condiments",
+    "Main food description": "Soy sauce, reduced sodium"
+  },
+  {
+    "WWEIA Category description": "Soy-based condiments",
+    "Main food description": "Fish sauce"
+  },
+  {
+    "WWEIA Category description": "Soy-based condiments",
+    "Main food description": "Teriyaki sauce, reduced sodium"
+  },
+  {
+    "WWEIA Category description": "Soy-based condiments",
+    "Main food description": "Hoisin sauce"
+  },
+  {
+    "WWEIA Category description": "Spinach",
+    "Main food description": "Spinach, creamed"
+  },
+  {
+    "WWEIA Category description": "Spinach",
+    "Main food description": "Spinach, NS as to form, cooked"
+  },
+  {
+    "WWEIA Category description": "Spinach",
+    "Main food description": "Spinach, frozen, cooked with butter or margarine"
+  },
+  {
+    "WWEIA Category description": "Spinach",
+    "Main food description": "Spinach, fresh, cooked, fat added, NS as to fat type"
+  },
+  {
+    "WWEIA Category description": "Spinach",
+    "Main food description": "Spinach, frozen, cooked, no added fat"
+  },
+  {
+    "WWEIA Category description": "Sport and energy drinks",
+    "Main food description": "Energy drink (NOS)"
+  },
+  {
+    "WWEIA Category description": "Sport and energy drinks",
+    "Main food description": "Energy drink (XS)"
+  },
+  {
+    "WWEIA Category description": "Sport and energy drinks",
+    "Main food description": "Energy Drink"
+  },
+  {
+    "WWEIA Category description": "Sport and energy drinks",
+    "Main food description": "Energy drink (SoBe Energize Energy Juice Drink)"
+  },
+  {
+    "WWEIA Category description": "Sport and energy drinks",
+    "Main food description": "Energy drink (Rockstar)"
+  },
+  {
+    "WWEIA Category description": "Stir-fry and soy-based sauce mixtures",
+    "Main food description": "Chicken or turkey, rice, and vegetables including carrots, broccoli, and/or dark-green leafy; soy-based sauce"
+  },
+  {
+    "WWEIA Category description": "Stir-fry and soy-based sauce mixtures",
+    "Main food description": "Fish and vegetables including carrots, broccoli, and/or dark-green leafy; no potatoes, soy-based sauce"
+  },
+  {
+    "WWEIA Category description": "Stir-fry and soy-based sauce mixtures",
+    "Main food description": "Chicken egg foo yung"
+  },
+  {
+    "WWEIA Category description": "Stir-fry and soy-based sauce mixtures",
+    "Main food description": "Beef, noodles, and vegetables including carrots, broccoli, and/or dark-green leafy; soy-based sauce"
+  },
+  {
+    "WWEIA Category description": "Stir-fry and soy-based sauce mixtures",
+    "Main food description": "Pork egg foo yung"
+  },
+  {
+    "WWEIA Category description": "Strawberries",
+    "Main food description": "Strawberries, raw"
+  },
+  {
+    "WWEIA Category description": "Strawberries",
+    "Main food description": "Strawberries, frozen"
+  },
+  {
+    "WWEIA Category description": "Strawberries",
+    "Main food description": "Strawberries, raw"
+  },
+  {
+    "WWEIA Category description": "Strawberries",
+    "Main food description": "Strawberries, frozen"
+  },
+  {
+    "WWEIA Category description": "Strawberries",
+    "Main food description": "Strawberries, raw"
+  },
+  {
+    "WWEIA Category description": "String beans",
+    "Main food description": "Green beans, frozen, cooked, fat added, NS as to fat type"
+  },
+  {
+    "WWEIA Category description": "String beans",
+    "Main food description": "Green beans, raw"
+  },
+  {
+    "WWEIA Category description": "String beans",
+    "Main food description": "Green beans, NS as to form, cooked"
+  },
+  {
+    "WWEIA Category description": "String beans",
+    "Main food description": "Green beans, canned, cooked, fat added, NS as to fat type"
+  },
+  {
+    "WWEIA Category description": "String beans",
+    "Main food description": "Green beans, canned, cooked, no added fat"
+  },
+  {
+    "WWEIA Category description": "Sugar substitutes",
+    "Main food description": "Sugar substitute, saccharin, liquid"
+  },
+  {
+    "WWEIA Category description": "Sugar substitutes",
+    "Main food description": "Sugar substitute, powder, NFS"
+  },
+  {
+    "WWEIA Category description": "Sugar substitutes",
+    "Main food description": "Sugar substitute, powder, NFS"
+  },
+  {
+    "WWEIA Category description": "Sugar substitutes",
+    "Main food description": "Sugar substitute, saccharin, liquid"
+  },
+  {
+    "WWEIA Category description": "Sugar substitutes",
+    "Main food description": "Sugar substitute, saccharin, powder"
+  },
+  {
+    "WWEIA Category description": "Sugars and honey",
+    "Main food description": "Honey"
+  },
+  {
+    "WWEIA Category description": "Sugars and honey",
+    "Main food description": "Sugar, white, confectioner's, powdered"
+  },
+  {
+    "WWEIA Category description": "Sugars and honey",
+    "Main food description": "Honey"
+  },
+  {
+    "WWEIA Category description": "Sugars and honey",
+    "Main food description": "Sugar, cinnamon"
+  },
+  {
+    "WWEIA Category description": "Sugars and honey",
+    "Main food description": "Sugar, brown"
+  },
+  {
+    "WWEIA Category description": "Tap water",
+    "Main food description": "Water, tap"
+  },
+  {
+    "WWEIA Category description": "Tap water",
+    "Main food description": "Water, NFS"
+  },
+  {
+    "WWEIA Category description": "Tap water",
+    "Main food description": "Water, tap"
+  },
+  {
+    "WWEIA Category description": "Tap water",
+    "Main food description": "Water, tap"
+  },
+  {
+    "WWEIA Category description": "Tap water",
+    "Main food description": "Water, NFS"
+  },
+  {
+    "WWEIA Category description": "Tea",
+    "Main food description": "Tea, iced, bottled, black"
+  },
+  {
+    "WWEIA Category description": "Tea",
+    "Main food description": "Iced Tea / Lemonade juice drink, light"
+  },
+  {
+    "WWEIA Category description": "Tea",
+    "Main food description": "Iced Tea / Lemonade juice drink, light"
+  },
+  {
+    "WWEIA Category description": "Tea",
+    "Main food description": "Tea, iced, instant, black, pre-sweetened with low calorie sweetener"
+  },
+  {
+    "WWEIA Category description": "Tea",
+    "Main food description": "Tea, iced, brewed, black, pre-sweetened with sugar"
+  },
+  {
+    "WWEIA Category description": "Tomato-based condiments",
+    "Main food description": "Ketchup, reduced sodium"
+  },
+  {
+    "WWEIA Category description": "Tomato-based condiments",
+    "Main food description": "Cocktail sauce"
+  },
+  {
+    "WWEIA Category description": "Tomato-based condiments",
+    "Main food description": "Cocktail sauce"
+  },
+  {
+    "WWEIA Category description": "Tomato-based condiments",
+    "Main food description": "Steak sauce"
+  },
+  {
+    "WWEIA Category description": "Tomato-based condiments",
+    "Main food description": "Salsa, NFS"
+  },
+  {
+    "WWEIA Category description": "Tomatoes",
+    "Main food description": "Tomatoes, canned, cooked"
+  },
+  {
+    "WWEIA Category description": "Tomatoes",
+    "Main food description": "Tomatoes, NS as to form, cooked"
+  },
+  {
+    "WWEIA Category description": "Tomatoes",
+    "Main food description": "Tomatoes, raw"
+  },
+  {
+    "WWEIA Category description": "Tomatoes",
+    "Main food description": "Tomatoes, NS as to form, cooked"
+  },
+  {
+    "WWEIA Category description": "Tomatoes",
+    "Main food description": "Tomatoes, canned, reduced sodium, cooked"
+  },
+  {
+    "WWEIA Category description": "Tortilla, corn, other chips",
+    "Main food description": "Cheese flavored corn snacks, reduced fat"
+  },
+  {
+    "WWEIA Category description": "Tortilla, corn, other chips",
+    "Main food description": "Tortilla chips, other flavors (Doritos)"
+  },
+  {
+    "WWEIA Category description": "Tortilla, corn, other chips",
+    "Main food description": "Chips, rice"
+  },
+  {
+    "WWEIA Category description": "Tortilla, corn, other chips",
+    "Main food description": "Popcorn chips, plain"
+  },
+  {
+    "WWEIA Category description": "Tortilla, corn, other chips",
+    "Main food description": "Popcorn chips, sweet flavors"
+  },
+  {
+    "WWEIA Category description": "Tortillas",
+    "Main food description": "Taco shell, flour"
+  },
+  {
+    "WWEIA Category description": "Tortillas",
+    "Main food description": "Tortilla, flour"
+  },
+  {
+    "WWEIA Category description": "Tortillas",
+    "Main food description": "Taco shell, corn"
+  },
+  {
+    "WWEIA Category description": "Tortillas",
+    "Main food description": "Tortilla, flour"
+  },
+  {
+    "WWEIA Category description": "Tortillas",
+    "Main food description": "Tortilla, corn"
+  },
+  {
+    "WWEIA Category description": "Turkey, duck, other poultry",
+    "Main food description": "Dove, cooked, NS as to cooking method"
+  },
+  {
+    "WWEIA Category description": "Turkey, duck, other poultry",
+    "Main food description": "Turkey, light and dark meat, roasted, skin eaten"
+  },
+  {
+    "WWEIA Category description": "Turkey, duck, other poultry",
+    "Main food description": "Turkey, light meat, skin not eaten"
+  },
+  {
+    "WWEIA Category description": "Turkey, duck, other poultry",
+    "Main food description": "Duck, cooked, skin eaten"
+  },
+  {
+    "WWEIA Category description": "Turkey, duck, other poultry",
+    "Main food description": "Turkey, light meat, skin eaten"
+  },
+  {
+    "WWEIA Category description": "Turnovers and other grain-based items",
+    "Main food description": "Turnover or hot pocket, ham"
+  },
+  {
+    "WWEIA Category description": "Turnovers and other grain-based items",
+    "Main food description": "Bread stuffing made with egg"
+  },
+  {
+    "WWEIA Category description": "Turnovers and other grain-based items",
+    "Main food description": "Spanakopita"
+  },
+  {
+    "WWEIA Category description": "Turnovers and other grain-based items",
+    "Main food description": "Cheese quiche, meatless"
+  },
+  {
+    "WWEIA Category description": "Turnovers and other grain-based items",
+    "Main food description": "Empanada, NFS"
+  },
+  {
+    "WWEIA Category description": "Vegetable dishes",
+    "Main food description": "Stuffed pepper, with meat"
+  },
+  {
+    "WWEIA Category description": "Vegetable dishes",
+    "Main food description": "Lettuce, wilted, with bacon dressing"
+  },
+  {
+    "WWEIA Category description": "Vegetable dishes",
+    "Main food description": "Stuffed pepper, with rice, meatless"
+  },
+  {
+    "WWEIA Category description": "Vegetable dishes",
+    "Main food description": "Sambar, vegetable stew"
+  },
+  {
+    "WWEIA Category description": "Vegetable dishes",
+    "Main food description": "Ratatouille"
+  },
+  {
+    "WWEIA Category description": "Vegetable juice",
+    "Main food description": "Tomato juice, 100%, low sodium"
+  },
+  {
+    "WWEIA Category description": "Vegetable juice",
+    "Main food description": "Tomato juice cocktail"
+  },
+  {
+    "WWEIA Category description": "Vegetable juice",
+    "Main food description": "Tomato and vegetable juice, 100%, low sodium"
+  },
+  {
+    "WWEIA Category description": "Vegetable juice",
+    "Main food description": "Tomato and vegetable juice, 100%, low sodium"
+  },
+  {
+    "WWEIA Category description": "Vegetable juice",
+    "Main food description": "Tomato juice, 100%"
+  },
+  {
+    "WWEIA Category description": "Vegetable sandwiches/burgers",
+    "Main food description": "Vegetable sandwich wrap"
+  },
+  {
+    "WWEIA Category description": "Vegetable sandwiches/burgers",
+    "Main food description": "Tomato sandwich on wheat"
+  },
+  {
+    "WWEIA Category description": "Vegetable sandwiches/burgers",
+    "Main food description": "Falafel sandwich"
+  },
+  {
+    "WWEIA Category description": "Vegetable sandwiches/burgers",
+    "Main food description": "Vegetable sandwich on white"
+  },
+  {
+    "WWEIA Category description": "Vegetable sandwiches/burgers",
+    "Main food description": "Vegetable sandwich on wheat, with cheese"
+  },
+  {
+    "WWEIA Category description": "Vegetables on a sandwich",
+    "Main food description": "Lettuce, for use on a sandwich"
+  },
+  {
+    "WWEIA Category description": "Vegetables on a sandwich",
+    "Main food description": "Pepper, for use on a sandwich"
+  },
+  {
+    "WWEIA Category description": "Vegetables on a sandwich",
+    "Main food description": "Avocado, for use on a sandwich"
+  },
+  {
+    "WWEIA Category description": "Vegetables on a sandwich",
+    "Main food description": "Spinach, for use on a sandwich"
+  },
+  {
+    "WWEIA Category description": "Vegetables on a sandwich",
+    "Main food description": "Mushrooms, for use on a sandwich"
+  },
+  {
+    "WWEIA Category description": "White potatoes, baked or boiled",
+    "Main food description": "Potato, boiled, from fresh, peel eaten, fat added, NS as to fat type"
+  },
+  {
+    "WWEIA Category description": "White potatoes, baked or boiled",
+    "Main food description": "Potato, baked, peel eaten"
+  },
+  {
+    "WWEIA Category description": "White potatoes, baked or boiled",
+    "Main food description": "Potato, boiled, from fresh, peel not eaten, fat added, NS as to fat type"
+  },
+  {
+    "WWEIA Category description": "White potatoes, baked or boiled",
+    "Main food description": "Potato, roasted, from fresh, peel not eaten, NS as to fat"
+  },
+  {
+    "WWEIA Category description": "White potatoes, baked or boiled",
+    "Main food description": "Potato, roasted, from fresh, peel eaten, fat added, NS as to fat type"
+  },
+  {
+    "WWEIA Category description": "Wine",
+    "Main food description": "Sangria, white"
+  },
+  {
+    "WWEIA Category description": "Wine",
+    "Main food description": "Wine, dessert, sweet"
+  },
+  {
+    "WWEIA Category description": "Wine",
+    "Main food description": "Wine, dessert, sweet"
+  },
+  {
+    "WWEIA Category description": "Wine",
+    "Main food description": "Sangria, red"
+  },
+  {
+    "WWEIA Category description": "Wine",
+    "Main food description": "Sangria, red"
+  },
+  {
+    "WWEIA Category description": "Yeast breads",
+    "Main food description": "Bread, white, special formula, added fiber"
+  },
+  {
+    "WWEIA Category description": "Yeast breads",
+    "Main food description": "Bread, sunflower meal, toasted"
+  },
+  {
+    "WWEIA Category description": "Yeast breads",
+    "Main food description": "Bread, onion, toasted"
+  },
+  {
+    "WWEIA Category description": "Yeast breads",
+    "Main food description": "Bread, sour dough, toasted"
+  },
+  {
+    "WWEIA Category description": "Yeast breads",
+    "Main food description": "Bread, raisin, toasted"
+  },
+  {
+    "WWEIA Category description": "Yogurt, Greek",
+    "Main food description": "Yogurt, Greek, nonfat milk, plain"
+  },
+  {
+    "WWEIA Category description": "Yogurt, Greek",
+    "Main food description": "Yogurt, Greek, NS as to type of milk or flavor"
+  },
+  {
+    "WWEIA Category description": "Yogurt, Greek",
+    "Main food description": "Yogurt, Greek, NS as to type of milk, flavors other than fruit"
+  },
+  {
+    "WWEIA Category description": "Yogurt, Greek",
+    "Main food description": "Yogurt, Greek, NS as to type of milk or flavor"
+  },
+  {
+    "WWEIA Category description": "Yogurt, Greek",
+    "Main food description": "Yogurt, Greek, whole milk, flavors other than fruit"
+  },
+  {
+    "WWEIA Category description": "Yogurt, regular",
+    "Main food description": "Yogurt, NFS"
+  },
+  {
+    "WWEIA Category description": "Yogurt, regular",
+    "Main food description": "Yogurt, whole milk, fruit"
+  },
+  {
+    "WWEIA Category description": "Yogurt, regular",
+    "Main food description": "Yogurt, NS as to type of milk, plain"
+  },
+  {
+    "WWEIA Category description": "Yogurt, regular",
+    "Main food description": "Yogurt, NFS"
+  },
+  {
+    "WWEIA Category description": "Yogurt, regular",
+    "Main food description": "Yogurt, nonfat milk, fruit"
+  }
+]

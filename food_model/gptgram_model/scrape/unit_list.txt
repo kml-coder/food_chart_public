@@ -1,0 +1,191 @@
+bag
+bag * pound
+ball
+batch
+big pinch
+bite-size chunk
+block
+bottle
+box
+bulb
+bulb bulb
+bulb clove
+bunch
+bunch spear
+bunch sprig
+bunch stalk
+can
+canister
+center-cut slice
+chunk
+clove
+clove clove
+container
+cube
+cup
+cup * gram
+cup * pound
+cup bulb
+cup handful
+cup large chunk
+cup scant
+cup slice
+cup sprig
+cup stalk
+cup stick
+dash
+dash dash
+diagonally sliced piece
+drop
+ear
+ear ear
+envelope
+fluid_ounce
+fluid_ounce bottle
+foot
+generou dash
+generou pinch
+good handful
+gram * tablespoon
+gram * teaspoon
+grind
+head
+head clove
+head head
+heaping bar
+inch
+inch piece
+inch slice
+inch square
+inch stick
+inch strip
+inch thick piece
+inch thick slice
+individual package
+individual packet
+jar
+large bulb
+large bunch
+large clove
+large clove clove
+large ear
+large glass bottle
+large head
+large leaf
+large link
+large pinch
+large scoop
+large slice
+large sprig
+large square
+large stalk
+large strip
+large unpeeled clove
+leaf
+leaf head
+link
+loaf
+loaf loaf
+long strip
+medium bulb
+medium clove
+medium ear
+medium head
+medium rib
+medium slice
+medium stalk
+metric_ton
+ounce block
+ounce bottle
+ounce can
+ounce chunk
+ounce cube
+ounce slice
+ounce spear
+ounce thin slice
+package
+packet
+part
+petainch * picoinch
+picoinch ** 2
+piece
+pinch
+pinch dash
+pint jar
+pkg
+pod
+pound bulb
+pound head
+pound slice
+pound stalk
+pound stick
+quarts-size
+rack
+recipe
+rib
+ring
+round loaf
+scant teaspoon
+scoop
+sheet
+shot
+slab
+slice
+slice nickel-sized slice
+slice slice
+small ball
+small block
+small bulb
+small bunch
+small clove
+small ear
+small handful
+small head
+small inner stalk
+small loaf
+small piece
+small pinch
+small scoop
+small slice
+small spear
+small sprig
+small square
+small stalk
+small triangular slice
+small wheel
+solo bulb
+spear
+splash
+sprig
+sprig sprig
+square
+stalk
+stalk stalk
+stem
+stick
+strip
+tablespoon
+tablespoon clove
+tablespoon heaped tablespoon
+tablespoon stick
+tablespoon thin strip
+tea bag
+teaspoon
+teaspoon scant
+teaspoon sprig
+thick slice
+thin
+thin slice
+thin small slice
+thin spear
+thin strip
+thin wedge
+tiny pinch
+tub
+twist
+unpeeled clove
+very small pinch
+wedge
+whole head
+wide-mouth quart
+yard
