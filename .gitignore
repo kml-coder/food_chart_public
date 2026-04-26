@@ -42,9 +42,6 @@
 !.github/workflows/**
 !gptgram_model/
 
-!/food_model/gptgram_model/scrape/*
-!/food_model/gptgram_model/scrape/**
-
 # local editor / OS noise
 food_app/.vscode/
 .DS_Store
