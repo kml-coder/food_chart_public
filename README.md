@@ -11,7 +11,7 @@ For ingredients that are hard to convert with fixed rules (for example, `a pinch
     <td align="center"><b>Chart Transformation</b></td>
   </tr>
   <tr>
-    <td><img src="docs/images/recipe-txt.png" width="400" /></td>
+    <td><img src="docs/images/recipe-xt.png" width="400" /></td>
     <td align="center" style="font-size: 32px; vertical-align: middle;">➡️</td>
     <td><img src="docs/images/chart-main.png" width="400" /></td>
   </tr>
