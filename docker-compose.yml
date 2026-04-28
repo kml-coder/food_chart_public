@@ -10,8 +10,10 @@ services:
       - OLLAMA_URL=http://host.docker.internal:11434/api/chat
       - OLLAMA_MODEL=phi3
       - USE_OLLAMA_GRAMS=true
+      - DEBERTA_MODEL_PATH=/app/deberta_model
     volumes:
       - ./food_server/model:/app/model:ro
+      - ./food_model/gptgram_model/artifacts/deberta_v3_base_grams_text_input_final:/app/deberta_model:ro
     restart: unless-stopped
 
   frontend:

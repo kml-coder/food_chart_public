@@ -4,7 +4,12 @@ from recipe_scrapers import scrape_me, WebsiteNotImplementedError
 from ingredient_parser import parse_ingredient
 from fractions import Fraction
 from bs4 import BeautifulSoup
-from transformers import T5Tokenizer, AutoModelForSeq2SeqLM
+from transformers import (
+    T5Tokenizer,
+    AutoModelForSeq2SeqLM,
+    AutoTokenizer,
+    AutoModelForSequenceClassification,
+)
 import torch
 import os
 
@@ -111,13 +116,25 @@ unitmap = {
     }
 
 MODEL_PATH = "./model"  # path that you downloaded model folder
+DEBERTA_MODEL_PATH = os.getenv(
+    "DEBERTA_MODEL_PATH",
+    "../food_model/gptgram_model/artifacts/deberta_v3_base_grams_text_input_final",
+)
 OLLAMA_URL = os.getenv("OLLAMA_URL", "http://localhost:11434/api/chat")
 OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "phi3")
 USE_OLLAMA_GRAMS = os.getenv("USE_OLLAMA_GRAMS", "true").lower() == "true"
 tokenizer = None
 model = None
 model_load_error = None
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+deberta_tokenizer = None
+deberta_model = None
+deberta_load_error = None
+if torch.cuda.is_available():
+    device = torch.device("cuda")
+elif torch.backends.mps.is_available():
+    device = torch.device("mps")
+else:
+    device = torch.device("cpu")
 
 try:
     tokenizer = T5Tokenizer.from_pretrained(MODEL_PATH)
@@ -125,6 +142,16 @@ try:
     model = model.to(device)
 except Exception as e:
     model_load_error = str(e)
+
+try:
+    deberta_tokenizer = AutoTokenizer.from_pretrained(DEBERTA_MODEL_PATH)
+    deberta_model = AutoModelForSequenceClassification.from_pretrained(
+        DEBERTA_MODEL_PATH
+    )
+    deberta_model = deberta_model.to(device)
+    deberta_model.eval()
+except Exception as e:
+    deberta_load_error = str(e)
 
 
 def extract_first_float(text):
@@ -206,6 +233,62 @@ def estimate_grams_with_local_model(item, return_trace=False):
             "parsed_number": predicted,
             "device": str(device),
             "model_path": MODEL_PATH,
+        },
+    }
+
+
+def build_deberta_text_input(item):
+    def norm(x):
+        return str(x or "").strip().lower()
+
+    def get_a_or_an(word):
+        if not word:
+            return "a"
+        return "an" if word[0].lower() in "aeiou" else "a"
+
+    size = norm(item.get("size", ""))
+    unit = norm(item.get("unit", ""))
+    name = norm(item.get("name", ""))
+    if unit:
+        # DeBERTa model input is always normalized to a single-item phrasing.
+        article = get_a_or_an(unit)
+        prefix = f"{article} {size}".strip()
+        return f"{prefix} {unit} of {name}".strip().replace("  ", " ")
+
+    article = get_a_or_an(size if size else name)
+    prefix = f"{article} {size}".strip()
+    return f"{prefix} {name}".strip().replace("  ", " ")
+
+
+def estimate_grams_with_deberta(item, return_trace=False):
+    if deberta_model is None or deberta_tokenizer is None:
+        raise RuntimeError(deberta_load_error or "Local DeBERTa model is not loaded")
+
+    text_input = build_deberta_text_input(item)
+    with torch.no_grad():
+        inputs = deberta_tokenizer(
+            text_input,
+            return_tensors="pt",
+            truncation=True,
+            max_length=96,
+        ).to(device)
+        logits = deberta_model(**inputs).logits.squeeze(-1)
+        pred_log = float(logits.detach().cpu().item())
+
+    # Notebook training uses log1p(label), so invert with expm1.
+    predicted = max(0.0, float(torch.expm1(torch.tensor(pred_log)).item()))
+    if not return_trace:
+        return predicted
+
+    return {
+        "predicted_grams": predicted,
+        "trace": {
+            "input_raw": str(item.get("raw", "") or ""),
+            "input_text": text_input,
+            "pred_log1p": pred_log,
+            "predicted_grams": predicted,
+            "device": str(device),
+            "model_path": DEBERTA_MODEL_PATH,
         },
     }
 
@@ -406,11 +489,37 @@ def predict_grams():
             local_error = None
             fallback_error = None
             t5_trace = None
+            deberta_trace = None
             selected_model_name = str(request_ollama_model or OLLAMA_MODEL)
             use_local_t5 = selected_model_name.lower().startswith("t5")
+            use_local_deberta = selected_model_name.lower().startswith("deberta")
             model_used = "unknown"
 
-            if use_local_t5:
+            if use_local_deberta:
+                try:
+                    deberta_result = estimate_grams_with_deberta(item, return_trace=True)
+                    base_grams = deberta_result["predicted_grams"]
+                    deberta_trace = deberta_result.get("trace")
+                    model_used = "deberta_local"
+                except Exception as e:
+                    local_error = str(e)
+                    try:
+                        base_grams = estimate_grams_with_ollama(item, OLLAMA_MODEL)
+                        model_used = f"ollama_fallback:{OLLAMA_MODEL}"
+                    except Exception as fallback_e:
+                        fallback_error = str(fallback_e)
+                        try:
+                            local_result = estimate_grams_with_local_model(
+                                item, return_trace=True
+                            )
+                            base_grams = local_result["predicted_grams"]
+                            t5_trace = local_result.get("trace")
+                            model_used = "t5_local_fallback"
+                        except Exception as t5_fallback_e:
+                            local_error = f"{local_error} | t5_fallback: {t5_fallback_e}"
+                            base_grams = estimate_grams_with_heuristic(item)
+                            model_used = "heuristic_fallback"
+            elif use_local_t5:
                 try:
                     local_result = estimate_grams_with_local_model(item, return_trace=True)
                     base_grams = local_result["predicted_grams"]
@@ -452,8 +561,11 @@ def predict_grams():
             if base_grams is None:
                 base_grams = 0.0
 
-            # Ollama returns grams for the full ingredient line, so no extra multiplier.
-            if (not use_local_t5) and USE_OLLAMA_GRAMS and not ollama_error:
+            # Ollama returns grams for the full ingredient line.
+            if use_local_deberta:
+                # DeBERTa predicts for normalized single-item phrasing, so scale by quantity.
+                total_grams = base_grams * quantity_value
+            elif (not use_local_t5) and USE_OLLAMA_GRAMS and not ollama_error:
                 total_grams = base_grams
             else:
                 total_grams = base_grams * quantity_value
@@ -461,8 +573,8 @@ def predict_grams():
             result = {
                 "raw": text,
                 "quantity": quantity_value,
-                "base_prediction": base_grams,
-                "total_prediction": total_grams,
+                "base_prediction": round(float(base_grams), 1),
+                "total_prediction": round(float(total_grams), 1),
                 "model_used": model_used
             }
             if ollama_error:
@@ -478,6 +590,8 @@ def predict_grams():
                     "quantity_multiplier": quantity_value,
                     "final_total_prediction": total_grams,
                 }
+            if deberta_trace:
+                result["deberta_trace"] = deberta_trace
             results.append(result)
 
         return jsonify({"predicted": results})

@@ -104,8 +104,8 @@ export default function App() {
     const [adjustedMap, setAdjustedMap] = useState({});
 
     const [predictions, setPredictions] = useState([]);
-    const [selectedOllamaModel, setSelectedOllamaModel] = useState('phi3');
-    const MODEL_OPTIONS = ['phi3', 'llama3:8b', 't5'];
+    const [selectedOllamaModel, setSelectedOllamaModel] = useState('deberta');
+    const MODEL_OPTIONS = ['deberta', 'phi3', 'llama3:8b', 't5'];
 
     const fetchIngredients = async () => {
         if(useTextInput && !textInput.trim()) return; // 텍스트 활성화되어도 텍스트가 없으면 return(실행 안됌)

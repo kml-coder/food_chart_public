@@ -6,6 +6,9 @@
 !food_app/
 !food_app/**
 
+!docs/
+!docs/**
+
 # food_server 
 !food_server/
 !food_server/server.py
