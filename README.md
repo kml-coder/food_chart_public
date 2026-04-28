@@ -1,51 +1,68 @@
-# Food Chart 🍴
+# Food Chart
 
-**Food Chart** is a full-stack project for food data visualization, machine learning experiments, and web deployment.  
-It combines a frontend app, a backend server, and machine learning scripts to explore food-related data, deploy services, and test recommendation models.
+Enter a recipe URL or raw ingredient text, and the app parses ingredients into a **pie chart by ingredient ratio**.  
+For ingredients that are hard to convert with fixed rules (for example, `a pinch of salt`), it also predicts grams using a **lightweight ML model**.
 
 ---
 
+## Demo
 
-## 📂 Project Structure
+There are currently no images in this repository.  
+If you add images at the paths below, they will render directly on GitHub.
 
+- `docs/images/chart-main.png`
+- `docs/images/mode-switch.png`
+- `docs/images/predict-except-data.png`
+- `docs/images/training-metrics.png`
+
+```md
+![Main Chart](docs/images/chart-main.png)
+![Mode Switch](docs/images/mode-switch.png)
+![Predict Except Data](docs/images/predict-except-data.png)
+![Training Metrics](docs/images/training-metrics.png)
 ```
-food_app/        # Frontend app (Next.js/React, exported and deployed to S3)
-food_server/     # Backend server (Flask-based REST API)
-food_model/      # Machine learning model scripts and data processing
-```
 
-## 📥 Clone the Repository
+---
 
-First, clone the repository from GitHub and move into the project folder:
+## Key Features
+
+- **Input mode switch**: `URL Mode` / `Text Mode`
+- **Automatic parsing**: `Convert to Chart` splits into `chartData` and `exceptData`
+- **Pie chart visualization**: Displays ingredient ratios and percentages
+- **Quantity adjustment**: `Adjust Ingredient` recalculates other ingredient amounts based on a selected ingredient amount
+- **Gram prediction for exception items**: `Predict Grams for Except Data`
+- **Model switching**: `deberta`, `phi3`, `llama3:8b`
+
+---
+
+## Why This Project
+
+Recipe units are highly inconsistent (`cup`, `tbsp`, `clove`, `pinch`, `package`, `whole`, etc.),  
+so a fixed conversion table alone is not enough for reliable weight estimation.
+
+This project focuses on:
+
+- Immediate chart visualization for directly convertible ingredients
+- ML-based correction for ambiguous units and expressions
+- End-to-end workflow from input to result in one screen
+
+---
+
+## Quick Start
+
+### 1) Clone
 
 ```bash
 git clone https://github.com/kml-coder/food_chart_public.git
 cd food_chart_public
 ```
 
-Second, download the [t5 model](https://drive.google.com/file/d/1_l-JuXDqZ-0Qd15OYCNO-n60bmftbety/view?usp=drive_link)
-and unzip it and move "model" folder to food_server folder
+### 2) Download local model
 
----
+- T5 model: [Google Drive](https://drive.google.com/file/d/1_l-JuXDqZ-0Qd15OYCNO-n60bmftbety/view?usp=drive_link)
+- Unzip it, then place the model folder at `food_server/model`
 
-## 🐳 Running with Docker
-
-Docker setup in this repository is only for:
-
-- `food_app` (frontend)
-- `food_server` (backend API)
-
-`food_model` scripts are intentionally excluded from Docker runtime.
-
-### 1. Place model files
-
-Backend expects model files at:
-
-```bash
-food_server/model
-```
-
-### 2. Run locally with Docker Compose (build from source)
+### 3) Run with Docker
 
 ```bash
 docker compose up --build
@@ -54,142 +71,34 @@ docker compose up --build
 - Frontend: `http://localhost:8080`
 - Backend: `http://localhost:5050`
 
-Stop:
+---
 
-```bash
-docker compose down
-```
+## Project Structure
 
-### 3. Deploy with GHCR images (pull prebuilt images)
-
-This repository includes GitHub Actions workflow to publish images to GHCR on push to `main`.
-
-- `ghcr.io/<OWNER>/<REPO>-backend:latest`
-- `ghcr.io/<OWNER>/<REPO>-frontend:latest`
-
-On deployment server:
-
-```bash
-export GHCR_OWNER=<your-github-owner>
-export IMAGE_PREFIX=<your-repository-name>
-
-docker compose -f docker-compose.deploy.yml pull
-docker compose -f docker-compose.deploy.yml up -d
-```
-
-Stop:
-
-```bash
-docker compose -f docker-compose.deploy.yml down
+```text
+food_app/        # React Native / Expo UI
+food_server/     # Flask API + inference routing
+food_model/      # Data cleaning, training notebooks, experiments
 ```
 
 ---
 
-## 🚀 Running the Backend (food_server)
+## Data Pipeline
 
-### 1. Setup Virtual Environment
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
-
-### 2. Install Dependencies
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Run Server
-```bash
-cd food_chart/food_server
-python3 server.py
-```
-
-- Default port: **5050**
-- To change the port: edit `server.py` → update `app.run(port=XXXX)`
+- Detailed document: [`readme_data_pipeline.md`](readme_data_pipeline.md)
 
 ---
 
-## Running the Frontend (food_app)
+## Model Strategy
 
-### 1. Start with Expo (Local Development)
-```bash
-cd food_chart/food_app
-
-# Install dependencies
-npm install   # or yarn install
-
-# Start Expo development server
-npx expo start
-```
+- Detailed document: [`readme_model_details.md`](readme_model_details.md)
 
 ---
 
-## 📦 Data scraping from recipe sites
-```bash
-cd food_chart/food_model/gptgram_model/scrape
-python3 scrape_xml.py
-python3 scrape.py
-python3 clean.py
+## Roadmap
 
-```
+- [ ] Add official demo screenshots/GIFs
+- [ ] Add Hugging Face model release link
+- [ ] Split modeling details into `readme_model.md`
+- [ ] Automate performance report generation (training logs/plots)
 
-## 🤖 Running the Model (food_model)
-
-### Example: Model execution (need your own dataset)
-```bash
-cd food_chart/food_model/src
-python3 model.py
-```
-
----
-
-## ☁️ Deploying on AWS EC2
-
-### 1. Connect to EC2
-```bash
-chmod 400 (your own pem)
-ssh -i (your own pem) (your own instance ip)
-```
-
-### 2. Install Dependencies
-```bash
-sudo apt update
-sudo apt install git -y
-sudo apt install -y python3-pip python3-venv
-```
-
-### 3. Clone Repo & Setup
-```bash
-git clone https://github.com/kml-coder/food_chart_public.git
-cd food_chart
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-cd food_chart/food_server
-
-python3 server.py
-```
-
----
-
-## 🔧 Requirements
-- Python 3.8+
-- Node.js & npm
-- Expo
-- React
-- AWS CLI
-- AWS account with S3 + EC2
-- Git
-
----
-
-## 📝 Notes
-- Configure AWS CLI before S3 sync:
-  ```bash
-  aws configure
-  ```
-- On EC2, ensure the **security group inbound rules** allow your server port (e.g., 5050).  
-- Replace `<EC2_PUBLIC_IP>` with the actual instance’s public IPv4 address.  
-- Keep sensitive files (`.env`, keys, etc.) excluded from public repositories using `.gitignore`.
-
----
