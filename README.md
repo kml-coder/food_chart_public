@@ -3,6 +3,20 @@
 Enter a recipe URL or raw ingredient text, and the app parses ingredients into a **pie chart by ingredient ratio**.  
 For ingredients that are hard to convert with fixed rules (for example, `a pinch of salt`), it also predicts grams using a **lightweight ML model**.
 
+
+<table>
+  <tr>
+    <td align="center"><b>Recipe Text Input</b></td>
+    <td align="center"><b></b></td>
+    <td align="center"><b>Chart Transformation</b></td>
+  </tr>
+  <tr>
+    <td><img src="docs/images/recipe-txt.png" width="400" /></td>
+    <td align="center" style="font-size: 32px; vertical-align: middle;">➡️</td>
+    <td><img src="docs/images/chart-main.png" width="400" /></td>
+  </tr>
+</table>
+
 ---
 
 ## Demo
