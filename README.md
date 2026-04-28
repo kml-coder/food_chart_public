@@ -99,13 +99,13 @@ food_model/      # Data cleaning, training notebooks, experiments
 
 ## Data Pipeline
 
-- Detailed document: [`readme_data_pipeline.md`](readme_data_pipeline.md)
+- Detailed document: [`readme_data_pipeline.md`](docs/readme_data_pipeline.md)
 
 ---
 
 ## Model Strategy
 
-- Detailed document: [`readme_model_details.md`](readme_model_details.md)
+- Detailed document: [`readme_model_details.md`](docs/readme_model_details.md)
 
 ---
 
