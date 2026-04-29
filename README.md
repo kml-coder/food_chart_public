@@ -19,25 +19,6 @@ For ingredients that are hard to convert with fixed rules (for example, `a pinch
 
 ---
 
-## Demo
-
-There are currently no images in this repository.  
-If you add images at the paths below, they will render directly on GitHub.
-
-- `docs/images/chart-main.png`
-- `docs/images/mode-switch.png`
-- `docs/images/predict-except-data.png`
-- `docs/images/training-metrics.png`
-
-```md
-![Main Chart](docs/images/chart-main.png)
-![Mode Switch](docs/images/mode-switch.png)
-![Predict Except Data](docs/images/predict-except-data.png)
-![Training Metrics](docs/images/training-metrics.png)
-```
-
----
-
 ## Key Features
 
 - **Input mode switch**: `URL Mode` / `Text Mode`
