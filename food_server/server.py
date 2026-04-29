@@ -357,13 +357,66 @@ def parse_ingredient_line(line, i):
             "raw": line
         }
 
+    # ------------------------------------------------------------------
+    # [LEGACY LOGIC - kept for reference]
+    # amount = None
+    # for amt in amounts:
+    #     if str(amt.unit).lower() in unitmap:
+    #         amount = amt
+    #         break
+    # if not amount:
+    #     amount = amounts[0]
+    # ------------------------------------------------------------------
+
+    # New active logic:
+    # Try multiple amount candidates and select the first one whose unit
+    # exists in unitmap. This helps when the first parsed candidate is vague
+    # but later candidates contain directly usable units.
     amount = None
     for amt in amounts:
-        if str(amt.unit).lower() in unitmap:
+        unit_candidate = str(getattr(amt, "unit", "") or "").strip().lower()
+        if unit_candidate in unitmap:
             amount = amt
             break
     if not amount:
         amount = amounts[0]
+
+    # ------------------------------------------------------------------
+    # [SCORING-BASED SELECTION - disabled for now, kept for future use]
+    # If you want a smarter selector later (e.g., prefer oz over can when
+    # both are present), you can enable this block.
+    #
+    # def _amount_score(amt):
+    #     unit_candidate = str(getattr(amt, "unit", "") or "").strip().lower()
+    #     score = 0
+    #
+    #     # Strong signal: directly convertible unit.
+    #     if unit_candidate in unitmap:
+    #         score += 100
+    #
+    #     # Prefer mass-like units when available.
+    #     if unit_candidate in {"g", "gram", "grams", "kg", "kilogram",
+    #                           "kilograms", "oz", "ounce", "ounces",
+    #                           "lb", "lbs", "pound"}:
+    #         score += 30
+    #
+    #     # Light penalty for vague recipe units.
+    #     if unit_candidate in {"handful", "pinch", "dash", "to taste"}:
+    #         score -= 20
+    #
+    #     # Slight preference for candidates with a valid numeric quantity.
+    #     try:
+    #         q = float(getattr(amt, "quantity", 0) or 0)
+    #         if q > 0:
+    #             score += 5
+    #     except Exception:
+    #         pass
+    #
+    #     return score
+    #
+    # scored = sorted(amounts, key=_amount_score, reverse=True)
+    # amount = scored[0] if scored else None
+    # ------------------------------------------------------------------
 
     # quantity
     if amount and isinstance(amount.quantity, Fraction):
@@ -387,6 +440,48 @@ def parse_ingredient_line(line, i):
         value = quantity * unitmap.get(unit_key, 0) if unit else 0
     except Exception as e:
         value = 0
+
+    # Fallback:
+    # If main parsed unit is not directly convertible (e.g., "can"),
+    # try to recover gram-convertible info from parsed size/raw text
+    # such as "6 oz can tomato paste".
+    if value <= 0:
+        size_text = ""
+        try:
+            size_text = str(amount.quantity_max) if getattr(amount, "quantity_max", None) else ""
+        except Exception:
+            size_text = ""
+
+        raw_text = str(line or "")
+        search_text = f"{raw_text} {size_text}".lower()
+
+        # Match "<number> <unit>" patterns in free text.
+        # Examples:
+        # - 6 oz
+        # - 6 ounce
+        # - 14.5 ounces
+        # - 250 g
+        token_pattern = re.compile(
+            r"(\d+(?:\.\d+)?)\s*(grams?|g|kilograms?|kg|ounces?|oz|onze|"
+            r"fluid\s*ounces?|fl\s*oz|pounds?|lbs?|lb|milliliters?|ml|liters?|l)\b"
+        )
+        matches = token_pattern.findall(search_text)
+        if matches:
+            # Use first valid convertible token.
+            for num_str, unit_str in matches:
+                normalized_unit = re.sub(r"\\s+", " ", unit_str.strip().lower())
+                try:
+                    num_val = float(num_str)
+                except Exception:
+                    continue
+                if normalized_unit in unitmap:
+                    value = num_val * unitmap[normalized_unit]
+                    # Keep parsed unit label if available; otherwise expose recovered unit.
+                    if not unit:
+                        unit = normalized_unit
+                    # Quantity in this fallback represents the recovered numeric amount.
+                    quantity = num_val
+                    break
 
     return {
         "name": name,
