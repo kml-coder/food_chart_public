@@ -57,7 +57,7 @@ cd food_chart_public
 - DeBERTa model: [Google Drive](https://drive.google.com/file/d/1AfjS5NNvzprcqNseWBcMeUQbv3g_hxoM/view?usp=sharing)
 - Set the model path with `DEBERTA_MODEL_PATH`
 ```bash
-export DEBERTA_MODEL_PATH="$HOME/models/deberta_v3_base_grams_text_input_final"
+export DEBERTA_MODEL_PATH="$HOME/<paste-your-model-folder-path>"
 ```
 ### 3) Run with Docker
 
