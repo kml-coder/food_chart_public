@@ -52,10 +52,10 @@ git clone https://github.com/kml-coder/food_chart_public.git
 cd food_chart_public
 ```
 
-### 2) Download local model
+### 2) Download local model (DeBERTa)
 
-- T5 model: [Google Drive](https://drive.google.com/file/d/1_l-JuXDqZ-0Qd15OYCNO-n60bmftbety/view?usp=drive_link)
-- Unzip it, then place the model folder at `food_server/model`
+- DeBERTa model: (I will add my download link)
+- Set the model path with `DEBERTA_MODEL_PATH`
 
 ### 3) Run with Docker
 
@@ -65,6 +65,38 @@ docker compose up --build
 
 - Frontend: `http://localhost:8080`
 - Backend: `http://localhost:5050`
+
+---
+
+## Runtime Requirements
+
+This project supports multiple gram-prediction backends in runtime.
+
+- Default local path: DeBERTa regression model (`DEBERTA_MODEL_PATH`)
+- Optional LLM backends via Ollama: `phi3`, `llama3:8b`
+
+If you want Ollama backends, install and pull models:
+
+```bash
+ollama pull phi3
+ollama pull llama3:8b
+```
+
+Optional environment variables:
+
+```bash
+DEBERTA_MODEL_PATH=/path/to/deberta_model
+OLLAMA_URL=http://localhost:11434/api/chat
+OLLAMA_MODEL=phi3
+USE_OLLAMA_GRAMS=true
+```
+
+Backend selection in UI:
+- `deberta`: local DeBERTa regression
+- `phi3`, `llama3:8b`: Ollama chat API
+
+Fallback behavior (high level):
+- If a selected backend is unavailable, the server falls back to another available path and finally to heuristic estimation.
 
 ---
 
@@ -97,4 +129,19 @@ food_model/      # Data cleaning, training notebooks, experiments
 - [ ] Add Hugging Face model release link
 - [ ] Split modeling details into `readme_model.md`
 - [ ] Automate performance report generation (training logs/plots)
+
+---
+
+## Troubleshooting
+
+- **Model path error**: verify `DEBERTA_MODEL_PATH` points to a valid local model directory.
+- **Ollama connection error**: ensure Ollama is running and `OLLAMA_URL` is reachable.
+- **Missing Ollama model**: run `ollama pull phi3` or `ollama pull llama3:8b`.
+- **Port conflict**: check that `8080` and `5050` are not used by other processes.
+
+---
+
+## Contributing
+
+This is a personal project, but issue reports and suggestions are welcome.
 

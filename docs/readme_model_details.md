@@ -3,7 +3,7 @@
 ## Model Strategy
 
 - Large open LLMs are possible, but they are oversized for this task in terms of cost and model footprint.
-- I train domain-focused lightweight models directly for practical deployment efficiency.
+- I trained a domain-focused lightweight model directly for practical deployment efficiency.
 - My objective is to predict grams from `unit`, `size`, and `name`, so I used an encoder-based regression model (`DeBERTa`).
 - My goal was to keep the model practical for deployment while improving gram prediction quality on noisy ingredient-unit text.
 
@@ -18,6 +18,16 @@ I loaded the cleaned dataset from `final_unit_removed.json` and kept only rows w
 - For training stability, I transformed labels with `log1p`:
   - `label = log1p(gram)`
 - I split the dataset into train/validation with an 80/20 split (`random_state=42`) and tokenized `text_input` with max length 96.
+
+## Reproducibility
+
+- Dataset file: `food_model/gptgram_model/final_unit_removed.json`
+- Training split: 80/20 via `train_test_split(test_size=0.2, random_state=42)`
+- Model: `microsoft/deberta-v3-base` with `num_labels=1`, `problem_type='regression'`
+- Tokenization: max input length `96`
+- Label transform: `log1p(gram)` for training, `expm1` for metric-space evaluation
+- Training setup: epoch-level eval/save with early stopping (`patience=5`)
+- Runtime note: training logs indicate a long single run to epoch `31.0` before best-checkpoint selection
 
 ---
 

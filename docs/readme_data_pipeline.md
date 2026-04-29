@@ -124,3 +124,17 @@ Result: about `7,919` rows (`food_portion_description_converted.json`)
 - Final merged dataset: about `26,140` rows (`scrape/final.json`)
 
 I used this merged dataset as the core unit/gram training data for my gram prediction model.
+
+---
+
+## Data Lineage (Audit View)
+
+| Input file | Transform | Output file | Row count |
+| --- | --- | --- | ---: |
+| Allrecipes ingredient rows | Keep non-direct-conversion units + deduplicate (`unit+size+name`) | `output_filled.json` | 18,352 |
+| `output_filled.json` | STEP1-4 merged cleanup (size move, unit cleanup, name-unit cleanup) | `output_filled_name_unit_removed.json` | 18,222 |
+| `food.xlsx` | Column select + JSON conversion | `food.json` | 22,046 |
+| `food.json` | Selected-unit filtering in `Portion description` | `food_portion_description_contains_selected_units.json` | 9,220 |
+| Selected USDA subset | Rule-based deletion + unit/size normalization + name extraction | `food_portion_description_unit_rules_applied_with_main_ingredient_before_first_comma.json` | 7,919 |
+| Previous USDA output | Field mapping to training schema | `food_portion_description_converted.json` | 7,919 |
+| Recipe-cleaned + USDA-converted | Merge | `final.json` | 26,140 |
