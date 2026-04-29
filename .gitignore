@@ -63,3 +63,4 @@ artifacts/
 # app local caches
 food_app/node_modules/
 food_app/.expo/
+

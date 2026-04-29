@@ -7,7 +7,9 @@ services:
     ports:
       - "5050:5050"
     environment:
-      - OLLAMA_URL=http://host.docker.internal:11434/api/chat
+      # [LOCAL-ONLY MODE] old host setting kept for reference:
+      # - OLLAMA_URL=http://host.docker.internal:11434/api/chat
+      - OLLAMA_URL=http://localhost:11434/api/chat
       - OLLAMA_MODEL=phi3
       - USE_OLLAMA_GRAMS=true
       - DEBERTA_MODEL_PATH=/app/deberta_model

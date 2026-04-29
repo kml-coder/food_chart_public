@@ -123,6 +123,8 @@ DEBERTA_MODEL_PATH = os.getenv(
 OLLAMA_URL = os.getenv("OLLAMA_URL", "http://localhost:11434/api/chat")
 OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "phi3")
 USE_OLLAMA_GRAMS = os.getenv("USE_OLLAMA_GRAMS", "true").lower() == "true"
+# [LOCAL-ONLY MODE]
+# No EC2/public backend endpoint is used in server runtime.
 tokenizer = None
 model = None
 model_load_error = None

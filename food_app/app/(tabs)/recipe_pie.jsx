@@ -89,8 +89,11 @@ export default function App() {
     const [useTextInput, setUseTextInput] = useState(false);
     const [textInput, setTextInput] = useState('');
 
-    const [useEC2, setUseEC2] = useState(false);
-    const BASE_URL = useEC2 ? 'http://3.149.161.11:5050' : 'http://localhost:5050';
+    // [LOCAL-ONLY MODE]
+    // Keep old EC2 toggle for reference only.
+    // const [useEC2, setUseEC2] = useState(false);
+    // const BASE_URL = useEC2 ? 'http://3.149.161.11:5050' : 'http://localhost:5050';
+    const BASE_URL = 'http://localhost:5050';
 
     const [url, setUrl] = useState('');
 
@@ -333,11 +336,13 @@ export default function App() {
             
             <Button title="Convert to Chart" onPress={fetchIngredients} disabled={loading} />
             {loading && <Text style={styles.loading}> Loading...</Text>}
+            {/* [LOCAL-ONLY MODE] Keep old EC2 switch for reference only.
             <Button title={useEC2 ? "Using EC2 (tap to switch to Local)" : "Using Localhost (tap to switch to EC2)"}
                 onPress={() => setUseEC2(prev => !prev)}
                 color="#666"
                 style={{ marginTop: 8 }}>
             </Button>
+            */}
             <Button
                 title={`Prediction Model: ${selectedOllamaModel} (tap to switch)`}
                 onPress={() =>
