@@ -54,7 +54,7 @@ cd food_chart_public
 
 ### 2) Download local model (DeBERTa)
 
-- DeBERTa model: [Google Drive](https://drive.google.com/drive/folders/1hOWGExGJKPh7ho2qoqU7AKT8mDVS7Wz0?usp=sharing)
+- DeBERTa model: [Google Drive](https://drive.google.com/file/d/1AfjS5NNvzprcqNseWBcMeUQbv3g_hxoM/view?usp=sharing)
 - Set the model path with `DEBERTA_MODEL_PATH`
 
 ### 3) Run with Docker
