@@ -57,6 +57,13 @@
 .venv/
 venv/
 env/
+**/.venv/
+**/venv/
+**/env/
+
+# logs
+*.log
+**/*.log
 
 artifacts/
 **/*.pt
@@ -64,6 +71,18 @@ artifacts/
 **/*.safetensors
 **/*.ckpt
 
-food_app/node_modules/
-food_app/.expo/
+# JS / frontend dependencies and caches (any directory)
+**/node_modules/
+**/.expo/
+**/.next/
+**/dist/
+**/build/
+**/.cache/
+**/coverage/
+**/.turbo/
+**/.pnpm-store/
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+**/pnpm-debug.log*
 
