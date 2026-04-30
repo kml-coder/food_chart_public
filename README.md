@@ -125,6 +125,30 @@ food_model/      # Data cleaning, training notebooks, experiments
 
 ---
 
+## Training Data Used
+
+I trained the gram-prediction model using:
+
+- `food_model/gptgram_model/final_unit_removed.json`
+
+Example row format (simplified):
+
+```json
+{
+  "unit": "cup",
+  "size": "large",
+  "name": "onion",
+  "long_name": "Onion, raw",
+  "gram": 240.0
+}
+```
+
+Notes:
+- `unit`, `size`, and `name` are normalized text fields used to build model input.
+- `gram` is the target label for regression.
+
+---
+
 ## Roadmap
 
 - [ ] Add official demo screenshots/GIFs
