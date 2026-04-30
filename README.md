@@ -122,9 +122,6 @@ food_model/      # Data cleaning, training notebooks, experiments
 
 ## Training Data Used
 
-### Data Pipeline
-
-- Detailed document: [`readme_data_pipeline.md`](docs/readme_data_pipeline.md)
 
 I trained the gram-prediction model using:
 
@@ -146,7 +143,9 @@ Notes:
 - `unit`, `size`, and `name` are normalized text fields used to build model input.
 - `gram` is the target label for regression.
 
-  
+### Data Pipeline
+
+- Detailed document: [`readme_data_pipeline.md`](docs/readme_data_pipeline.md)
 
 ---
 
