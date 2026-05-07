@@ -34,6 +34,7 @@
 !food_model/gptgram_model/
 !food_model/gptgram_model/final_unit_removed.json
 
+
 # docs (readmes + images)
 !docs/
 !docs/**
