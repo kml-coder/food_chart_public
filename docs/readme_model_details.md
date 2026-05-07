@@ -124,8 +124,7 @@ The model over-predicts in **63.4%** of cases (median signed error: +3.3 g). Thi
 ## Model Artifacts
 
 - My DeBERTa model path in server runtime: `DEBERTA_MODEL_PATH`
-- Optional model release link (to be added):
-  - `https://huggingface.co/<your-org-or-id>/<model-repo>`
+- Optional model release link (to be added soon):
 
 ---
 
