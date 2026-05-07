@@ -129,15 +129,6 @@ The model over-predicts in **63.4%** of cases (median signed error: +3.3 g). Thi
 
 ---
 
-## Documentation
-
-Detailed model-building and experiment notes are available in:
-
-- `food_model/gptgram_model/scrape/unit_size_cleanup.ipynb`
-- `food_model/gptgram_model/t5_small_regression.ipynb`
-
----
-
 ## Known Limits
 
 - Parsing quality still varies across recipe websites.
