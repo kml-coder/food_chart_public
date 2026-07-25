@@ -47,9 +47,16 @@ the deploy script keeps that file.
 scripts/deploy_space.sh KL946/food_chart
 ```
 
-The script builds the Expo bundle with `EXPO_PUBLIC_API_URL=/api`, clones the
-Space, copies in `app.py`, `requirements.txt`, `server.py` and the bundle, then
-pushes. Pushing needs an HF access token with **write** scope as the git
+The script builds the Expo bundle with `EXPO_BASE_URL=/app` and
+`EXPO_PUBLIC_API_URL=/api`, clones the Space, copies in `app.py`,
+`requirements.txt`, `server.py` and the bundle, then pushes.
+
+`EXPO_BASE_URL` is required. Without it the bundle is built for the root path,
+so serving it at `/app` still returns HTTP 200 with the right HTML, but
+expo-router boots, matches no route and renders "This screen does not exist".
+`curl` cannot see that failure — only a browser can. `food_app/app.config.js`
+turns the variable into `experiments.baseUrl`; unset, the app stays at the root
+as before for Docker, Cloud Run and local dev. Pushing needs an HF access token with **write** scope as the git
 password, or `hf auth login` plus the git credential helper.
 
 The first build takes several minutes: torch, transformers and Gradio.

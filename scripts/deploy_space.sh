@@ -26,7 +26,11 @@ echo "==> Building the Expo web bundle"
 cd "$REPO_ROOT/food_app"
 [[ -d node_modules ]] || npm ci
 rm -rf web-dist
+# EXPO_BASE_URL must match where app.py serves the bundle. Without it the HTML
+# still loads, but expo-router boots at /app, matches no route and renders
+# "This screen does not exist" — only visible in a browser, not via curl.
 # /api matches where app.py mounts the Flask app.
+EXPO_BASE_URL=/app \
 EXPO_PUBLIC_API_URL=/api \
 EXPO_PUBLIC_MODEL_OPTIONS=deberta \
   npx expo export --platform web --output-dir web-dist
