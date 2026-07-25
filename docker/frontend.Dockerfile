@@ -6,6 +6,12 @@ COPY food_app/package*.json /app/
 RUN npm ci
 
 COPY food_app /app
+
+# In this compose setup nginx and Flask are separate origins, so the bundle
+# needs an absolute backend URL.
+ARG EXPO_PUBLIC_API_URL=http://localhost:5050
+ENV EXPO_PUBLIC_API_URL=${EXPO_PUBLIC_API_URL}
+
 RUN npx expo export --platform web \
     && if [ -d dist ]; then mv dist /tmp/web; elif [ -d web-build ]; then mv web-build /tmp/web; else echo "No web build output found" && exit 1; fi
 

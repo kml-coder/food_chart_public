@@ -1,0 +1,37 @@
+# Upload filter for `gcloud run deploy --source .`
+#
+# Without this, gcloud uploads the whole working directory — including
+# food_model/ (~16GB of training artifacts and fastText binaries) and every
+# node_modules tree. The Docker build only needs food_app/, food_server/,
+# docker/ and the Dockerfile.
+
+.git/
+.github/
+
+# Training data, notebooks and model artifacts: the weights come from the Hub.
+food_model/
+artifacts/
+docs/
+
+# Dependency trees and build output — the image builds these itself.
+node_modules/
+**/node_modules/
+.venv/
+**/.venv/
+food_app/.expo/
+food_app/dist/
+food_app/web-dist/
+food_server/model/
+
+# Secrets, and local .env files that Expo would otherwise read at export time
+# and bake a localhost API URL into the production bundle.
+**/.env
+**/.env.*
+**/*.pem
+**/*.key
+
+# Noise
+**/__pycache__/
+**/*.pyc
+**/.DS_Store
+*.md

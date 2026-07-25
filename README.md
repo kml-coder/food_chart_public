@@ -68,6 +68,11 @@ docker compose up --build
 - Frontend: `http://localhost:8080`
 - Backend: `http://localhost:5050`
 
+### 4) Or deploy it
+
+The web bundle and the API are served from one origin, on a free Hugging Face
+ZeroGPU Space. See [`DEPLOY.md`](DEPLOY.md).
+
 ---
 
 ## Runtime Requirements

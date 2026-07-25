@@ -1,10 +1,19 @@
 .git
 .gitignore
 .DS_Store
+
+# Never let a local .env into the build: Expo reads it at export time and would
+# bake a localhost API URL into the production bundle.
+**/.env
+**/.env.*
+!food_app/.env.example
 node_modules
 food_app/node_modules
 food_app/.expo
 food_app/dist
+food_app/web-dist
 food_app/web-build
 food_server/__pycache__
 food_server/*.pyc
+# reference copy of the old UI — never part of a build
+backup

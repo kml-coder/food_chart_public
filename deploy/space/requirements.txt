@@ -1,0 +1,21 @@
+# Hugging Face Space (Gradio SDK, ZeroGPU hardware).
+#
+# torch: ZeroGPU supports 2.8.0 - 2.11.0 only, and needs the CUDA build from
+# PyPI — not the CPU wheel index the Docker image uses.
+torch==2.9.1
+
+# The checkpoint was saved by transformers 5.6.0: config.json uses the v5
+# "dtype" key, tokenizer_config.json declares "backend": "tokenizers", and the
+# folder has no spm.model for a v4 slow tokenizer to fall back on.
+transformers==5.6.0
+sentencepiece
+
+# Serves the Flask app as WSGI under the FastAPI app.
+a2wsgi
+flask
+flask-cors
+recipe-scrapers
+ingredient-parser-nlp
+beautifulsoup4
+requests
+uvicorn

@@ -1,4 +1,4 @@
-from flask import Flask,request,jsonify
+from flask import Flask,request,jsonify,send_from_directory
 from flask_cors import CORS
 from recipe_scrapers import scrape_me, WebsiteNotImplementedError
 from ingredient_parser import parse_ingredient
@@ -15,7 +15,11 @@ import os
 
 import requests, json, csv, re, time
 
-app= Flask(__name__)
+# STATIC_DIR holds the exported Expo web bundle in the all-in-one deployment.
+# When it is empty the process behaves as an API-only server (local dev / compose).
+STATIC_DIR = os.getenv("STATIC_DIR", "").strip()
+
+app= Flask(__name__, static_folder=None)
 CORS(app)
 
 
@@ -295,6 +299,28 @@ def estimate_grams_with_deberta(item, return_trace=False):
     }
 
 
+# Optional hook. A deployment can install a callable that predicts a whole
+# batch at once, so an expensive per-call wrapper runs once per request instead
+# of once per ingredient. ZeroGPU's @spaces.GPU is the motivating case: each
+# allocation costs seconds of overhead, which would dwarf the ~50ms inference.
+#
+# Signature: (list[item]) -> dict[int, {"predicted_grams": float, "trace": dict}]
+# Keys are indices into the input list. Missing keys fall back to the per-item
+# path below, so a partial or failed batch degrades instead of breaking.
+deberta_batch_runner = None
+
+
+def run_deberta_batch(items):
+    if not deberta_batch_runner or not items:
+        return {}
+    try:
+        result = deberta_batch_runner(items)
+        return result if isinstance(result, dict) else {}
+    except Exception:
+        # Any batch failure just means every item takes the per-item path.
+        return {}
+
+
 def estimate_grams_with_heuristic(item):
     # Final fallback so we avoid returning all zeros.
     try:
@@ -568,8 +594,15 @@ def predict_grams():
         except_data = data.get("exceptData", [])
         request_ollama_model = data.get("ollamaModel")
 
+        selected_model_name_top = str(request_ollama_model or OLLAMA_MODEL)
+        batched = (
+            run_deberta_batch(except_data)
+            if selected_model_name_top.lower().startswith("deberta")
+            else {}
+        )
+
         results = []
-        for item in except_data:
+        for index, item in enumerate(except_data):
             text = item.get("raw", "")
             quantity = item.get("quantity", 1)  # default 1
 
@@ -594,7 +627,9 @@ def predict_grams():
 
             if use_local_deberta:
                 try:
-                    deberta_result = estimate_grams_with_deberta(item, return_trace=True)
+                    deberta_result = batched.get(index) or estimate_grams_with_deberta(
+                        item, return_trace=True
+                    )
                     base_grams = deberta_result["predicted_grams"]
                     deberta_trace = deberta_result.get("trace")
                     model_used = "deberta_local"
@@ -696,7 +731,64 @@ def predict_grams():
         return jsonify({"error": str(e)}), 500
 
 
+@app.route('/health', methods=['GET'])
+def health():
+    return jsonify({
+        "status": "ok",
+        "deberta_loaded": deberta_model is not None,
+        "deberta_error": deberta_load_error,
+        "t5_loaded": model is not None,
+        "ollama_enabled": USE_OLLAMA_GRAMS,
+        "device": str(device),
+        "serving_web": bool(STATIC_DIR),
+    })
+
+
+# ----------------------------------------------------------------------
+# Sites `recipe-scrapers` can parse in URL mode. Read from the installed
+# library rather than a hardcoded copy, so an upgrade updates the UI too.
+# ----------------------------------------------------------------------
+_supported_sites_cache = None
+
+
+@app.route('/supported-sites', methods=['GET'])
+def supported_sites():
+    global _supported_sites_cache
+    if _supported_sites_cache is None:
+        try:
+            from recipe_scrapers import SCRAPERS
+            _supported_sites_cache = sorted(SCRAPERS.keys())
+        except Exception as e:
+            return jsonify({"error": str(e), "sites": [], "count": 0}), 500
+    return jsonify({"sites": _supported_sites_cache, "count": len(_supported_sites_cache)})
+
+
+# ----------------------------------------------------------------------
+# Static web bundle (all-in-one deployment).
+# Werkzeug ranks the explicit API rules above this catch-all, so /parse-text,
+# /get-ingredients, /predict-grams and /health keep working.
+# ----------------------------------------------------------------------
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def serve_web(path):
+    if not STATIC_DIR or not os.path.isdir(STATIC_DIR):
+        return jsonify({"error": "Not found"}), 404
+
+    if path:
+        root = os.path.abspath(STATIC_DIR)
+        candidate = os.path.abspath(os.path.join(root, path))
+        # Block traversal outside the bundle directory.
+        if candidate == root or candidate.startswith(root + os.sep):
+            if os.path.isfile(candidate):
+                return send_from_directory(STATIC_DIR, path)
+            # expo-router static output writes one .html per route.
+            if os.path.isfile(candidate + ".html"):
+                return send_from_directory(STATIC_DIR, path + ".html")
+
+    return send_from_directory(STATIC_DIR, "index.html")
+
+
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5050)
+    app.run(host='0.0.0.0', port=int(os.getenv("PORT", "5050")))
 
 

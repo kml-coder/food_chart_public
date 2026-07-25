@@ -5,18 +5,27 @@
 # ------------------------------------------------------------
 *
 
-# secrets
-**/.env
-**/.env.*
+# NOTE: the secrets block lives at the BOTTOM of this file.
+# Last matching pattern wins, and the `!food_app/**` allowlist below would
+# otherwise re-include any .env inside an allowed directory.
 
 # root-level files to keep
 !.gitignore
 !.dockerignore
+!.gcloudignore
 !README.md
 !DOCKER.md
+!DEPLOY.md
+!Dockerfile
 !requirements.txt
 !docker-compose.yml
 !docker-compose.deploy.yml
+
+# deployment
+!deploy/
+!deploy/**
+!scripts/
+!scripts/**
 
 # docker + CI
 !docker/
@@ -38,6 +47,10 @@
 # docs (readmes + images)
 !docs/
 !docs/**
+
+# original hand-written UI, kept for reference (not built or served)
+!backup/
+!backup/**
 
 # optional training code is excluded in runtime-minimal mode
 # (uncomment if you want to track training scripts/notebooks again)
@@ -77,6 +90,7 @@ artifacts/
 **/.expo/
 **/.next/
 **/dist/
+**/web-dist/
 **/build/
 **/.cache/
 **/coverage/
@@ -87,3 +101,12 @@ artifacts/
 **/yarn-error.log*
 **/pnpm-debug.log*
 
+
+# ------------------------------------------------------------
+# secrets — MUST stay last so no allowlist above can re-include them
+# ------------------------------------------------------------
+**/.env
+**/.env.*
+**/*.pem
+**/*.key
+!food_app/.env.example
