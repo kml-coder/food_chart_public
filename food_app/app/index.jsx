@@ -265,9 +265,11 @@ export default function App() {
     const [selectedOllamaModel, setSelectedOllamaModel] = useState(MODEL_OPTIONS[0] || 'deberta');
     // Display names only. The wire values stay as-is: server.py routes to the local
     // model by `startswith("deberta")`, so renaming the key would break the request.
+    // The chip carries the project's own name so the estimator does not read as an
+    // off-the-shelf checkpoint; the note under it keeps the base model visible.
     const MODEL_LABELS = {
-        deberta: 'deberta-v3-base-grams',
-        deberta_local: 'deberta-v3-base-grams',
+        deberta: 'Food Chart Grams',
+        deberta_local: 'Food Chart Grams',
     };
     const modelLabel = (name) => MODEL_LABELS[name] || name;
 
@@ -589,6 +591,12 @@ export default function App() {
                                 );
                             })}
                         </View>
+                        {MODEL_OPTIONS.includes('deberta') && (
+                            <Text style={[styles.hint, { marginTop: 2 }]}>
+                                Fine-tuned DeBERTa-v3-base, trained on this project’s dataset ·
+                                {' '}KL946/deberta-v3-base-grams
+                            </Text>
+                        )}
                     </View>
                 </View>
 
