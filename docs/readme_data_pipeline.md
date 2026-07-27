@@ -127,6 +127,33 @@ I used this merged dataset as the core unit/gram training data for my gram predi
 
 ---
 
+## Dataset Versions
+
+Model experiments ran across three versions of this data. `usable` counts rows with `gram > 0`.
+
+| Version | File | Rows | Usable | What changed |
+| --- | --- | ---: | ---: | --- |
+| v1 raw | `scrape/output_filled.json` | 18,352 | 18,262 | Recipe rows, deduplicated |
+| v2 cleaned | `scrape/output_filled_name_unit_removed.json` | 18,222 | 18,136 | STEP1–4 cleanup |
+| v3 merged | `final_unit_removed.json` | 26,069 | **25,983** | USDA merged in (`long_name` added) |
+
+The shipped model is trained on **v3**, and every metric reported in this repo refers to v3.
+
+---
+
+## Known Limits
+
+- **The published dataset carries no recipe id.** Rows are ingredient-level and were
+  deduplicated on `unit + size + name`, which collapses rows across recipes. As a
+  result, counts here are ingredient rows rather than recipes, and any per-recipe
+  metric (for example the pie-chart slice error in the model doc) has to be
+  approximated with synthetic groupings instead of measured directly.
+- USDA coverage skews toward processed foods and standard portion descriptions, so
+  unusual recipe-side units (`bunch`, `sprig`, `handful`) rely mostly on the recipe
+  pipeline and carry higher error.
+
+---
+
 ## Data Lineage (Audit View)
 
 | Input file | Transform | Output file | Row count |

@@ -42,6 +42,10 @@
 !food_model/
 !food_model/gptgram_model/
 !food_model/gptgram_model/final_unit_removed.json
+# baseline evaluation — numpy-only, runs against the tracked dataset above.
+# This is the evidence behind the "does the model beat a lookup table?" table
+# in README.md, so it has to ship with the repo.
+!food_model/gptgram_model/eval_baselines.py
 
 
 # docs (readmes + images)

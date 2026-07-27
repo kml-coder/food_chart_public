@@ -75,6 +75,98 @@ TrainOutput(
 
 ---
 
+## Baseline Comparison
+
+"MAE 38.87 g" means nothing without something to compare against. The obvious
+skeptical question for this dataset is: *since the input is `{unit, size, name}`,
+wouldn't a plain per-unit average do just as well?*
+
+I measured it. Every baseline below is fitted on **train only** and evaluated on the
+**same validation split the model used** (`test_size=0.2, random_state=42`), so this
+is an apples-to-apples comparison rather than numbers from two different runs.
+
+Reproduce: `python3 food_model/gptgram_model/eval_baselines.py` (numpy only, no torch)
+→ writes `docs/baseline_metrics.md`
+
+| Method | Learned | MAE (g) | MedAE (g) | RobustMAE (g) | MAPE (%) | Within 20% |
+| --- | :--: | ---: | ---: | ---: | ---: | ---: |
+| Global mean | ✗ | 105.53 | 104.94 | 84.07 | 3268.2 | 0.1512 |
+| Global median | ✗ | 101.96 | 75.00 | 78.77 | 2294.2 | 0.0583 |
+| Hardcoded unit dict (`server.py` heuristic) | ✗ | 75.72 | 22.00 | 48.10 | 724.0 | 0.3215 |
+| Per-unit mean lookup | ✗ | 69.59 | 40.42 | 48.81 | 1506.9 | 0.2040 |
+| Per-unit median lookup | ✗ | 63.93 | 32.00 | 40.19 | 691.1 | 0.2780 |
+| **Per-(unit × size) median lookup** — best untrained | ✗ | **61.65** | 29.00 | 38.35 | 639.8 | **0.3009** |
+| **DeBERTa v3 (shipped)** | ✓ | **38.87** | — | — | **40.5** | **0.5440** |
+
+| | Best untrained | DeBERTa | Delta |
+| --- | ---: | ---: | ---: |
+| MAE | 61.65 g | 38.87 g | **−37 %** |
+| MAPE | 639.8 % | 40.5 % | **−94 %** |
+| Within 20% | 0.301 | 0.544 | **1.81×** |
+
+### Why a per-unit lookup cannot close the gap
+
+The same unit means different weights for different ingredients — liquid vs solid,
+leaf size, how tightly it is packed. A lookup keyed on `unit` alone never reads the
+ingredient name, so that spread is **structurally unreachable** for it.
+
+```
+cup   : cilantro 16g · basil 24g · kale 135g · spinach 200g · sugar 200g · milk 248g
+bunch : parsley 40g · cilantro 30g · basil 28g · kale 188g
+```
+
+| unit | distinct ingredients | p90/p10 of per-ingredient medians | residual MAE a unit lookup cannot remove |
+| --- | ---: | ---: | ---: |
+| `piece` | 136 | **44.0×** | 69.6 g |
+| `packet` | 82 | **44.0×** | 47.9 g |
+| `package` | 88 | **22.6×** | 111.2 g |
+| `bunch` | 113 | **16.1×** | 143.4 g |
+| `slice` | 453 | **10.8×** | 31.4 g |
+| `cup` | 6,076 | 2.9× | 59.7 g |
+
+`1 cup` is 16 g of cilantro but 248 g of milk — a **15× spread**. Reading the
+ingredient name is precisely the job the model does, and it shows up most clearly in
+Within-20% (0.30 → 0.54) rather than in MAE.
+
+---
+
+## Chart-Slice Error
+
+The product does not ship grams — it ships a **pie chart of proportions**. So the
+metric that actually matters is not "how many grams off" but **how many percentage
+points off the slice on screen is**.
+
+> **Assumption:** the public dataset has no recipe id (see the data pipeline doc), so
+> per-recipe measurement is not possible. I grouped validation rows into synthetic
+> 10-ingredient recipes (4,000 draws). Real recipes are not uniform random draws, so
+> these figures are approximate.
+
+Per-slice absolute error in percentage points, best untrained baseline:
+
+| Slice size (true share) | Mean error (pp) | Visible? |
+| --- | ---: | --- |
+| Small slices (< 2 %) | **2.13 pp** | no |
+| Large slices (≥ 20 %) | **12.03 pp** | yes |
+| All slices | 4.90 pp | — |
+
+This is what explains the MAPE paradox. Error by true-gram bucket, same predictions:
+
+| True range | Mean absolute error (g) | MAPE (%) |
+| --- | ---: | ---: |
+| 0–5 g | 17.3 | **4909** |
+| 5–20 g | 16.2 | 184 |
+| 20–100 g | 46.3 | 114 |
+| 100–300 g | 55.6 | **30** |
+| 300 g+ | 465.1 | 62 |
+
+**The two metrics point in opposite directions.** MAPE explodes exactly where the
+chart is least sensitive (sub-5 g ingredients occupy invisible slices) and looks best
+exactly where chart accuracy is actually decided (100 g+ ingredients dominate the
+area). MAPE is therefore the wrong headline metric for this product; slice error and
+Within-20% are the right ones.
+
+---
+
 ## Result Figures
 
 ### Overview
@@ -130,6 +222,10 @@ The model over-predicts in **63.4%** of cases (median signed error: +3.3 g). Thi
 
 ## Known Limits
 
+- **The split is train/validation only — there is no held-out test set.** The reported
+  numbers are validation scores that were also used to choose between candidates
+  (DeBERTa vs T5-small vs LightGBM baselines), so they carry selection bias and are
+  optimistic. A three-way split is the correct fix.
 - Parsing quality still varies across recipe websites.
 - Lines without explicit units or with highly irregular expressions (leaf, strand, bunch) rely entirely on model inference and show significantly higher error.
 - Some ingredients have large context-dependent weight variation even with the same name (e.g. `kale`, `spinach`).

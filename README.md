@@ -120,7 +120,41 @@ food_model/      # Data cleaning, training notebooks, experiments
 
 ## Model Strategy
 
+Input is a fixed `{unit, size, name}` schema and the output is a single number, so I
+treated it as a regression problem and trained an encoder model
+(`microsoft/deberta-v3-base`, `num_labels=1`) rather than reaching for a large LLM.
+The Ollama backends stay in the runtime so the two approaches can be compared from
+the UI directly.
+
+### Does the model actually beat a lookup table?
+
+Since the input is just `{unit, size, name}`, a fair objection is that a per-unit
+average might do the same job. Measured on the **same validation split**:
+
+| Method | Learned | MAE (g) | MAPE (%) | Within 20% |
+| --- | :--: | ---: | ---: | ---: |
+| Per-unit median lookup | ✗ | 63.93 | 691.1 | 0.278 |
+| Per-(unit × size) median lookup — best untrained | ✗ | 61.65 | 639.8 | 0.301 |
+| **DeBERTa v3 (shipped)** | ✓ | **38.87** | **40.5** | **0.544** |
+
+MAE −37 %, Within-20% **1.81×**.
+
+The gap exists because the same unit means different weights for different
+ingredients — `1 cup` is 16 g of cilantro but 248 g of milk, a **15× spread**. A
+lookup keyed on `unit` never reads the ingredient name, so that variance is
+structurally unreachable for it.
+
+Reproduce: `python3 food_model/gptgram_model/eval_baselines.py` (numpy only, no torch).
+
+> **On MAPE:** the headline MAPE looks alarming because the dataset is full of
+> single-digit-gram ingredients, and MAPE divides by the true value (2 g predicted as
+> 6 g is 200 % but only 4 g off). Since the product output is a **proportion pie
+> chart**, sub-2 % slices land within **2.13 pp** of correct — invisible on screen —
+> while the large ingredients that actually decide the chart sit at MAPE 30 %.
+> Details and the slice-error measurement are in the model doc.
+
 - Detailed document: [`readme_model_details.md`](docs/readme_model_details.md)
+- Baseline reproduction: `food_model/gptgram_model/eval_baselines.py`
 
 ---
 
@@ -147,6 +181,18 @@ Example row format (simplified):
 Notes:
 - `unit`, `size`, and `name` are normalized text fields used to build model input.
 - `gram` is the target label for regression.
+
+### Dataset Versions
+
+Experiments ran on three versions. `usable` counts rows where `gram > 0`.
+
+| Version | File | Rows | Usable | What changed |
+| --- | --- | ---: | ---: | --- |
+| v1 raw | `scrape/output_filled.json` | 18,352 | 18,262 | Allrecipes ingredient rows, deduplicated |
+| v2 cleaned | `scrape/output_filled_name_unit_removed.json` | 18,222 | 18,136 | size split out, `slice` normalized, multi-word units dropped |
+| v3 merged | `final_unit_removed.json` | 26,069 | **25,983** | USDA portion data merged in (adds `long_name`) |
+
+The shipped model is trained on **v3**. All metrics in this repo refer to v3.
 
 ### Data Pipeline
 
