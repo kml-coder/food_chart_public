@@ -112,6 +112,26 @@ function ActionButton({ label, onPress, disabled, variant }) {
     );
 }
 
+// What the user actually typed into a prefilled field, with the sample text around
+// it stripped. The caret usually lands mid-string, so the first keystroke arrives as
+// the sample with one character spliced in; returning just that character makes the
+// sample behave like a placeholder without ever emptying the field on its own.
+const typedInto = (sample, text) => {
+    let start = 0;
+    while (start < text.length && start < sample.length && text[start] === sample[start]) start++;
+    let end = 0;
+    while (
+        end < text.length - start &&
+        end < sample.length - start &&
+        text[text.length - 1 - end] === sample[sample.length - 1 - end]
+    ) end++;
+    const inserted = text.slice(start, text.length - end);
+    const deleted = sample.slice(start, sample.length - end);
+    if (inserted && !deleted) return inserted; // typed into the sample
+    if (deleted && !inserted) return ''; // deleted part of the sample
+    return text; // pasted over a selection — take it as is
+};
+
 const formatGroupForChart = (group) => {
     const sortedChartData = [...group.chartData].sort((a, b) => b.value - a.value);
     const total = sortedChartData.reduce((sum, item) => sum + (Number(item.value) || 0), 0) || 1;
@@ -517,21 +537,15 @@ export default function App() {
                                 !urlTouched && url === SAMPLE_URL && styles.inputSample,
                             ]}
                             value={url}
+                            /* The sample goes away on the first keystroke, not on focus.
+                               Clearing on focus emptied the field invisibly (the placeholder
+                               used to be the same string) and selecting it on focus ate the
+                               next click, since that click only clears the selection — both
+                               made the button look dead. */
                             onChangeText={(text) => {
+                                const untouchedSample = !urlTouched && url === SAMPLE_URL;
                                 setUrlTouched(true);
-                                setUrl(text);
-                            }}
-                            /* Select instead of clear. Clearing looked identical to the
-                               untouched field (the placeholder was the same string), so one
-                               stray click emptied the URL invisibly and the button turned
-                               into a silent no-op. Selecting still lets typing replace it. */
-                            onFocus={(e) => {
-                                // The click that focuses the field places the caret after this
-                                // handler runs, which collapses an immediate select(). Defer it.
-                                const input = e.target;
-                                if (!urlTouched && url === SAMPLE_URL) {
-                                    setTimeout(() => input?.select?.(), 0);
-                                }
+                                setUrl(untouchedSample ? typedInto(SAMPLE_URL, text) : text);
                             }}
                             placeholder="https://example.com/recipe"
                             autoCapitalize="none"
