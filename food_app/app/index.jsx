@@ -11,6 +11,8 @@ const COLORS = {
     muted: '#6f6a64',
     accent: '#e0632c',
     accentSoft: '#fdf0e9',
+    // Prefilled sample text: dimmer than real input so it reads as a suggestion.
+    sample: '#a7a099',
 };
 
 const CONTENT_WIDTH = 620;
@@ -54,6 +56,7 @@ const styles = StyleSheet.create({
         color: COLORS.text,
         width: '100%',
     },
+    inputSample: { color: COLORS.sample },
     textarea: { height: 140, textAlignVertical: 'top' },
 
     button: {
@@ -216,7 +219,11 @@ export default function App() {
     // For local dev against a separate backend, set EXPO_PUBLIC_API_URL in food_app/.env.
     const BASE_URL = process.env.EXPO_PUBLIC_API_URL || '';
 
-    const [url, setUrl] = useState('');
+    // Prefilled so the URL mode is testable with a single tap. Cleared the first
+    // time the user focuses the field, so typing a real link replaces the sample.
+    const SAMPLE_URL = 'https://sugarspunrun.com/best-cheesecake-recipe/';
+    const [url, setUrl] = useState(SAMPLE_URL);
+    const [urlTouched, setUrlTouched] = useState(false);
 
     const [groupData, setGroupData] = useState([]); //이런거 쓰는 이유는 전역 변수로 쓰기 위함임
     const [loading, setLoading] = useState(false);
@@ -228,6 +235,7 @@ export default function App() {
     const [adjustedMap, setAdjustedMap] = useState({});
 
     const [predictions, setPredictions] = useState([]);
+    const [predicting, setPredicting] = useState(false);
     // Ollama backends need a local Ollama daemon, so hosted builds ship with
     // 'deberta' only. Override with EXPO_PUBLIC_MODEL_OPTIONS (comma separated).
     const MODEL_OPTIONS = (process.env.EXPO_PUBLIC_MODEL_OPTIONS || 'deberta,phi3,llama3:8b,t5')
@@ -235,10 +243,27 @@ export default function App() {
         .map((name) => name.trim())
         .filter(Boolean);
     const [selectedOllamaModel, setSelectedOllamaModel] = useState(MODEL_OPTIONS[0] || 'deberta');
+    // Display names only. The wire values stay as-is: server.py routes to the local
+    // model by `startswith("deberta")`, so renaming the key would break the request.
+    const MODEL_LABELS = {
+        deberta: 'deberta-v3-base-grams',
+        deberta_local: 'deberta-v3-base-grams',
+    };
+    const modelLabel = (name) => MODEL_LABELS[name] || name;
 
     const fetchIngredients = async () => {
         if(useTextInput && !textInput.trim()) return; // 텍스트 활성화되어도 텍스트가 없으면 return(실행 안됌)
         if (!useTextInput && !url.trim()) return; // url 활성화되어도 url가 없으면 return(실행 안됌)
+        // Every result below belongs to the previous recipe, so clear it before the
+        // request. Otherwise a second parse shows the new chart next to the old
+        // gram predictions and a picker still holding an ingredient that is gone.
+        setTitle('');
+        setGroupData([]);
+        setRawIngredients([]);
+        setPredictions([]);
+        setSelectedIngredient(null);
+        setNewAmount('');
+        setAdjustedMap({});
         setLoading(true);
         try {
             let json; //
@@ -283,6 +308,24 @@ export default function App() {
             setLoading(false); //  runs whatever happens
         }
     } // 문제가 저기 있는 value는 tablespoon 기준이고, cup일때는 4 cup / original quantity * 16 이라 무조건 4분의 1이됌
+
+    // Every chart item, tagged with a unique id and its group. `raw` is not unique:
+    // real recipes repeat a line across groups ("1 teaspoon pure vanilla extract" in
+    // both the cake and the frosting), and one line can contain another ("1 large egg"
+    // inside "1 large egg yolk"). Selecting by raw picked the first match in both
+    // cases, so the rescale ran off the wrong ingredient.
+    const chartItems = useMemo(
+        () => groupData.flatMap((group, groupIndex) =>
+            group.chartData.map((item, itemIndex) => ({
+                ...item,
+                uid: `${groupIndex}-${itemIndex}`,
+                purpose: group.purpose || 'Main',
+            }))
+        ),
+        [groupData]
+    );
+    const multipleGroups = groupData.length > 1;
+
     const adjustIngredients = () => {
         if (!selectedIngredient || !newAmount) return;
         const parsedNewAmount = parseFloat(newAmount);
@@ -310,6 +353,9 @@ export default function App() {
             alert("No except data to predict");
             return;
         }
+        // A ZeroGPU cold start takes tens of seconds, so the button needs its own
+        // spinner — without it the page looks frozen.
+        setPredicting(true);
         const res = await fetch(`${BASE_URL}/predict-grams`, {
             method: "POST",
             headers: {"Content-Type": "application/json"},
@@ -353,9 +399,16 @@ export default function App() {
                 });
             })
         );
+        // Promoted items shift every position in chartData, so the uid held by the
+        // current selection would now point at a different ingredient.
+        setSelectedIngredient(null);
+        setNewAmount('');
+        setAdjustedMap({});
     } catch (e) {
         alert(e.message);
         console.log(e);
+    } finally {
+        setPredicting(false);
     }
     };
 
@@ -459,9 +512,27 @@ export default function App() {
                         />
                     ) : (
                         <TextInput
-                            style={styles.input}
+                            style={[
+                                styles.input,
+                                !urlTouched && url === SAMPLE_URL && styles.inputSample,
+                            ]}
                             value={url}
-                            onChangeText={setUrl}
+                            onChangeText={(text) => {
+                                setUrlTouched(true);
+                                setUrl(text);
+                            }}
+                            /* Select instead of clear. Clearing looked identical to the
+                               untouched field (the placeholder was the same string), so one
+                               stray click emptied the URL invisibly and the button turned
+                               into a silent no-op. Selecting still lets typing replace it. */
+                            onFocus={(e) => {
+                                // The click that focuses the field places the caret after this
+                                // handler runs, which collapses an immediate select(). Defer it.
+                                const input = e.target;
+                                if (!urlTouched && url === SAMPLE_URL) {
+                                    setTimeout(() => input?.select?.(), 0);
+                                }
+                            }}
                             placeholder="https://example.com/recipe"
                             autoCapitalize="none"
                             autoCorrect={false}
@@ -469,7 +540,13 @@ export default function App() {
                     )}
 
                     <View style={{ height: 14 }} />
-                    <ActionButton label="Convert to Chart" onPress={fetchIngredients} disabled={loading} />
+                    {/* Greyed out on an empty field, so pressing it can never look like a
+                        dead button — fetchIngredients returns early in that case. */}
+                    <ActionButton
+                        label="Convert to Chart"
+                        onPress={fetchIngredients}
+                        disabled={loading || (useTextInput ? !textInput.trim() : !url.trim())}
+                    />
 
                     {loading && (
                         <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginTop: 14 }}>
@@ -493,7 +570,7 @@ export default function App() {
                                         key={name}
                                         onPress={() => setSelectedOllamaModel(name)}
                                         style={[styles.chip, active && styles.chipActive]}>
-                                        <Text style={[styles.chipLabel, active && styles.chipLabelActive]}>{name}</Text>
+                                        <Text style={[styles.chipLabel, active && styles.chipLabelActive]}>{modelLabel(name)}</Text>
                                     </Pressable>
                                 );
                             })}
@@ -518,9 +595,8 @@ export default function App() {
                             {!!title && (
                                 <Text style={{ fontSize: 19, fontWeight: '700', marginBottom: 18, color: COLORS.text }}>{title}</Text>
                             )}
-                            {/* # TODO
-                            Sugar 밑에 있는거 선택해도 위에있는게 선택되고 tablespoon 이 아니라 cup이 나옴,
-                            raw를 고유값으로 한다 했는데, 그거 말고 idx 생각하기 왜냐하면 group이 달라지면 같은 값의 raw가 나올 수 도 있기 때문*/}
+                            {/* (Done) raw는 고유값이 아니라 group이 다르면 같은 raw가 나옴 →
+                            chartItems의 `${groupIndex}-${itemIndex}` uid로 구별하도록 바꿈 */}
                             <View style={{ flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
                                 {makescroll()}
                             </View>
@@ -534,18 +610,21 @@ export default function App() {
                             </Text>
                             <View style={{ borderWidth: 1, borderColor: COLORS.border, borderRadius: 10, marginBottom: 12 }}>
                                 <Picker
-                                    selectedValue={selectedIngredient?.raw || ''}
+                                    selectedValue={selectedIngredient?.uid || ''}
                                     style={{ height: 42, width: '100%', borderWidth: 0, backgroundColor: 'transparent', paddingHorizontal: 10, color: COLORS.text }}
-                                    onValueChange={(itemRaw) => {
-                                        const found = groupData.flatMap(g => g.chartData).find(item => item.raw === itemRaw)
-                                        setSelectedIngredient(found);
+                                    onValueChange={(uid) => {
+                                        setSelectedIngredient(chartItems.find((item) => item.uid === uid) || null);
                                     }}>
                                     <Picker.Item label="Pick an ingredient" value="" />
-                                    {rawIngredients.map((line,idx)=> {
-                                        const item = groupData.flatMap(g => g.chartData).find(i => line.includes(i.raw)); // 이것도 조정해야됐었다
-                                        if (!item) return null;
-                                        return <Picker.Item key={idx} label={item.name} value={item.raw} />;// 저 value를 통해서 구별하는데 name은 겹쳐서 같은 것으로 인식하니 raw로 하자 아예 다르니까
-                                    })}
+                                    {/* The group goes in the label only when there is more than one,
+                                        so a single-group recipe keeps the short ingredient names. */}
+                                    {chartItems.map((item) => (
+                                        <Picker.Item
+                                            key={item.uid}
+                                            label={multipleGroups ? `${item.name} (${item.purpose})` : item.name}
+                                            value={item.uid}
+                                        />
+                                    ))}
                                 </Picker>
                             </View>
                             <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 14 }}>
@@ -598,8 +677,19 @@ export default function App() {
                             <ActionButton
                                 label="Predict Grams for Except Data"
                                 onPress={fetchPredictions}
+                                disabled={predicting}
                                 variant="secondary"
                             />
+
+                            {predicting && (
+                                <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center', marginTop: 14 }}>
+                                    <ActivityIndicator color={COLORS.accent} />
+                                    <Text style={[styles.hint, { marginLeft: 8 }]}>
+                                        Estimating grams… the first run can take a while while the
+                                        GPU spins up.
+                                    </Text>
+                                </View>
+                            )}
 
                             {predictions.length > 0 && (
                                 <View style={{ marginTop: 18 }}>
@@ -607,7 +697,7 @@ export default function App() {
                                         <View key={idx} style={{ marginVertical: 5 }}>
                                             <Text style={styles.listItem}>
                                                 {item.raw} → <Text style={{ fontWeight: '700' }}>{item.total_prediction} g</Text>
-                                                <Text style={{ color: COLORS.muted }}>{`  (${item.model_used || 'unknown'})`}</Text>
+                                                <Text style={{ color: COLORS.muted }}>{`  (${modelLabel(item.model_used) || 'unknown'})`}</Text>
                                             </Text>
                                             {item.t5_trace && (
                                                 <Text style={{ fontSize: 11, color: COLORS.muted }}>

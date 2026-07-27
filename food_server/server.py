@@ -497,7 +497,9 @@ def parse_ingredient_line(line, i):
         if matches:
             # Use first valid convertible token.
             for num_str, unit_str in matches:
-                normalized_unit = re.sub(r"\\s+", " ", unit_str.strip().lower())
+                # r"\\s+" matched a literal backslash, so "fl  oz" / "fluid\nounces"
+                # never collapsed and fell out of unitmap.
+                normalized_unit = re.sub(r"\s+", " ", unit_str.strip().lower())
                 try:
                     num_val = float(num_str)
                 except Exception:
@@ -571,10 +573,17 @@ def parse_text():
     text = data.get("text",'')
     if not text.strip():
         return jsonify({'error': 'No ingredient lines provided'}), 400
-    lines = text.split('\n')
+    # Blank lines must go: parse_ingredient("  ") raises IndexError, which used to
+    # take down the whole request over a single trailing newline in the textarea.
+    lines = [line.strip() for line in text.split('\n') if line.strip()]
     if not lines:
         return jsonify({'error': 'No ingredient lines provided'}), 400
-    parsed = [parse_ingredient_line(line, i) for i, line in enumerate(lines)]
+    try:
+        parsed = [parse_ingredient_line(line, i) for i, line in enumerate(lines)]
+    except Exception as e:
+        # Without this the frontend gets Flask's HTML 500 page and fails on
+        # res.json() with a parser error instead of showing the real cause.
+        return jsonify({'error': f'Could not parse the ingredient lines: {e}'}), 500
     chart_data = [item for item in parsed if item['value'] > 0]
     except_data = [item for item in parsed if item['value'] == 0]
     groups_data = [{
